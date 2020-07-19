@@ -1,8 +1,15 @@
+# VS Code
 .vs
 .vscode
-Logs
-Packages
-Library
-ProjectSettings
-obj
+
+# Unity generated
+Library/
+Temp/
+
+# Visual Studio generated
+obj/
+*.csproj
+*.tmp
+
+# Custome
 _save
