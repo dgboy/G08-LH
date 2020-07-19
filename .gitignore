@@ -5,11 +5,9 @@
 # Unity generated
 Library/
 Temp/
-*.meta
 
 # Visual Studio generated
 obj/
-*.csproj
 *.tmp
 
 # Custome

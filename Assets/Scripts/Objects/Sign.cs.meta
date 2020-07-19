@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b3d8a762fa054f408fec3899e348601
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dialogBox: {instanceID: 0}
+  - dialogText: {instanceID: 0}
+  - clue: {fileID: 11400000, guid: 1d6f8a7611762be46ba24a0ad5310115, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

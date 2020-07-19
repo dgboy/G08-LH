@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ef3fbf3f92764d845a7a573f00d7978a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - positionStorage: {fileID: 11400000, guid: 382a918c15c765c4b8188a44b399f043, type: 2}
+  - fadeInPanel: {fileID: 2033982994817212000, guid: 3cfb8e74c3704224b9d77e7dff5d61f9,
+      type: 3}
+  - fadeOutPanel: {fileID: 6484555548245670462, guid: f8ed210c7c79adc42b0dd8f43a4f67ca,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

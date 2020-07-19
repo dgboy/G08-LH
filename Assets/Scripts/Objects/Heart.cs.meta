@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d9ab4ab8ef73b844d9c2f9433cd56985
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - powerUpSignal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
+  - playerHealth: {fileID: 11400000, guid: 03ddba860889b104587098272dbda747, type: 2}
+  - heartContainers: {fileID: 11400000, guid: 574739076d1d94247ab2f00421db4070, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
