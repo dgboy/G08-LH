@@ -14,14 +14,14 @@ public class LockedDoor : Interactive {
     public DoorType thisDoorType;
     public bool open = false;
     public Inventory playerInventory;
-    public SpriteRenderer openDoorSprite;
+    // public SpriteRenderer openDoorSprite;
     public SpriteRenderer closeDoorSprite;
     public BoxCollider2D doorCollider;
+    public GameObject door;
 
     private void Update() {
-        if(playerInRange && Input.GetKeyDown(KeyCode.R)) {
+        if(playerInRange && Input.GetButtonDown("Check")) {
             if(playerInventory.numberOfKeys > 0) {
-                playerInventory.numberOfKeys--;
                 Open();
             } else {
                 Debug.Log("Closed!");
@@ -29,10 +29,13 @@ public class LockedDoor : Interactive {
         }
     }
     public void Open() {
-        doorCollider.enabled = false;
-        closeDoorSprite.enabled = false;
+        playerInventory.numberOfKeys--;
+        door.SetActive(false);
+        // clue.Raise(); 
+        // doorCollider.enabled = false;
+        // closeDoorSprite.enabled = false;
         
-        openDoorSprite.enabled = true;
+        // openDoorSprite.enabled = true;
         open = true;
     }
     public void Close() {

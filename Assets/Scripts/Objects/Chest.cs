@@ -23,12 +23,9 @@ public class Chest : Interactive {
     }
 
     void Update() {
-        if(!blocked && playerInRange) {
-
-            if (Input.GetKey(KeyCode.R)) {
-                OpenChest();
-                StartCoroutine(WaitCo());
-            }
+        if(Input.GetButtonDown("Check") && !blocked && playerInRange) {
+            OpenChest();
+            StartCoroutine(WaitCo());
         }
     }
 

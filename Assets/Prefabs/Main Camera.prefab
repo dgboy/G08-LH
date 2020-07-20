@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3393368749656083712}
   - component: {fileID: 3393368749656083967}
   - component: {fileID: 3393368749656083965}
-  - component: {fileID: 3879873461401438321}
   - component: {fileID: 3393368749656083966}
   - component: {fileID: 3393368749656083713}
   - component: {fileID: 3393368749656083714}
+  - component: {fileID: 3851999942665977321}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -87,31 +87,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3393368749656083964}
   m_Enabled: 1
---- !u!114 &3879873461401438321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3393368749656083964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenResolution: {x: 857, y: 474}
-  internalResolution: {x: 289, y: 160}
-  upscaledResolution: {x: 0, y: 0}
-  smooth: 1
-  forceSquarePixels: 0
-  pixels: {x: 90, y: 160}
-  pixelsPerUnit: 16
-  requireStencilBuffer: 0
-  useUpscaleShader: 1
-  upscaleMaterial: {fileID: 2100000, guid: 6de3dd6a2ea7941c6aa915f6353a2a98, type: 2}
-  finalBlitStretch: {x: 1, y: 1}
-  mainCamera: {fileID: 3393368749656083967}
-  mainCanvas: {fileID: 0}
 --- !u!114 &3393368749656083966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,5 +150,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &3851999942665977321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393368749656083964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f08a6f40d2ec4de981f811bfc829f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TexturePixelsPerWorldUnit: 16

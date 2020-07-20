@@ -10,9 +10,9 @@ public class Sign : Interactive {
 
     void Update() {
         if(playerInRange) {
-            if(dialogBox.activeInHierarchy && Input.GetKey(KeyCode.Escape)) {
+            if(dialogBox.activeInHierarchy && Input.GetButtonDown("Check")) {
                 dialogBox.SetActive(false);
-            } else if(!dialogBox.activeInHierarchy && Input.GetKey(KeyCode.F)){
+            } else if(!dialogBox.activeInHierarchy && Input.GetButtonDown("Check")) {
                 dialogText.text = dialog;
                 dialogBox.SetActive(true);
             }

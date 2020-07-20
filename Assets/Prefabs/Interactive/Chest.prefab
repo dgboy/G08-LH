@@ -49,6 +49,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -60,6 +61,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -171,6 +173,8 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
   item: {fileID: 11400000, guid: 194fcca5226e8b44d844b667df8b9ae0, type: 2}
   itemSignal: {fileID: 11400000, guid: b8d4f760754661346be19e614a50167f, type: 2}
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
+  dialogBox: {fileID: 1737816683056229427, guid: 92225ca2aaec1124a96879633f9d14b3,
+    type: 3}
+  dialogText: {fileID: 1112701753745352524, guid: f32d90ee5f9afd147afc972d34372e52,
+    type: 3}
   storedOpen: {fileID: 11400000, guid: ac94dca35a8c0d7498cf352306f0eb9f, type: 2}
