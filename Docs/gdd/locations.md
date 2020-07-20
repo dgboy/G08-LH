@@ -1,9 +1,8 @@
 # Локации игры (минимум 100 шт.)
 
-
 ## Хижина Чёрной ведьмы (Дом ГГ) (6B)
 
-![forest-house](C:\_gamedev\G08-LH\Docs\images\forest-house.gif)
+![forest-house](C:\_gamedev\G08-LH\Docs\_images\forest-house.gif)
 
 ## A
 ### 0 Пляж неупокоенного пирата
