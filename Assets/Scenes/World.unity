@@ -101266,15 +101266,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0402048b9493c9543a53a8e125737c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   nameEnemy: Patrol Log
+  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   attackDamage: 1
   moveSpeed: 1.5
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
   deathEffectDelay: 1
-  homePosition: {x: 0, y: 0}
   roomSignal: {fileID: 0}
+  thisLoot: {fileID: 0}
   chaseRadius: 4
   attackRadius: 1.2
   path:
@@ -103699,7 +103700,7 @@ PrefabInstance:
     - target: {fileID: 4598175387037942657, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2761b042b845647b566ae40a21db1e, type: 3}
@@ -106401,15 +106402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08bde101513baa498f32a929e71319f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   nameEnemy: Unknown
+  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   attackDamage: 1
   moveSpeed: 1.5
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
   deathEffectDelay: 1
-  homePosition: {x: 0, y: 0}
   roomSignal: {fileID: 0}
+  thisLoot: {fileID: 0}
   chaseRadius: 4
   attackRadius: 1.2
   boundary: {fileID: 1506923965}
@@ -106518,15 +106520,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03824acba2cf5c4e95bc6c1508b88e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   nameEnemy: Turret Log
+  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   attackDamage: 1
   moveSpeed: 1.5
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
   deathEffectDelay: 1
-  homePosition: {x: 0, y: 0}
   roomSignal: {fileID: 0}
+  thisLoot: {fileID: 0}
   chaseRadius: 6
   attackRadius: 0
   projectile: {fileID: 3853740960722847899, guid: 33a32464455c1e74a8b49f300076426b,

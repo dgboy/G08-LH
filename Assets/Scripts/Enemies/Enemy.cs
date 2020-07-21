@@ -11,20 +11,22 @@ public enum EnemyState {
 
 public class Enemy : MonoBehaviour {
 
-    public FloatValue maxHealth;
+    [Header("Characteristics")]
     public string nameEnemy = "Unknown";
+    public FloatValue maxHealth;
     public int attackDamage = 1;
     public float moveSpeed = 1.5f;
-    public GameObject deathEffect;
-    public float deathEffectDelay = 1f;
     public Vector2 homePosition;
+
+    protected float health;
+    protected EnemyState currentState;
     
     [Header("Death Effects")]
-    protected EnemyState currentState;
-    protected float health;
+    public GameObject deathEffect;
+    public float deathEffectDelay = 1f;
 
-    [Header("Death Effects")]
     public GameSignal roomSignal;
+    public LootTable thisLoot;
 
     private void Awake() {
         health = maxHealth.initialValue;
@@ -41,11 +43,12 @@ public class Enemy : MonoBehaviour {
 
         if(health <= 0) {
             DeathEffect();
+            MakeLoot();
+            this.gameObject.SetActive(false);
+
             if (roomSignal) {
                 roomSignal.Raise();
             }
-                
-            this.gameObject.SetActive(false);
         }
     }
 
@@ -68,6 +71,15 @@ public class Enemy : MonoBehaviour {
 
             currentState = EnemyState.idle;
             myRigid.velocity = Vector2.zero;
+        }
+    }
+
+    private void MakeLoot() {
+        if(thisLoot != null) {
+            PowerUp current = thisLoot.LootPowerUp();
+            if (current != null) {
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
         }
     }
 

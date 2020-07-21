@@ -166,13 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5bf6197b82282d459f910565b4d0055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   nameEnemy: Loggy
+  maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   attackDamage: 1
   moveSpeed: 1.5
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
   deathEffectDelay: 1
+  roomSignal: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 1805d0b6b4a1cc9489f25fe62cc95e0f, type: 2}
   chaseRadius: 4
   attackRadius: 1.5
 --- !u!61 &5852065725710032370
