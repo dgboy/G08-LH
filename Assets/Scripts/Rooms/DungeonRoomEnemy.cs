@@ -36,6 +36,7 @@ public class DungeonRoomEnemy : DungeonRoom {
                 ChangeActivation(pots[i], true);
             }
             CloseDoors();
+            virtualCamera.SetActive(true);
         }
     }
     public override void OnTriggerExit2D(Collider2D other) {
@@ -46,6 +47,7 @@ public class DungeonRoomEnemy : DungeonRoom {
             for (int i = 0; i < pots.Length; i++) {
                 ChangeActivation(pots[i], false);
             }
+            virtualCamera.SetActive(false);
         }
     }
 }

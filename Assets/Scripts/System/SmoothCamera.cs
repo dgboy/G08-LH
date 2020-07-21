@@ -10,7 +10,7 @@ public class SmoothCamera : MonoBehaviour
     public Vector2 minPos;
     public Vector2 maxPos;
 
-    public Animator animator;
+    private Animator animator;
 
     void Start() {
         animator = GetComponent<Animator>();

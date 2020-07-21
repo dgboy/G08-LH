@@ -720,6 +720,12 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Ink-Libraries.csproj">
