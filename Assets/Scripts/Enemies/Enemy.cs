@@ -19,12 +19,17 @@ public class Enemy : MonoBehaviour {
     public float deathEffectDelay = 1f;
     public Vector2 homePosition;
     
+    [Header("Death Effects")]
     protected EnemyState currentState;
     protected float health;
 
+    [Header("Death Effects")]
+    public GameSignal roomSignal;
 
     private void Awake() {
         health = maxHealth.initialValue;
+        homePosition = transform.position;
+
     }
 
     private void OnEnable() {
@@ -36,6 +41,10 @@ public class Enemy : MonoBehaviour {
 
         if(health <= 0) {
             DeathEffect();
+            if (roomSignal) {
+                roomSignal.Raise();
+            }
+                
             this.gameObject.SetActive(false);
         }
     }

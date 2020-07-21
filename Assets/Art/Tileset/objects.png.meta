@@ -55,7 +55,7 @@ TextureImporter:
     second: objects_16
   - first:
       213: -6050296909894318094
-    second: objects_17
+    second: stone_big
   - first:
       213: -3201709878794754465
     second: objects_18
@@ -876,13 +876,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_17
+      name: stone_big
       rect:
         serializedVersion: 2
         x: 320
         y: 288
-        width: 96
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -29,16 +29,21 @@ public class LockedDoor : Interactive {
         }
     }
     public void Open() {
-        playerInventory.numberOfKeys--;
+        if (thisDoorType == DoorType.key) {
+            playerInventory.numberOfKeys--;
+        }
+
+        Debug.Log("Non-active The Doors!");
         door.SetActive(false);
+        open = true;
+        
         // clue.Raise(); 
         // doorCollider.enabled = false;
         // closeDoorSprite.enabled = false;
         
         // openDoorSprite.enabled = true;
-        open = true;
     }
     public void Close() {
-        
+        door.SetActive(true);
     }
 }
