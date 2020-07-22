@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
     public Inventory playerInventory;
     public SpriteRenderer reseiveItemSprite;
     public GameSignal painSignal;
+    public GameObject projectile;
 
     [Header("Invulnerable Frames")]
     public Color flash;
@@ -51,6 +52,9 @@ public class Player : MonoBehaviour {
 
         if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger) {
             StartCoroutine(AttackCo());
+        }
+        else if(Input.GetButtonDown("Weapon 2") && currentState != PlayerState.attack && currentState != PlayerState.stagger) {
+            StartCoroutine(SecondAttackCo());
         }
         else if(currentState == PlayerState.walk || currentState != PlayerState.stagger && currentState != PlayerState.interact) {
             Move();
@@ -96,6 +100,17 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void MakeArrow() {
+        Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        Debug.Log(temp);
+        Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+        arrow.Setup(temp, ChooseArrowDirection());
+    }
+    Vector3 ChooseArrowDirection() {
+        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
+    }
+
 
     private IEnumerator AttackCo() {
         animator.SetBool("attacking", true);
@@ -103,6 +118,19 @@ public class Player : MonoBehaviour {
         yield return null;
         
         animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(.3f);
+        
+        if(currentState != PlayerState.interact) {
+            currentState = PlayerState.walk;
+        }
+    }
+    private IEnumerator SecondAttackCo() {
+        // animator.SetBool("attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        
+        MakeArrow();
+        // animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
         
         if(currentState != PlayerState.interact) {

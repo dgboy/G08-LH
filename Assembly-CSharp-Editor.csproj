@@ -270,6 +270,9 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="GitHub.Api.45">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Api.45.dll</HintPath>
  </Reference>
@@ -663,6 +666,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Monetization">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
  </Reference>
@@ -693,6 +699,9 @@
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
@@ -701,12 +710,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
