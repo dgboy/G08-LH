@@ -2,26 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class MeleeEnemy : Log {
     void Start() {
         health = maxHealth.initialValue;
         homePosition = transform.position;
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        // target = GameObject.FindWithTag("Player").transform;
-        // currentState = EnemyState.idle;
-        // animator.SetBool("wakeUp", true);
-        
     }
-    
+
     protected override void CheckDistance() {
         if(
-            Vector3.Distance(target.position, transform.position) <= chaseRadius &&
-            Vector3.Distance(target.position, transform.position) > attackRadius
+            Vector3.Distance(target.position, transform.position) <= chaseRadius 
+            && Vector3.Distance(target.position, transform.position) > attackRadius
         ) {
-            if(currentState == EnemyState.idle || currentState == EnemyState.walking && currentState != EnemyState.stagger) {
+            if(
+                currentState == EnemyState.idle 
+                || currentState == EnemyState.walking 
+                && currentState != EnemyState.stagger
+            ) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 rigid.MovePosition(temp);
                 ChangeWalkAnimation(temp - transform.position);

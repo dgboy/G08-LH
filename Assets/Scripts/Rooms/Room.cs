@@ -7,6 +7,9 @@ public class Room : MonoBehaviour {
     public Pot[] pots;
     public GameObject virtualCamera;
 
+    void OnDisable() {
+        virtualCamera.SetActive(false);
+    }
 
     public virtual void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger) {
