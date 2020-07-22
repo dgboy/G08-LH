@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Log : Enemy {
-
+    [Header("Target")]
+    public Transform target;
     public float chaseRadius = 4.0f;
     public float attackRadius = 1.2f;
 
     protected Rigidbody2D rigid;
     protected Animator animator;
-    protected Transform target;
 
     void Start() {
         rigid = GetComponent<Rigidbody2D>();

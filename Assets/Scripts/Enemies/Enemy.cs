@@ -17,33 +17,34 @@ public class Enemy : MonoBehaviour {
     public int attackDamage = 1;
     public float moveSpeed = 1.5f;
     public Vector2 homePosition;
-
-    protected float health;
-    protected EnemyState currentState;
+    public GameSignal roomSignal;
+    public LootTable thisLoot;
     
     [Header("Death Effects")]
     public GameObject deathEffect;
-    public float deathEffectDelay = 1f;
+    protected float deathEffectDelay = 1f;
 
-    public GameSignal roomSignal;
-    public LootTable thisLoot;
+    protected float health;
+    protected EnemyState currentState;
 
-    private void Awake() {
+
+    protected void Awake() {
         health = maxHealth.initialValue;
         homePosition = transform.position;
-
     }
 
-    private void OnEnable() {
+    protected void OnEnable() {
         health = maxHealth.initialValue;
         transform.position = homePosition;
         currentState = EnemyState.idle;
     }
 
     public void TakeDamage(float damage) {
+        Debug.Log("Damage!");
         health -= damage;
 
         if(health <= 0) {
+        Debug.Log("Dead!");
             DeathEffect();
             MakeLoot();
             this.gameObject.SetActive(false);
