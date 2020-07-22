@@ -24,10 +24,7 @@ public class Player : MonoBehaviour {
     public Inventory playerInventory;
     public SpriteRenderer reseiveItemSprite;
 
-    public GameObject projectile;
     public GameSignal painSignal;
-    public GameSignal decreaseMagic;
-
     [Header("Invulnerable Frames")]
     public Color flash;
     public Color regular;
@@ -35,6 +32,12 @@ public class Player : MonoBehaviour {
     public int numberOfFlashes;
     public Collider2D trigger;
     public SpriteRenderer mySprite;
+
+    [Header("Projectile Stuff")]
+    public GameObject projectile;
+    public GameSignal decreaseMagic;
+    public Item Bow;
+
 
     void Start() {
         currentState = PlayerState.walk;
@@ -63,7 +66,9 @@ public class Player : MonoBehaviour {
             && currentState != PlayerState.attack 
             && currentState != PlayerState.stagger
         ) {
-            StartCoroutine(SecondAttackCo());
+            if (playerInventory.CheckForItem(Bow)) {
+                StartCoroutine(SecondAttackCo());
+            }
         } else if(
             currentState == PlayerState.walk 
             || currentState != PlayerState.stagger 

@@ -20,6 +20,13 @@ public class Inventory : ScriptableObject, ISerializationCallbackReceiver {
         currentMagic -= magicCost;
     }
 
+    public bool CheckForItem(Item item) {
+        if(items.Contains(item)) {
+            return true;
+        }
+        return false;
+    }
+
     public void OnAfterDeserialize() {
         numberOfKeys = 0;
         coins = 0;
