@@ -9,6 +9,8 @@ public class Inventory : ScriptableObject, ISerializationCallbackReceiver {
     public List<Item> items = new List<Item>();
     public int numberOfKeys = 0;
     public int coins = 0;
+    public float maxMagic = 10;
+    public float currentMagic = 10;
 
     public Vector2 defaultValue;
 
