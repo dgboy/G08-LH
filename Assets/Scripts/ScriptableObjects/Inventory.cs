@@ -10,9 +10,15 @@ public class Inventory : ScriptableObject, ISerializationCallbackReceiver {
     public int numberOfKeys = 0;
     public int coins = 0;
     public float maxMagic = 10;
-    public float currentMagic = 10;
+    public float currentMagic;
 
-    public Vector2 defaultValue;
+    public void OnEnable() {
+        currentMagic = maxMagic;
+    }
+
+    public void DecreaseMagic(float magicCost) {
+        currentMagic -= magicCost;
+    }
 
     public void OnAfterDeserialize() {
         numberOfKeys = 0;

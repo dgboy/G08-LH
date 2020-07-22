@@ -5,10 +5,21 @@ using UnityEngine;
 public class Arrow : MonoBehaviour {
     public float speed = 5;
     public Rigidbody2D myRigidbody;
+    public float lifetime;
+    private float lifetimeCounter;
+    public float magicCost;
 
-    // void Start() {
-    //     myRigidbody = GetComponent<Rigidbody2D>();
-    // }
+    void Start() {
+        lifetimeCounter = lifetime;
+        // myRigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    void Update() {
+        lifetimeCounter -= Time.deltaTime;
+        if(lifetimeCounter <= 0) {
+            Destroy(this.gameObject);
+        }
+    }
 
     public void Setup(Vector2 velocity, Vector3 direction) {
         myRigidbody.velocity = velocity.normalized * speed;
