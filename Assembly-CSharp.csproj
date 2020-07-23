@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\System\PauseManager.cs" />
      <Compile Include="Assets\Scripts\System\SignalListener.cs" />
      <Compile Include="Assets\Scripts\System\SmoothCamera.cs" />
+     <Compile Include="Assets\Scripts\TimelineManager.cs" />
      <Compile Include="Assets\Scripts\zzz\DialogNPC.cs" />
      <Compile Include="Assets\Scripts\zzz\RandomMovement.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
