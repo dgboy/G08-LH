@@ -17,4 +17,4 @@ MonoBehaviour:
   numberOfKeys: 0
   coins: 0
   maxMagic: 10
-  currentMagic: 12
+  currentMagic: 10

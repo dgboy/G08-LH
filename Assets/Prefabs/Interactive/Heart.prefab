@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -59,6 +60,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -143,4 +145,4 @@ MonoBehaviour:
   powerUpSignal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
   playerHealth: {fileID: 11400000, guid: 03ddba860889b104587098272dbda747, type: 2}
   heartContainers: {fileID: 11400000, guid: 574739076d1d94247ab2f00421db4070, type: 2}
-  amountToIncrease: 2
+  healPower: 2

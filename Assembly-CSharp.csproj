@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\System\GuiHandler.cs" />
      <Compile Include="Assets\Scripts\System\MagicManager.cs" />
      <Compile Include="Assets\Scripts\System\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\System\PauseManager.cs" />
      <Compile Include="Assets\Scripts\System\SignalListener.cs" />
      <Compile Include="Assets\Scripts\System\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\zzz\DialogNPC.cs" />
