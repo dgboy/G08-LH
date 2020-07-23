@@ -8,7 +8,7 @@ public class Sign : Interactive {
     public Text dialogText;
     public string dialog;
 
-    void Update() {
+    public virtual void Update() {
         if(playerInRange) {
             if(dialogBox.activeInHierarchy && Input.GetButtonDown("Check")) {
                 dialogBox.SetActive(false);
