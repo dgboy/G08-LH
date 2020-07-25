@@ -11,21 +11,21 @@ public enum PlayerState {
 }
 
 public class Player : MonoBehaviour {
-
-    private Vector3 movement;
     public PlayerState currentState;
-    private Rigidbody2D myRigid;
-    private Animator animator;
     public float speed = 15.0f;
-
     public FloatValue currentHealth;
     public GameSignal healthSignal;
     public VectorValue startPosition;
     public Inventory playerInventory;
     public SpriteRenderer reseiveItemSprite;
 
-    public GameSignal painSignal;
+    [Header("Projectile Stuff")]
+    public GameObject projectile;
+    public GameSignal decreaseMagic;
+    public Item Bow;
+
     [Header("Invulnerable Frames")]
+    public GameSignal painSignal;
     public Color flash;
     public Color regular;
     public float flashDuration;
@@ -33,11 +33,9 @@ public class Player : MonoBehaviour {
     public Collider2D trigger;
     public SpriteRenderer mySprite;
 
-    [Header("Projectile Stuff")]
-    public GameObject projectile;
-    public GameSignal decreaseMagic;
-    public Item Bow;
-
+    private Vector3 movement;
+    private Rigidbody2D myRigid;
+    private Animator animator;
 
     void Start() {
         currentState = PlayerState.walk;

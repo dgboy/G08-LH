@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Vector Value", fileName = "Vector Value")]
-public class VectorValue : ScriptableObject, ISerializationCallbackReceiver {
+[System.Serializable]
+public class VectorValue : ScriptableObject {
     public Vector2 initialValue;
     public Vector2 defaultValue;
 

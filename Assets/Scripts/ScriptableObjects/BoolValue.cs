@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Bool Value", fileName = "Bool Value")]
-public class BoolValue : ScriptableObject, ISerializationCallbackReceiver {
+[System.Serializable]
+public class BoolValue : ScriptableObject {
     public bool runtimeValue;
     public bool defaultValue;
 
