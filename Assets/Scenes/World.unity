@@ -4801,6 +4801,29 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2787562957495163947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &311193215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5965942429536869800, guid: a1da4c5199b62cb44ae15b4ceb39683f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2787562957495163947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &311193216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311193215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9eaf68ec7357a4c901afc5def4c490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blankInventorySlot: {fileID: 190731716090712939, guid: 9ade51ca72fb57d42b503c25105e080d,
+    type: 3}
+  inventoryPanel: {fileID: 432219970}
+  descriptionText: {fileID: 567508992}
+  useButton: {fileID: 359262596}
 --- !u!1001 &317854548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6118,6 +6141,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 910713659414261909}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &567508992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+    type: 3}
+  m_PrefabInstance: {fileID: 904328337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &569006594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6962771086676876788, guid: dd7389d83517d9b408e7b8a662c7bbff,
@@ -8159,7 +8194,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974972, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_Name
-      value: Text Item Discription
+      value: Text Item Description
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974973, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}

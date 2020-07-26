@@ -52,7 +52,10 @@
      <Compile Include="Assets\Scripts\Enemies\PatrolLog.cs" />
      <Compile Include="Assets\Scripts\Enemies\RockProjectile.cs" />
      <Compile Include="Assets\Scripts\Enemies\TurretEnemy.cs" />
-     <Compile Include="Assets\Scripts\InventoryItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
+     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
      <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
      <Compile Include="Assets\Scripts\Objects\Chest.cs" />
