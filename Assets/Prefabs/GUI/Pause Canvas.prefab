@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 2787562957010984726}
+  inventoryPanel: {fileID: 5965942429536869800}
   mainMenu: MainMenu
 --- !u!1 &2787562957992753965
 GameObject:
