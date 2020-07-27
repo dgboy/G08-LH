@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\Inventory\MagicReaction.cs" />
+     <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
      <Compile Include="Assets\Scripts\Objects\Arrow.cs" />

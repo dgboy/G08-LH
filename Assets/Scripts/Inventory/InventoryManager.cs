@@ -14,7 +14,8 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject useButton;
 
-    void Start() {
+    void OnEnable() {
+        ClearInventorySlots();
         MakeInventorySlots();
         SetTextAndButton("", false);
     }
