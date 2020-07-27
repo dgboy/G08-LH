@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Inventory\HealthReaction.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventorySaver.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\Inventory\MagicReaction.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
