@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogNPC : Interactive {
-    // [SerializeField] private TextAsset myDialog;
-    // [SerializeField] private TextAssetValue dialogValue;
+    [SerializeField] private TextAsset myDialog;
+    [SerializeField] private TextAssetValue dialogValue;
     // [SerializeField] private Notification branchingDialogNotification;
 
     void Start() {
@@ -12,11 +12,12 @@ public class DialogNPC : Interactive {
     }
 
     void Update() {
-        // if (playerInRange) {
-        //     if(Input.GetButtonDown("Check")) {
-        //         dialogValue.value = myDialog;
-        //         // branchingDialogNotification.Raise();
-        //     }
-        // }
+        if (playerInRange) {
+            if(Input.GetButtonDown("Check")) {
+                dialogValue.value = myDialog;
+                // branchingDialogNotification.Raise();
+                clue.Raise();
+            }
+        }
     }
 }

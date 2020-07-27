@@ -13,8 +13,11 @@ public enum PlayerState {
 public class Player : MonoBehaviour {
     public PlayerState currentState;
     public float speed = 15.0f;
-    public FloatValue currentHealth;
-    public GameSignal healthSignal;
+
+    // TODO HEALTH
+    // public FloatValue currentHealth;
+    // public GameSignal healthSignal;
+    
     public VectorValue startPosition;
     public Inventory playerInventory;
     public SpriteRenderer reseiveItemSprite;
@@ -95,14 +98,17 @@ public class Player : MonoBehaviour {
     }
 
     public void Knock(Rigidbody2D myRigid, float knockTime, float damage) {
-        currentHealth.runtimeValue -= damage;
-        healthSignal.Raise();
+        StartCoroutine(KnockCo(knockTime));
 
-        if(currentHealth.runtimeValue > 0) {
-            StartCoroutine(KnockCo(knockTime));
-        } else {
-            this.gameObject.SetActive(false);
-        }
+        // TODO HEALTH
+        // currentHealth.runtimeValue -= damage;
+        // healthSignal.Raise();
+
+        // if(currentHealth.runtimeValue > 0) {
+        //     StartCoroutine(KnockCo(knockTime));
+        // } else {
+        //     this.gameObject.SetActive(false);
+        // }
     }
 
     public void RaiseItem() {

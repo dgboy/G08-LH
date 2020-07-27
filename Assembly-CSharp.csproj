@@ -45,6 +45,8 @@
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\SixtyFPS.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\TileSpin.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtCamera.cs" />
+     <Compile Include="Assets\Reusable Components\GenericDamage.cs" />
+     <Compile Include="Assets\Reusable Components\GenericHealth.cs" />
      <Compile Include="Assets\Scripts\Enemies\AreaLog.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\Log.cs" />
@@ -61,6 +63,7 @@
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
+     <Compile Include="Assets\Scripts\NPC\BranchingDialog.cs" />
      <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
      <Compile Include="Assets\Scripts\Objects\Chest.cs" />
      <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
@@ -81,6 +84,7 @@
      <Compile Include="Assets\Scripts\Player\HeartManager.cs" />
      <Compile Include="Assets\Scripts\Player\Knockback.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Rooms\DungeonRoom.cs" />
      <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
      <Compile Include="Assets\Scripts\Rooms\OverworldRoom.cs" />

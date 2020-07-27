@@ -249,9 +249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 1d6f8a7611762be46ba24a0ad5310115, type: 2}
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog: 
+  dialogBox: {fileID: 1737816683056229427, guid: 92225ca2aaec1124a96879633f9d14b3,
+    type: 3}
+  dialogText: {fileID: 1112701753745352524, guid: f32d90ee5f9afd147afc972d34372e52,
+    type: 3}
+  dialog: '?'
   bounds: {fileID: 4729247693763326145}
   speed: 5
   moveTime: 3

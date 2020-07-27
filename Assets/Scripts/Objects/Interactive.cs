@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactive : MonoBehaviour {
-
     public GameSignal clue;
     protected bool playerInRange = false;
     protected bool blocked = false;
