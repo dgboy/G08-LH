@@ -10,28 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a03f130c9ea77746b3293a066ea2aeb, type: 3}
-  m_Name: Apple
+  m_Name: Magic Potion
   m_EditorClassIdentifier: 
-  itemName: "\u042F\u0431\u043B\u043E\u043A\u043E"
-  itemDescription: "\u0421\u0432\u0435\u0436\u0435\u0435 \u0438 \u0441\u043E\u0447\u043D\u043E\u0435.
-    \u0422\u043E\u043B\u044C\u043A\u043E \u043D\u0435\u0434\u0430\u0432\u043D\u043E
-    \u0441\u043E\u0440\u0432\u0430\u043B."
-  itemImage: {fileID: 5508725064705088119, guid: c3cf0c7e639c40a42bb139735b1f395b,
-    type: 3}
-  numberHeld: 10
+  itemName: "\u041A\u0440\u0438\u0441\u0442\u0430\u043B"
+  itemDescription: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442
+    \u043C\u0430\u0433\u0438\u044E."
+  itemImage: {fileID: 21300000, guid: 7fc045d5b1c7a49b89d11b409406336b, type: 3}
+  numberHeld: 2
   usable: 1
   unique: 0
   thisEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705823131560594140, guid: 98cff31f495ce7f408c36ffdb80d9b73,
+      - m_Target: {fileID: -5683938130902422075, guid: 0ab680577732c9e4c91ddc4a294724ca,
           type: 3}
         m_MethodName: Use
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
