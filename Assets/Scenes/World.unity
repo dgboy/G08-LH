@@ -4819,9 +4819,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9eaf68ec7357a4c901afc5def4c490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInventory: {fileID: 11400000, guid: 9844ff4a3f780734eb9ce62c3f3bb5a7, type: 2}
+  currentItem: {fileID: 0}
   blankInventorySlot: {fileID: 190731716090712939, guid: 9ade51ca72fb57d42b503c25105e080d,
     type: 3}
   inventoryPanel: {fileID: 432219970}
+  itemNameText: {fileID: 913666769}
   descriptionText: {fileID: 567508992}
   useButton: {fileID: 359262596}
 --- !u!1001 &317854548
@@ -5139,7 +5142,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 359262599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 311193216}
+        m_MethodName: UseButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &359262599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5937,7 +5951,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 5}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &432219972
 MonoBehaviour:
@@ -8094,17 +8108,17 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_text
-      value: Item Description
+      value: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 16
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8139,7 +8153,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textAlignment
-      value: 272
+      value: 264
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8149,7 +8163,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8164,7 +8178,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_wordWrappingRatios
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8190,6 +8204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.w
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4289056767
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974972, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8303,6 +8322,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df92672639b5a64ab710781f87eb390, type: 3}
+--- !u!114 &913666769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+    type: 3}
+  m_PrefabInstance: {fileID: 954130703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &954130703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8313,17 +8344,17 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_text
-      value: Item Name
+      value: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -8368,7 +8399,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974972, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -109135,7 +109166,7 @@ PrefabInstance:
     - target: {fileID: 5965942429536869800, guid: a1da4c5199b62cb44ae15b4ceb39683f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1da4c5199b62cb44ae15b4ceb39683f, type: 3}
@@ -109298,7 +109329,7 @@ PrefabInstance:
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.924276
+      value: 15.957684
       objectReference: {fileID: 0}
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}

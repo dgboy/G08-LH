@@ -5,9 +5,12 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour {
     public PlayerInventory playerInventory;
+    public InventoryItem currentItem;
+
     [Header("Inventory Information")]
     [SerializeField] private GameObject blankInventorySlot;
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject useButton;
 
@@ -18,6 +21,7 @@ public class InventoryManager : MonoBehaviour {
 
     void SetTextAndButton(string description, bool buttonActive) {
         descriptionText.text = description;
+        itemNameText.text = description;
         if (buttonActive) {
             useButton.SetActive(true);
         } else {
@@ -40,6 +44,19 @@ public class InventoryManager : MonoBehaviour {
                     newSlot.Setup(playerInventory.myInventory[i], this);
                 }
             }
+        }
+    }
+
+    public void SetupDesciptionAndButton(string newDescription, string newItemNameText, bool isButtonUsable, InventoryItem newItem) {
+        currentItem = newItem;
+        descriptionText.text = newDescription;
+        itemNameText.text = newItemNameText;
+        useButton.SetActive(isButtonUsable);
+    }
+
+    public void UseButtonPressed() {
+        if (currentItem) {
+            currentItem.Use();
         }
     }
 }

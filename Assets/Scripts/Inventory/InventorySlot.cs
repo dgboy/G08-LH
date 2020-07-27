@@ -6,9 +6,6 @@ using TMPro;
 
 public class InventorySlot : MonoBehaviour {
     [Header("Variables from the item")]
-    // public Sprite itemSprite;
-    // public int numberHeld;
-    // public string itemDescription;
     public InventoryItem thisItem;
     public InventoryManager thisManager;
 
@@ -22,11 +19,13 @@ public class InventorySlot : MonoBehaviour {
 
         if (thisItem) {
             itemImage.sprite = thisItem.itemImage;
-            itemNumberText.text = "" + thisItem.numberHeld;
+            itemNumberText.text = (thisItem.unique) ? "" : "" + thisItem.numberHeld;
         }
-    } 
+    }
 
-    void Start() {
-        
+    public void ClickOn() {
+        if (thisItem) {
+            thisManager.SetupDesciptionAndButton(thisItem.itemDescription, thisItem.itemName, thisItem.usable, thisItem);
+        }
     }
 }
