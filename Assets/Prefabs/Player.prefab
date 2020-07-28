@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2034872928795216697}
   - component: {fileID: 2862622738220496162}
   - component: {fileID: 6614792587194516108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Received Item
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -120,7 +120,8 @@ GameObject:
   - component: {fileID: 2856092686552196387}
   - component: {fileID: 2856092686552196396}
   - component: {fileID: 2856092686552196397}
-  m_Layer: 0
+  - component: {fileID: 633203293}
+  m_Layer: 10
   m_Name: HitBox Right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -183,9 +184,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea070c108d74e741acebfc5c404e863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 4
+  thrust: 2
   knockTime: 0.2
+  otherTag: enemy
+--- !u!114 &633203293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856092686552196386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27639bfe27efa824b9bf77cec8a064f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 1
+  otherTag: enemy
 --- !u!1 &2856092687328428297
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +217,7 @@ GameObject:
   - component: {fileID: 2856092687328428342}
   - component: {fileID: 6006243182199615514}
   - component: {fileID: 7761968271719680641}
+  - component: {fileID: 744271932}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -362,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 15
+  speed: 10
   startPosition: {fileID: 11400000, guid: 382a918c15c765c4b8188a44b399f043, type: 2}
   playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
   reseiveItemSprite: {fileID: 2862622738220496162}
@@ -375,7 +391,7 @@ MonoBehaviour:
   regular: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.15
   numberOfFlashes: 3
-  trigger: {fileID: 0}
+  trigger: {fileID: 4746513712350809977}
   mySprite: {fileID: 2856092687328428299}
 --- !u!114 &6006243182199615514
 MonoBehaviour:
@@ -418,6 +434,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contextClue: {fileID: 7958929943298140499}
   clueActive: 0
+--- !u!114 &744271932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856092687328428297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: 7d5e8b055955e4c45befb81254e8ada2, type: 2}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
+    m_PropagationSpeed: 343
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_IgnoreTag: 
+  m_UseImpactDirection: 0
+  m_ScaleImpactWithMass: 0
+  m_ScaleImpactWithSpeed: 0
 --- !u!1 &2856092687422445439
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +494,8 @@ GameObject:
   - component: {fileID: 2856092687422445432}
   - component: {fileID: 2856092687422445433}
   - component: {fileID: 2856092687422445434}
-  m_Layer: 0
+  - component: {fileID: 2042944910}
+  m_Layer: 10
   m_Name: HitBox Down
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -492,9 +558,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea070c108d74e741acebfc5c404e863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 4
+  thrust: 2
   knockTime: 0.2
+  otherTag: enemy
+--- !u!114 &2042944910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856092687422445439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27639bfe27efa824b9bf77cec8a064f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 1
+  otherTag: enemy
 --- !u!1 &2856092687817201131
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +586,8 @@ GameObject:
   - component: {fileID: 2856092687817201044}
   - component: {fileID: 2856092687817201045}
   - component: {fileID: 2856092687817201046}
-  m_Layer: 0
+  - component: {fileID: 1135833117}
+  m_Layer: 10
   m_Name: HitBox Left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -569,9 +650,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea070c108d74e741acebfc5c404e863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 4
+  thrust: 2
   knockTime: 0.2
+  otherTag: enemy
+--- !u!114 &1135833117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856092687817201131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27639bfe27efa824b9bf77cec8a064f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 1
+  otherTag: enemy
 --- !u!1 &2856092687958256457
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +678,8 @@ GameObject:
   - component: {fileID: 2856092687958256458}
   - component: {fileID: 2856092687958256459}
   - component: {fileID: 2856092687958256500}
-  m_Layer: 0
+  - component: {fileID: 510650690}
+  m_Layer: 10
   m_Name: HitBox Up
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -646,9 +742,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea070c108d74e741acebfc5c404e863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 4
+  thrust: 2
   knockTime: 0.2
+  otherTag: enemy
+--- !u!114 &510650690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856092687958256457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27639bfe27efa824b9bf77cec8a064f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 1
+  otherTag: enemy
 --- !u!1 &3643805674513424303
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +1006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4258241864083866799}
   - component: {fileID: 8939001612399248312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Context Clue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

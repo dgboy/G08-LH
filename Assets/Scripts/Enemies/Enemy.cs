@@ -39,32 +39,40 @@ public class Enemy : MonoBehaviour {
         currentState = EnemyState.idle;
     }
 
-    public void TakeDamage(float damage) {
-        Debug.Log("Damage!");
-        health -= damage;
+    // public void TakeDamage(float damage) {
+    //     Debug.Log("Damage!");
+    //     health -= damage;
 
-        if(health <= 0) {
-            DeathEffect();
-            MakeLoot();
-            this.gameObject.SetActive(false);
+    //     if(health <= 0) {
+    //         DeathEffect();
+    //         MakeLoot();
+    //         this.gameObject.SetActive(false);
 
-            if (roomSignal) {
-                roomSignal.Raise();
-            }
-        }
-    }
+    //         if (roomSignal) {
+    //             roomSignal.Raise();
+    //         }
+    //     }
+    // }
 
     public void ChangeState(EnemyState newState) {
         if(currentState != newState) {
             currentState = newState;
         }
     }
-    public void Knock(Rigidbody2D myRigid, float knockTime, float damage) {
-        TakeDamage(damage);
+    public void Knock(Rigidbody2D myRigid, float knockTime) {
+        StartCoroutine(KnockCo(myRigid, knockTime));
+        // // TakeDamage(damage);
         
-        if(this.health > 0) {
-            StartCoroutine(KnockCo(myRigid, knockTime));
-        }
+        // if(temp.currentHealth > 0) {
+        // } else {
+        //     DeathEffect();
+        //     MakeLoot();
+        //     this.gameObject.SetActive(false);
+
+        //     if (roomSignal) {
+        //         roomSignal.Raise();
+        //     }
+        // }
     }
 
     private IEnumerator KnockCo(Rigidbody2D myRigid, float knockTime) {

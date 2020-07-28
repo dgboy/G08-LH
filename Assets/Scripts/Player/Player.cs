@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum PlayerState {
     idle,
@@ -36,23 +37,23 @@ public class Player : MonoBehaviour {
     public Collider2D trigger;
     public SpriteRenderer mySprite;
 
+    private Rigidbody2D myRigidbody;
+    private Animator myAnimator;
     private Vector3 movement;
-    private Rigidbody2D myRigid;
-    private Animator animator;
 
     void Start() {
         currentState = PlayerState.walk;
-        animator = GetComponent<Animator>();
-        myRigid = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myRigidbody = GetComponent<Rigidbody2D>();
 
         transform.position = startPosition.initialValue;
 
-        animator.SetFloat("moveX", 0);
-        animator.SetFloat("moveY", -1);
+        myAnimator.SetFloat("moveX", 0);
+        myAnimator.SetFloat("moveY", -1);
     }
 
     void Update() {
-        movement = Vector3.zero;
+        // movement = Vector3.zero;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -83,21 +84,21 @@ public class Player : MonoBehaviour {
         if(movement != Vector3.zero) {
             movement.x = Mathf.Round(movement.x);
             movement.y = Mathf.Round(movement.y);
-            animator.SetFloat("moveX", movement.x);
-            animator.SetFloat("moveY", movement.y);
-            animator.SetBool("moving", true);
+            myAnimator.SetFloat("moveX", movement.x);
+            myAnimator.SetFloat("moveY", movement.y);
+            myAnimator.SetBool("moving", true);
         } else {
-            animator.SetBool("moving", false);
+            myAnimator.SetBool("moving", false);
         }
         // Избавляемся от ускорения ходьбы по диагонали 
         movement.Normalize();
         
-        myRigid.MovePosition(
+        myRigidbody.MovePosition(
             transform.position + movement * speed * Time.deltaTime
         );
     }
 
-    public void Knock(Rigidbody2D myRigid, float knockTime, float damage) {
+    public void Knock(float knockTime) {
         StartCoroutine(KnockCo(knockTime));
 
         // TODO HEALTH
@@ -113,11 +114,11 @@ public class Player : MonoBehaviour {
 
     public void RaiseItem() {
         if (currentState != PlayerState.interact) {
-            animator.SetBool("receive_item", true);
+            myAnimator.SetBool("receive_item", true);
             currentState = PlayerState.interact;
             reseiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
         } else {
-            animator.SetBool("receive_item", false);
+            myAnimator.SetBool("receive_item", false);
             currentState = PlayerState.idle;
             reseiveItemSprite.sprite = null;
         }
@@ -125,7 +126,7 @@ public class Player : MonoBehaviour {
 
     private void MakeArrow() {
         if (playerInventory.currentMagic > 0) {
-            Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+            Vector2 temp = new Vector2(myAnimator.GetFloat("moveX"), myAnimator.GetFloat("moveY"));
             Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
             arrow.Setup(temp, ChooseArrowDirection());
             playerInventory.DecreaseMagic(arrow.magicCost);
@@ -135,17 +136,17 @@ public class Player : MonoBehaviour {
     }
 
     Vector3 ChooseArrowDirection() {
-        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        float temp = Mathf.Atan2(myAnimator.GetFloat("moveY"), myAnimator.GetFloat("moveX")) * Mathf.Rad2Deg;
         return new Vector3(0, 0, temp);
     }
 
 
     private IEnumerator AttackCo() {
-        animator.SetBool("attacking", true);
+        myAnimator.SetBool("attacking", true);
         currentState = PlayerState.attack;
         yield return null;
         
-        animator.SetBool("attacking", false);
+        myAnimator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
         
         if(currentState != PlayerState.interact) {
@@ -166,12 +167,12 @@ public class Player : MonoBehaviour {
     private IEnumerator KnockCo(float knockTime) {
         painSignal.Raise();
 
-        if(myRigid != null) {
+        if(myRigidbody != null) {
             StartCoroutine(FlashCo()); 
             yield return new WaitForSeconds(knockTime);
 
             currentState = PlayerState.idle;
-            myRigid.velocity = Vector2.zero;
+            myRigidbody.velocity = Vector2.zero;
         }
     }
     private IEnumerator FlashCo() {

@@ -22,7 +22,7 @@ public class GenericHealth : MonoBehaviour {
 
     public virtual void Damage(float amountToDamage) {
         currentHealth -= amountToDamage;
-        if(currentHealth < maxHealth.runtimeValue) {
+        if(currentHealth < 0) {
             currentHealth = 0;
         }
     }

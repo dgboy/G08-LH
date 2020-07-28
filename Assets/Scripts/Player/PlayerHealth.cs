@@ -10,12 +10,4 @@ public class PlayerHealth : GenericHealth {
         maxHealth.runtimeValue = currentHealth;
         healthSignal.Raise();
     }
-
-    void Start() {
-        
-    }
-
-    void Update() {
-        
-    }
 }

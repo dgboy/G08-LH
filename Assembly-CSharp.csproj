@@ -36,6 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Lib\GGEZ\PerfectPixelCamera\Demo\Assets\ZoomDemo.cs" />
      <Compile Include="Assets\Lib\GGEZ\PerfectPixelCamera\Scripts\PerfectPixelCamera.cs" />
      <Compile Include="Assets\Lib\Ink\Example\Scripts\BasicInkExample.cs" />
@@ -45,8 +52,6 @@
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\SixtyFPS.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\TileSpin.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtCamera.cs" />
-     <Compile Include="Assets\Reusable Components\GenericDamage.cs" />
-     <Compile Include="Assets\Reusable Components\GenericHealth.cs" />
      <Compile Include="Assets\Scripts\Enemies\AreaLog.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\Log.cs" />
@@ -85,6 +90,10 @@
      <Compile Include="Assets\Scripts\Player\Knockback.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Reusable Components\DamageOnContact.cs" />
+     <Compile Include="Assets\Scripts\Reusable Components\DestroyOverTime.cs" />
+     <Compile Include="Assets\Scripts\Reusable Components\GenericDamage.cs" />
+     <Compile Include="Assets\Scripts\Reusable Components\GenericHealth.cs" />
      <Compile Include="Assets\Scripts\Rooms\DungeonRoom.cs" />
      <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
      <Compile Include="Assets\Scripts\Rooms\OverworldRoom.cs" />
@@ -128,6 +137,7 @@
      <None Include="Assets\Lib\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtUI.shader" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Lib\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Lib\GGEZ\PerfectPixelCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -317,6 +327,9 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+        <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
         <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
