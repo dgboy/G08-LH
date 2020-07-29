@@ -8,7 +8,8 @@ public enum PlayerState {
     walk,
     attack,
     interact,
-    stagger
+    stagger, 
+    ability
 }
 
 public class Player : MonoBehaviour {
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour {
     public VectorValue startPosition;
     public Inventory playerInventory;
     public SpriteRenderer reseiveItemSprite;
-
+    
     [Header("Projectile Stuff")]
     public GameObject projectile;
     public GameSignal decreaseMagic;
@@ -37,19 +38,21 @@ public class Player : MonoBehaviour {
     public Collider2D trigger;
     public SpriteRenderer mySprite;
 
-    private Rigidbody2D myRigidbody;
-    private Animator myAnimator;
+    [SerializeField] private GenericAbility currentAbility;
+    private Vector3 facingDirection = Vector2.down;
+    private Rigidbody2D rigidbody;
+    private Animator animator;
     private Vector3 movement;
 
     void Start() {
         currentState = PlayerState.walk;
-        myAnimator = GetComponent<Animator>();
-        myRigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
 
         transform.position = startPosition.initialValue;
 
-        myAnimator.SetFloat("moveX", 0);
-        myAnimator.SetFloat("moveY", -1);
+        animator.SetFloat("moveX", 0);
+        animator.SetFloat("moveY", -1);
     }
 
     void Update() {
@@ -68,9 +71,12 @@ public class Player : MonoBehaviour {
             && currentState != PlayerState.attack 
             && currentState != PlayerState.stagger
         ) {
-            if (playerInventory.CheckForItem(Bow)) {
-                StartCoroutine(SecondAttackCo());
+            if(currentAbility) {
+                StartCoroutine(AbilityCo(currentAbility.duration));
             }
+            // if (playerInventory.CheckForItem(Bow)) {
+            //     StartCoroutine(SecondAttackCo());
+            // }
         } else if(
             currentState == PlayerState.walk 
             || currentState != PlayerState.stagger 
@@ -78,22 +84,23 @@ public class Player : MonoBehaviour {
         ) {
             Move();
         }
+
     }
 
     void Move() {
         if(movement != Vector3.zero) {
             movement.x = Mathf.Round(movement.x);
             movement.y = Mathf.Round(movement.y);
-            myAnimator.SetFloat("moveX", movement.x);
-            myAnimator.SetFloat("moveY", movement.y);
-            myAnimator.SetBool("moving", true);
+            animator.SetFloat("moveX", movement.x);
+            animator.SetFloat("moveY", movement.y);
+            animator.SetBool("moving", true);
         } else {
-            myAnimator.SetBool("moving", false);
+            animator.SetBool("moving", false);
         }
         // Избавляемся от ускорения ходьбы по диагонали 
         movement.Normalize();
         
-        myRigidbody.MovePosition(
+        rigidbody.MovePosition(
             transform.position + movement * speed * Time.deltaTime
         );
     }
@@ -114,11 +121,11 @@ public class Player : MonoBehaviour {
 
     public void RaiseItem() {
         if (currentState != PlayerState.interact) {
-            myAnimator.SetBool("receive_item", true);
+            animator.SetBool("receive_item", true);
             currentState = PlayerState.interact;
             reseiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
         } else {
-            myAnimator.SetBool("receive_item", false);
+            animator.SetBool("receive_item", false);
             currentState = PlayerState.idle;
             reseiveItemSprite.sprite = null;
         }
@@ -126,7 +133,7 @@ public class Player : MonoBehaviour {
 
     private void MakeArrow() {
         if (playerInventory.currentMagic > 0) {
-            Vector2 temp = new Vector2(myAnimator.GetFloat("moveX"), myAnimator.GetFloat("moveY"));
+            Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
             Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
             arrow.Setup(temp, ChooseArrowDirection());
             playerInventory.DecreaseMagic(arrow.magicCost);
@@ -136,17 +143,17 @@ public class Player : MonoBehaviour {
     }
 
     Vector3 ChooseArrowDirection() {
-        float temp = Mathf.Atan2(myAnimator.GetFloat("moveY"), myAnimator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
         return new Vector3(0, 0, temp);
     }
 
 
     private IEnumerator AttackCo() {
-        myAnimator.SetBool("attacking", true);
+        animator.SetBool("attacking", true);
         currentState = PlayerState.attack;
         yield return null;
         
-        myAnimator.SetBool("attacking", false);
+        animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
         
         if(currentState != PlayerState.interact) {
@@ -167,12 +174,12 @@ public class Player : MonoBehaviour {
     private IEnumerator KnockCo(float knockTime) {
         painSignal.Raise();
 
-        if(myRigidbody != null) {
+        if(rigidbody != null) {
             StartCoroutine(FlashCo()); 
             yield return new WaitForSeconds(knockTime);
 
             currentState = PlayerState.idle;
-            myRigidbody.velocity = Vector2.zero;
+            rigidbody.velocity = Vector2.zero;
         }
     }
     private IEnumerator FlashCo() {
@@ -188,5 +195,23 @@ public class Player : MonoBehaviour {
         }
 
         trigger.enabled = true;
+    }
+    private IEnumerator AbilityCo(float duration) {
+        facingDirection = movement;
+        currentAbility.Ability(transform.position, facingDirection, animator, rigidbody);
+        // if (currentAbility) {
+        // } else {
+        //     yield return null;
+        // }
+        currentState = PlayerState.ability;
+        yield return new WaitForSeconds(duration);
+        currentState = PlayerState.idle;
+    }
+
+    bool IsRestrictedState(PlayerState curState) {
+        if(curState == PlayerState.attack || curState == PlayerState.ability) {
+            return true;
+        }
+        return false;
     }
 }
