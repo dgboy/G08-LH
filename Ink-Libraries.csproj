@@ -351,21 +351,6 @@
  <Reference Include="DOTweenEditor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.Api.45">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Api.45.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Logging.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Unity.45">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.UnityShim">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
- </Reference>
- <Reference Include="sfw.net">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/sfw.net.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>

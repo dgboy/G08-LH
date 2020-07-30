@@ -55,8 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lib\GitHub\Editor\ExtensionLoader.cs" />
-     <Compile Include="Assets\Lib\GitHub\Editor\UnityAPIWrapper.cs" />
      <Compile Include="Assets\Lib\Ink\Core\Editor\Compiler\Auto Compiler\InkPostProcessor.cs" />
      <Compile Include="Assets\Lib\Ink\Core\Editor\Compiler\InkCompiler.cs" />
      <Compile Include="Assets\Lib\Ink\Core\Editor\Ink Library\InkFile.cs" />
@@ -75,8 +73,6 @@
      <Compile Include="Assets\Lib\Ink\Tools\Ink Inspector\Editor\InkInspector.cs" />
      <Compile Include="Assets\Lib\Ink\Tools\Player Window\Editor\InkPlayerWindow.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Editor\PixelArtCameraEditor.cs" />
-     <None Include="Assets\Lib\GitHub\Editor\credits.txt" />
-     <None Include="Assets\Lib\GitHub\Editor\eula.txt" />
      <None Include="Assets\Lib\Ink\Tools\File Icons\Editor\Resources\InkDefaultTemplate.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -278,21 +274,6 @@
  </Reference>
  <Reference Include="DOTweenEditor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Api.45">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Api.45.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Logging.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Unity.45">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.UnityShim">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
- </Reference>
- <Reference Include="sfw.net">
- <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/GitHub/Editor/sfw.net.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
