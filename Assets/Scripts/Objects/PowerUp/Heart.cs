@@ -9,10 +9,10 @@ public class Heart : PowerUp {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger) {
-            playerHealth.runtimeValue += healPower;
+            playerHealth.value += healPower;
 
-            if(playerHealth.runtimeValue > heartContainers.runtimeValue * 2f) {
-                playerHealth.runtimeValue = heartContainers.runtimeValue * 2f;
+            if(playerHealth.value > heartContainers.value * 2f) {
+                playerHealth.value = heartContainers.value * 2f;
             }
 
             powerUpSignal.Raise();

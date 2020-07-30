@@ -6,7 +6,7 @@ public class BranchingDialog : MonoBehaviour {
     [SerializeField] private GameObject branchingCanvas;
     [SerializeField] private GameObject dialogPrefab;
     [SerializeField] private GameObject choicePrefab;
-    [SerializeField] private TextAssetValue dialogValue;
+    [SerializeField] private DialogAssetValue dialogValue;
 
     void Start() {
         

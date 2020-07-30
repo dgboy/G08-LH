@@ -7,7 +7,7 @@ public class MagicReaction : MonoBehaviour {
     public GameSignal magicSignal;
 
     public void Use(int amountToIncrease) {
-        playerMagic.runtimeValue += amountToIncrease;
+        playerMagic.value += amountToIncrease;
         magicSignal.Raise();
     }
 }

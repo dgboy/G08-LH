@@ -13,7 +13,7 @@ public class SceneTransition : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger) {
-            positionStorage.initialValue = playerPosition; 
+            positionStorage.value = playerPosition; 
             //other.GetComponent<Animator>().SetFloat("moveY", 1);
             StartCoroutine(FadeCo());
             //SceneManager.LoadScene(sceneToLoad);

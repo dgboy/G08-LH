@@ -15,10 +15,6 @@ public enum PlayerState {
 public class Player : MonoBehaviour {
     public PlayerState currentState;
     public float speed = 15.0f;
-
-    // TODO HEALTH
-    // public FloatValue currentHealth;
-    // public GameSignal healthSignal;
     
     public VectorValue startPosition;
     public Inventory playerInventory;
@@ -48,15 +44,13 @@ public class Player : MonoBehaviour {
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
-
-        transform.position = startPosition.initialValue;
+        transform.position = startPosition.value;
 
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", -1);
     }
 
     void Update() {
-        // movement = Vector3.zero;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -74,9 +68,6 @@ public class Player : MonoBehaviour {
             if(currentAbility) {
                 StartCoroutine(AbilityCo(currentAbility.duration));
             }
-            // if (playerInventory.CheckForItem(Bow)) {
-            //     StartCoroutine(SecondAttackCo());
-            // }
         } else if(
             currentState == PlayerState.walk 
             || currentState != PlayerState.stagger 
@@ -107,16 +98,6 @@ public class Player : MonoBehaviour {
 
     public void Knock(float knockTime) {
         StartCoroutine(KnockCo(knockTime));
-
-        // TODO HEALTH
-        // currentHealth.runtimeValue -= damage;
-        // healthSignal.Raise();
-
-        // if(currentHealth.runtimeValue > 0) {
-        //     StartCoroutine(KnockCo(knockTime));
-        // } else {
-        //     this.gameObject.SetActive(false);
-        // }
     }
 
     public void RaiseItem() {
@@ -152,10 +133,8 @@ public class Player : MonoBehaviour {
         animator.SetBool("attacking", true);
         currentState = PlayerState.attack;
         yield return null;
-        
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
-        
         if(currentState != PlayerState.interact) {
             currentState = PlayerState.walk;
         }
@@ -163,21 +142,17 @@ public class Player : MonoBehaviour {
     private IEnumerator SecondAttackCo() {
         currentState = PlayerState.attack;
         yield return null;
-        
         MakeArrow();
         yield return new WaitForSeconds(.3f);
-        
         if(currentState != PlayerState.interact) {
             currentState = PlayerState.walk;
         }
     }
     private IEnumerator KnockCo(float knockTime) {
         painSignal.Raise();
-
         if(rigidbody != null) {
             StartCoroutine(FlashCo()); 
             yield return new WaitForSeconds(knockTime);
-
             currentState = PlayerState.idle;
             rigidbody.velocity = Vector2.zero;
         }

@@ -1,19 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Float Value", fileName = "Float Value")]
-public class FloatValue : ScriptableObject, ISerializationCallbackReceiver {
-    public float initialValue;
-    
-    // [HideInInspector]
-    public float runtimeValue;
+[CreateAssetMenu(menuName = "Scriptable Objects/Values/Float", fileName = "Float Value")]
+public class FloatValue : ScriptableObject {
+    public float value;
+    [SerializeField] private float defaultValue;
 
-    public void OnAfterDeserialize() {
-        runtimeValue = initialValue;
-    }
-
-    public void OnBeforeSerialize() {
-
+    private void OnEnable() {
+        value = defaultValue;
     }
 }

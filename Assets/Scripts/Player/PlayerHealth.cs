@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : GenericHealth {
-    [SerializeField] private GameSignal healthSignal;
+public class PlayerHealth : Health {
+    [SerializeField] private FlashColor flash;
 
-    public override void Damage(float amountToDamage) {
-        base.Damage(amountToDamage);
-        maxHealth.runtimeValue = currentHealth;
-        healthSignal.Raise();
+    public override void Damage(int damage) {
+        base.Damage(damage);
+        if(currentHealth > 0) {
+            if (flash) {
+                flash.StartFlash();
+            }
+        }
     }
 }

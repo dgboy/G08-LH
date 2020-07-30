@@ -1,19 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Vector Value", fileName = "Vector Value")]
-[System.Serializable]
+[CreateAssetMenu(menuName = "Scriptable Objects/Values/Vector", fileName = "Vector Value")]
 public class VectorValue : ScriptableObject {
-    public Vector2 initialValue;
-    public Vector2 defaultValue;
+    public Vector2 value;
+    [SerializeField] private Vector2 defaultValue;
 
-    public void OnAfterDeserialize() {
-        initialValue = defaultValue;
+    private void OnEnable() {
+        value = defaultValue;
     }
-    
-    public void OnBeforeSerialize() {
-        
-    }
-
 }

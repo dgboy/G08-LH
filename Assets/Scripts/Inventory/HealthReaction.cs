@@ -7,7 +7,7 @@ public class HealthReaction : MonoBehaviour {
     public GameSignal healhSignal;
 
     public void Use(int amountToIncrease) {
-        playerHealth.runtimeValue += amountToIncrease;
+        playerHealth.value += amountToIncrease;
         healhSignal.Raise();
     }
 }

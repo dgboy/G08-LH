@@ -1,19 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Bool Value", fileName = "Bool Value")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Values/Bool", fileName = "Bool Value")]
 [System.Serializable]
 public class BoolValue : ScriptableObject {
-    public bool runtimeValue;
-    public bool defaultValue;
+    public bool value;
+    [SerializeField] private bool defaultValue;
 
-    public void OnAfterDeserialize() {
-        runtimeValue = defaultValue;
-    }
-    
-    public void OnBeforeSerialize() {
-        
+    private void OnEnable() {
+        value = defaultValue;
     }
 
 }

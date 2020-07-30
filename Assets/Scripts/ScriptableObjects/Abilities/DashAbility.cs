@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
-[CreateAssetMenu(fileName = "Dash", menuName = "ScriptableObjects/Abilities/Dash", order = 0)]
+[CreateAssetMenu(fileName = "Dash", menuName = "Scriptable Objects/Abilities/Dash", order = 0)]
 public class DashAbility : GenericAbility {
     public float dashForse;
 
@@ -11,8 +11,8 @@ public class DashAbility : GenericAbility {
         Animator animator = null,
         Rigidbody2D rigidbody = null
     ) {
-        if (playerMagic.runtimeValue >= magicCost) {
-            playerMagic.runtimeValue -= magicCost;
+        if (playerMagic.value >= magicCost) {
+            playerMagic.value -= magicCost;
             usePlayerMagic.Raise();
         } else {
             return;

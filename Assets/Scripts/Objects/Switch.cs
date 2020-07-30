@@ -11,7 +11,7 @@ public class Switch : MonoBehaviour {
 
     void Start() {
         mySprite = GetComponent<SpriteRenderer>();
-        active = storedValue.runtimeValue;
+        active = storedValue.value;
         if(active) {
             ActivateSwitch();
         }
@@ -19,7 +19,7 @@ public class Switch : MonoBehaviour {
 
     public void ActivateSwitch() {
             active = true;
-            storedValue.runtimeValue = active;
+            storedValue.value = active;
             mySprite.sprite = activeSprite;
             thisDoor.Open();
     }

@@ -16,7 +16,7 @@ public class Chest : Interactive {
 
     void Start() {
         animator = GetComponent<Animator>();
-        if(storedOpen.runtimeValue) {
+        if(storedOpen.value) {
             animator.SetBool("open", true);
             blocked = true;
         }
@@ -32,7 +32,7 @@ public class Chest : Interactive {
     private void OpenChest() {
         animator.SetBool("open", true);
         
-        storedOpen.runtimeValue = true;
+        storedOpen.value = true;
         dialogBox.SetActive(true);
         dialogText.text = item.itemDescription;
 

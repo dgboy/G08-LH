@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeEnemy : Log {
     void Start() {
-        health = maxHealth.initialValue;
+        health = maxHealth.value;
         homePosition = transform.position;
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "Generic Ability", menuName = "ScriptableObjects/Abilities/Generic Ability", order = 0)]
+[CreateAssetMenu(fileName = "Generic Ability", menuName = "Scriptable Objects/Abilities/Ability", order = 0)]
 public class GenericAbility : ScriptableObject {
     public float magicCost;
     public float duration;

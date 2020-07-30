@@ -29,12 +29,12 @@ public class Enemy : MonoBehaviour {
 
 
     protected void Awake() {
-        health = maxHealth.initialValue;
+        health = maxHealth.value;
         homePosition = transform.position;
     }
 
     protected void OnEnable() {
-        health = maxHealth.initialValue;
+        health = maxHealth.value;
         transform.position = homePosition;
         currentState = EnemyState.idle;
     }
