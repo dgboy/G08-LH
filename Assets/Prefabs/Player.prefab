@@ -388,12 +388,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 15
+  speed: 4
   currentHealth: {fileID: 11400000, guid: 03ddba860889b104587098272dbda747, type: 2}
   healthSignal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
   startPosition: {fileID: 11400000, guid: 382a918c15c765c4b8188a44b399f043, type: 2}
   playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
   reseiveItemSprite: {fileID: 2862622738220496162}
+  projectile: {fileID: 2486475216213313215, guid: 963267f3ce4ea1b40aee8230d7bd2492,
+    type: 3}
+  decreaseMagic: {fileID: 11400000, guid: 328e9805ffe9cfe44a7988ca88f14f0d, type: 2}
+  Bow: {fileID: 11400000, guid: b79428e98d30ed948b2761ca168b71fa, type: 2}
   painSignal: {fileID: 11400000, guid: 1fde6169f60c2e64cb2eeb62b93166c8, type: 2}
   flash: {r: 1, g: 0, b: 0, a: 0.9019608}
   regular: {r: 1, g: 1, b: 1, a: 1}
@@ -401,10 +405,6 @@ MonoBehaviour:
   numberOfFlashes: 3
   trigger: {fileID: 2856092687328428336}
   mySprite: {fileID: 2856092687328428299}
-  projectile: {fileID: 2486475216213313215, guid: 963267f3ce4ea1b40aee8230d7bd2492,
-    type: 3}
-  decreaseMagic: {fileID: 11400000, guid: 328e9805ffe9cfe44a7988ca88f14f0d, type: 2}
-  Bow: {fileID: 11400000, guid: b79428e98d30ed948b2761ca168b71fa, type: 2}
 --- !u!114 &6006243182199615514
 MonoBehaviour:
   m_ObjectHideFlags: 0

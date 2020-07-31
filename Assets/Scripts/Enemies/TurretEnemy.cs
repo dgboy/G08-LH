@@ -21,10 +21,12 @@ public class TurretEnemy : Log {
             Vector3.Distance(target.position, transform.position) <= chaseRadius &&
             Vector3.Distance(target.position, transform.position) > attackRadius
         ) {
+            Debug.Log("!!!before!!!");
             if(currentState == EnemyState.idle || currentState == EnemyState.walking && currentState != EnemyState.stagger) {
                 if (canFire) {
                 Vector3 tempVector = target.transform.position - transform.position;
-                GameObject current = Instantiate(projectile, transform.position, Quaternion.identity); 
+                GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
+                Debug.Log(current);
                 current.GetComponent<Projectile>().Launch(tempVector);
                 canFire = false;
 
@@ -37,7 +39,7 @@ public class TurretEnemy : Log {
             //ChangeState(EnemyState.idle);
             animator.SetBool("wakeUp", false);
         }
-        base.CheckDistance();                               
+        base.CheckDistance();
     }
 
     // void Start() {

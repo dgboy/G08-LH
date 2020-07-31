@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public void NewGame() {
-        SceneManager.LoadScene("World");
+        SceneManager.LoadScene("HeroHome");
     }
     
     public void Exit() {

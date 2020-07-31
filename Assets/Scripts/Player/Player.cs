@@ -12,7 +12,7 @@ public enum PlayerState {
 
 public class Player : MonoBehaviour {
     public PlayerState currentState;
-    public float speed = 15.0f;
+    public float speed = 10.0f;
     public FloatValue currentHealth;
     public GameSignal healthSignal;
     public VectorValue startPosition;
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        movement = Vector3.zero;
+        // movement = Vector3.zero;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -87,11 +87,9 @@ public class Player : MonoBehaviour {
             animator.SetBool("moving", false);
         }
         // Избавляемся от ускорения ходьбы по диагонали 
-        movement.Normalize();
+        // movement.Normalize();
         
-        myRigid.MovePosition(
-            transform.position + movement * speed * Time.deltaTime
-        );
+        myRigid.velocity = movement.normalized * speed;
     }
 
     public void Knock(Rigidbody2D myRigid, float knockTime, float damage) {

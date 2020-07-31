@@ -6725,7 +6725,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 9
+  m_Priority: 8
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 807640416}
@@ -105499,8 +105499,8 @@ Transform:
   - {fileID: 369727209}
   - {fileID: 593387485}
   - {fileID: 6563747071782348078}
-  - {fileID: 8918485043189989973}
   - {fileID: 1443966255}
+  - {fileID: 8918485043189989973}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109515,11 +109515,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2856092687328428342, guid: 90ea53da0e9c57e4cb0172150ce44f43,
-        type: 3}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 2856092687422445439, guid: 90ea53da0e9c57e4cb0172150ce44f43,
         type: 3}
       propertyPath: m_IsActive
@@ -110286,7 +110281,7 @@ MonoBehaviour:
     type: 3}
   target: {fileID: 0}
   chaseRadius: 6
-  attackRadius: 0
+  attackRadius: 2
   projectile: {fileID: 3853740960722847899, guid: 33a32464455c1e74a8b49f300076426b,
     type: 3}
   fireDelay: 0.8
@@ -110346,7 +110341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5852065725538711590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.48, y: 13.03, z: 0}
+  m_LocalPosition: {x: 12.39, y: 31.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1006721866}
@@ -110594,7 +110589,7 @@ GameObject:
   - component: {fileID: 6563747071782348079}
   - component: {fileID: 6563747071782348073}
   m_Layer: 0
-  m_Name: Room 0
+  m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -110963,7 +110958,7 @@ PrefabInstance:
     - target: {fileID: 8861423443511400260, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_Name
-      value: Room 1
+      value: Room 2
       objectReference: {fileID: 0}
     - target: {fileID: 8861423443511400260, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
@@ -111008,7 +111003,7 @@ PrefabInstance:
     - target: {fileID: 8861423443511400262, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8861423443511400262, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
@@ -111028,12 +111023,12 @@ PrefabInstance:
     - target: {fileID: 8861423443511400263, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 45.77442
+      value: 45.87281
       objectReference: {fileID: 0}
     - target: {fileID: 8861423443511400263, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -21.065151
+      value: -0.009922028
       objectReference: {fileID: 0}
     - target: {fileID: 8861423443511400263, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
@@ -111058,12 +111053,12 @@ PrefabInstance:
     - target: {fileID: 8861423443511400263, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -21.069923
+      value: -20.971535
       objectReference: {fileID: 0}
     - target: {fileID: 8861423443511400263, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: -20.628702
+      value: 0.13136292
       objectReference: {fileID: 0}
     - target: {fileID: 9168888199444424504, guid: 56925ddfb72447142a75f399d26bbae7,
         type: 3}
@@ -111112,10 +111107,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 25}
-      - {x: 0, y: 0}
-      - {x: 25, y: 0}
-      - {x: 25, y: 25}
+    - - {x: -20.907322, y: -0.06568718}
+      - {x: -20.322697, y: -20.725124}
+      - {x: 45.926334, y: -20.825731}
+      - {x: 45.892418, y: -0.028513432}
 --- !u!4 &8918485043189989973
 Transform:
   m_ObjectHideFlags: 0
@@ -111132,7 +111127,7 @@ Transform:
   - {fileID: 8777529816743218206}
   - {fileID: 999298961073189133}
   m_Father: {fileID: 1782663631}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8918485043189989975
 GameObject:
@@ -111146,7 +111141,7 @@ GameObject:
   - component: {fileID: 8918485043189989972}
   - component: {fileID: 8918485043189989970}
   m_Layer: 0
-  m_Name: Room Prefab
+  m_Name: Room 3
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
