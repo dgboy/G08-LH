@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
     [SerializeField] private float speed;
-    [SerializeField] private Rigidbody2D myRigidbody;
+    [SerializeField] protected Rigidbody2D myRigidbody;
 
     public void Motion(Vector2 direction) {
         direction = direction.normalized;

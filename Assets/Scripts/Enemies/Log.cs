@@ -8,11 +8,11 @@ public class Log : Enemy {
     public float chaseRadius = 4.0f;
     public float attackRadius = 1.2f;
 
-    protected Rigidbody2D rigid;
+    protected Rigidbody2D rigidbody;
     protected Animator animator;
 
     void Start() {
-        rigid = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
 
@@ -31,7 +31,7 @@ public class Log : Enemy {
         ) {
             if(currentState == EnemyState.idle || currentState == EnemyState.walking && currentState != EnemyState.stagger) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                rigid.MovePosition(temp);
+                rigidbody.MovePosition(temp);
 
                 ChangeWalkAnimation(temp - transform.position);
                 ChangeState(EnemyState.walking);

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c1e5cfced8294499a93d2ff8543dab, type: 3}
   m_Name: PlayerMP
   m_EditorClassIdentifier: 
-  initialValue: 10
-  runtimeValue: 10
+  value: 0
+  defaultValue: 10

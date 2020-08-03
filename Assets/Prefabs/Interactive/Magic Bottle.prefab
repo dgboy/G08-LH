@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 814676704931907883}
   - component: {fileID: 1383931742737719240}
-  - component: {fileID: 3484986785852688984}
   - component: {fileID: 7870069316825820450}
+  - component: {fileID: 3484986785852688984}
   m_Layer: 0
   m_Name: Magic Bottle
   m_TagString: Untagged
@@ -84,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3484986785852688984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522424615166971855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de3e4fe8708d5f941ada1153bc1a0414, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpSignal: {fileID: 11400000, guid: 9003be452c0ae944282ec8963f2b02b8, type: 2}
-  playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
-  magicValue: 3
 --- !u!61 &7870069316825820450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +110,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5684471, y: 0.8416538}
   m_EdgeRadius: 0
+--- !u!114 &3484986785852688984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522424615166971855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e4fe8708d5f941ada1153bc1a0414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpSignal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
+  playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
+  magicValue: 3

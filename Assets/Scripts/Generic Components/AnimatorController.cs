@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class AnimatorController : MonoBehaviour {
-    [SerializeField] private Animator anim;
+    [SerializeField] public Animator anim;
 
     public void SetAnimParameter(string floatName, float floatValue) {
         anim.SetFloat(floatName, floatValue);

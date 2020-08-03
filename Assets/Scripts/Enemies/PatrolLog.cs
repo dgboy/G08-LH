@@ -17,7 +17,7 @@ public class PatrolLog : Log {
 
             if(currentState == EnemyState.idle || currentState == EnemyState.walking && currentState != EnemyState.stagger) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                rigid.MovePosition(temp);
+                rigidbody.MovePosition(temp);
 
                 ChangeWalkAnimation(temp - transform.position);
                 ChangeState(EnemyState.walking);
@@ -28,7 +28,7 @@ public class PatrolLog : Log {
             
             if(Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, path[currentPoint].position, moveSpeed * Time.deltaTime);
-                rigid.MovePosition(temp);
+                rigidbody.MovePosition(temp);
                 ChangeWalkAnimation(temp - transform.position);
             } else {
                 ChangeGoal();

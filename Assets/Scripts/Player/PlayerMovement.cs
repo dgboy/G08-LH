@@ -8,14 +8,19 @@ public class PlayerMovement : Movement {
     [SerializeField] private ReceiveItem myItem;
     [SerializeField] private float WeaponAttackDuration;
     private Vector2 tempMovement = Vector2.down;
+    private Vector3 facingDirection = Vector2.down;
+
+    [SerializeField] private GenericAbility currentAbility;
 
     void Start() {
         myState.ChangeState(GenericState.idle);
     }
 
     void Update() {
-        GetInput();
-        SetAnimation();
+        if (!IsRestrictedState(myState.myState)) {
+            GetInput();
+            SetAnimation();
+        }
     }
 
 
@@ -32,6 +37,13 @@ public class PlayerMovement : Movement {
             StartCoroutine(WeaponCo());
             tempMovement = Vector2.zero;
             Motion(tempMovement);
+        } else if (Input.GetButtonDown("Weapon 2")) {
+            if (currentAbility) {
+                StartCoroutine(AbilityCo(currentAbility.duration));
+            }
+            // tempMovement.x = Input.GetAxisRaw("Horizontal");
+            // tempMovement.y = Input.GetAxisRaw("Vertical");
+            // Motion(tempMovement);
         } else if (myState.myState != GenericState.attack) {
             tempMovement.x = Input.GetAxisRaw("Horizontal");
             tempMovement.y = Input.GetAxisRaw("Vertical");
@@ -41,13 +53,13 @@ public class PlayerMovement : Movement {
             Motion(tempMovement);
         }
 
-        if(myState.myState == GenericState.receiveItem) {
-            if(Input.GetButtonDown("Check")) {
+        if(Input.GetButtonDown("Check")) {
+            if(myState.myState == GenericState.receiveItem) {
                 myState.ChangeState(GenericState.idle);
                 anim.SetAnimParameter("receiveItem", false);
                 myItem.ChangeSpriteState();
+                return;
             }
-            return;
         }
     }
 
@@ -57,6 +69,7 @@ public class PlayerMovement : Movement {
             anim.SetAnimParameter("moveY", Mathf.Round(tempMovement.y));
             anim.SetAnimParameter("moving", true);
             SetState(GenericState.walk);
+            facingDirection = tempMovement;
         } else {
             anim.SetAnimParameter("moving", false);
             if(myState.myState != GenericState.attack) {
@@ -69,8 +82,21 @@ public class PlayerMovement : Movement {
         myState.ChangeState(GenericState.attack);
         anim.SetAnimParameter("attacking", true);
         yield return new WaitForSeconds(WeaponAttackDuration);
-
         myState.ChangeState(GenericState.idle);
         anim.SetAnimParameter("attacking", false);
+    }
+
+    private IEnumerator AbilityCo(float duration) {
+        myState.ChangeState(GenericState.ability);
+        currentAbility.Ability(transform.position, facingDirection, anim.anim, myRigidbody);
+        yield return new WaitForSeconds(duration);
+        myState.ChangeState(GenericState.idle);
+    }
+
+    bool IsRestrictedState(GenericState curState) {
+        if(curState == GenericState.attack || curState == GenericState.ability) {
+            return true;
+        }
+        return false;
     }
 }

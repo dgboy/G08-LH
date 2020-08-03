@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMagic : Magic
-{
+public class PlayerMagic : Magic {
 
 }

@@ -8,7 +8,8 @@ public enum GenericState {
     attack,
     stun,
     dead,
-    receiveItem
+    receiveItem,
+    ability
 }
 
 public class StateMachine : MonoBehaviour {

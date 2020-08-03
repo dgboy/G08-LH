@@ -6,7 +6,7 @@ public class GenericAbility : ScriptableObject {
     public float duration;
 
     public FloatValue playerMagic;
-    public GameSignal usePlayerMagic;
+    public Notification usePlayerMagic;
 
     public virtual void Ability(
         Vector2 position, 

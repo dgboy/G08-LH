@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   magicCost: 2
-  duration: 1
+  duration: 0.3
   playerMagic: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
-  usePlayerMagic: {fileID: 11400000, guid: 9003be452c0ae944282ec8963f2b02b8, type: 2}
+  usePlayerMagic: {fileID: 11400000, guid: 41a7f8932c236584bb87dc012e943b6d, type: 2}
   dashForse: 3

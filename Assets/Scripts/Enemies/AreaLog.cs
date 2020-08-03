@@ -14,7 +14,7 @@ public class AreaLog : Log {
         ) { 
             if(currentState == EnemyState.idle || currentState == EnemyState.walking && currentState != EnemyState.stagger) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                rigid.MovePosition(temp);
+                rigidbody.MovePosition(temp);
 
                 ChangeWalkAnimation(temp - transform.position);
                 ChangeState(EnemyState.walking);

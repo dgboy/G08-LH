@@ -5,7 +5,6 @@ using UnityEngine;
 public class Notification : ScriptableObject {
     public List<NotificationListener> listeners = new List<NotificationListener>();
 
-
     public void Raise() {
         for (int i = listeners.Count - 1; i >= 0; i--) {
             listeners[i].Raise();

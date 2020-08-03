@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3038ad56-ca31-0c86-3157-8386113d9c4e}</ProjectGuid>
+    <ProjectGuid>{ab964bdc-9a95-d20f-86cd-96fc52b34700}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,132 +36,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Lib\GGEZ\PerfectPixelCamera\Demo\Assets\ZoomDemo.cs" />
-     <Compile Include="Assets\Lib\GGEZ\PerfectPixelCamera\Scripts\PerfectPixelCamera.cs" />
-     <Compile Include="Assets\Lib\Ink\Example\Scripts\BasicInkExample.cs" />
-     <Compile Include="Assets\Lib\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
-     <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\CameraPan.cs" />
-     <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\RandomRotate.cs" />
-     <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\SixtyFPS.cs" />
-     <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\TileSpin.cs" />
-     <Compile Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtCamera.cs" />
-     <Compile Include="Assets\Scripts\Enemies\AreaLog.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Log.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Logic\SimpleFollow.cs" />
-     <Compile Include="Assets\Scripts\Enemies\MeleeEnemy.cs" />
-     <Compile Include="Assets\Scripts\Enemies\PatrolLog.cs" />
-     <Compile Include="Assets\Scripts\Enemies\TurretEnemy.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\AnimatorController.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\Damage.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\Health.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\Knockback.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\DestroyOverTime.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Interactable.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Magic.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Movement.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\ResetToPosition.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\StateMachine.cs" />
-     <Compile Include="Assets\Scripts\Inventory\HealthReaction.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventorySaver.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
-     <Compile Include="Assets\Scripts\Inventory\MagicReaction.cs" />
-     <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
-     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
-     <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
-     <Compile Include="Assets\Scripts\NPC\BranchingDialog.cs" />
-     <Compile Include="Assets\Scripts\NPC\DialogNPC.cs" />
-     <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
-     <Compile Include="Assets\Scripts\Objects\Chest.cs" />
-     <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
-     <Compile Include="Assets\Scripts\Objects\Interactive.cs" />
-     <Compile Include="Assets\Scripts\Objects\LocationTransfer.cs" />
-     <Compile Include="Assets\Scripts\Objects\LockedDoor.cs" />
-     <Compile Include="Assets\Scripts\Objects\Pot.cs" />
-     <Compile Include="Assets\Scripts\Objects\PowerUp\Coin.cs" />
-     <Compile Include="Assets\Scripts\Objects\PowerUp\Heart.cs" />
-     <Compile Include="Assets\Scripts\Objects\PowerUp\MagicPowerUp.cs" />
-     <Compile Include="Assets\Scripts\Objects\PowerUp\PowerUp.cs" />
-     <Compile Include="Assets\Scripts\Objects\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Objects\RockProjectile.cs" />
-     <Compile Include="Assets\Scripts\Objects\SceneTransition.cs" />
-     <Compile Include="Assets\Scripts\Objects\Sign.cs" />
-     <Compile Include="Assets\Scripts\Objects\Switch.cs" />
-     <Compile Include="Assets\Scripts\Player\CoinTextManager.cs" />
-     <Compile Include="Assets\Scripts\Player\ContextClue.cs" />
-     <Compile Include="Assets\Scripts\Player\HeartManager.cs" />
-     <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMagic.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMoney.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Player\ReceiveItem.cs" />
-     <Compile Include="Assets\Scripts\Player\ResetPlayerPosition.cs" />
-     <Compile Include="Assets\Scripts\Rooms\DungeonRoom.cs" />
-     <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
-     <Compile Include="Assets\Scripts\Rooms\OverworldRoom.cs" />
-     <Compile Include="Assets\Scripts\Rooms\Room.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\DashAbility.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\GenericAbility.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\GameSignal.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Notification.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\NotificationListener.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\BoolValue.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\DialogAssetValue.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\FloatValue.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\SpriteValue.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\StringValue.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Values\VectorValue.cs" />
-     <Compile Include="Assets\Scripts\System\MagicManager.cs" />
-     <Compile Include="Assets\Scripts\System\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\System\PauseManager.cs" />
-     <Compile Include="Assets\Scripts\System\SaveManager.cs" />
-     <Compile Include="Assets\Scripts\System\SignalListener.cs" />
-     <Compile Include="Assets\Scripts\System\SmoothCamera.cs" />
-     <Compile Include="Assets\Scripts\System\TimelineManager.cs" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtSpriteDiffuse.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtDiffuse.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtFont.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\BilinearSharp.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtSprite.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtUI.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Lib\Demigiant\DOTween\readme.txt" />
-     <None Include="Assets\Lib\GGEZ\PerfectPixelCamera\README.txt" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtParticle.shader" />
-     <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\ExtensionMethods\CanvasExtension.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\ExtensionMethods\SerializedPropertyExtentions.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\ExtensionMethods\UIExtentionMethods.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\PropertyAttributes\HideIf.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\PropertyAttributes\InputAxisListDropdownAttribute.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\PropertyAttributes\LargeHeader.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\PropertyAttributes\ReadOnly.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Dependencies\Utilities\InputUtility.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Samples\Scripts\Projectile.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Samples\Scripts\SimpleController.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\AnalogicKnob.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\ButtonBase.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\DisableOnOrientation.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\Input.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\Swipe.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\UIButtonToAxis.cs" />
+     <Compile Include="Assets\plugins\LeoLuz\Virtual Plug and Play Joystick\Scripts\UIButtonToButton.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

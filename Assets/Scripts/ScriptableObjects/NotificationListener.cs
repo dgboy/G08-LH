@@ -2,8 +2,8 @@
 using UnityEngine.Events;
 
 public class NotificationListener : MonoBehaviour {
-    public UnityEvent myEvent;
     [SerializeField] public Notification myNotification;
+    public UnityEvent myEvent;
 
     public void OnEnable() {
         myNotification.RegisterListener(this);

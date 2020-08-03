@@ -1,44 +1,35 @@
 ﻿using UnityEngine;
 
-public class Magic : MonoBehaviour
-{
-    [SerializeField] private int currentMagic;
+public class Magic : MonoBehaviour {
     [SerializeField] private int maxMagic;
+    [SerializeField] private int currentMagic;
 
 
-    public bool CanUseMagic(int amountToUse)
-    {
-        if(currentMagic >= amountToUse)
-        {
+    public bool CanUseMagic(int amountToUse) {
+        if(currentMagic >= amountToUse) {
             return true;
         }
         return false;
     }
 
-    public void UseMagic(int amountToUse)
-    {
+    public void UseMagic(int amountToUse) {
         currentMagic -= amountToUse;
-        if(currentMagic<= 0)
-        {
+        if(currentMagic <= 0) {
             currentMagic = 0;
         }
     }
 
-    public void UseAllMagic()
-    {
+    public void UseAllMagic() {
         currentMagic = 0;
     }
 
-    public void FillMagic()
-    {
+    public void FillMagic() {
         currentMagic = maxMagic;
     }
 
-    public void AddMagic(int amountToAdd)
-    {
+    public void AddMagic(int amountToAdd) {
         currentMagic += amountToAdd;
-        if(currentMagic > maxMagic)
-        {
+        if(currentMagic > maxMagic) {
             currentMagic = maxMagic;
         }
     }

@@ -8,7 +8,7 @@ public class Loot {
     public int lootChance;
 }
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Loot Table", fileName = "Loot Table", order = 0)]
+[CreateAssetMenu(menuName = "Scriptable Objects/Loot Table", fileName = "Loot Table", order = 0)]
 public class LootTable : ScriptableObject {
     public Loot[] loots;
 

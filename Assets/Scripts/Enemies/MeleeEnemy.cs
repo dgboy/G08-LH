@@ -6,7 +6,7 @@ public class MeleeEnemy : Log {
     void Start() {
         health = maxHealth.value;
         homePosition = transform.position;
-        rigid = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -21,7 +21,7 @@ public class MeleeEnemy : Log {
                 && currentState != EnemyState.stagger
             ) {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                rigid.MovePosition(temp);
+                rigidbody.MovePosition(temp);
                 ChangeWalkAnimation(temp - transform.position);
                 ChangeState(EnemyState.walking);
             }
