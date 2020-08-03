@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 40253818}
   m_Layer: 10
   m_Name: HitBox Right
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5915,7 +5915,7 @@ GameObject:
   - component: {fileID: 914950959}
   m_Layer: 10
   m_Name: HitBox Down
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101125,7 +101125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8a886659edfdc4dad39fa67f77bc29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNotification: {fileID: 11400000, guid: 41a7f8932c236584bb87dc012e943b6d, type: 2}
+  myNotification: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
   myEvent:
     m_PersistentCalls:
       m_Calls:
@@ -101207,7 +101207,7 @@ MonoBehaviour:
   myState: {fileID: 344300470}
   myItem: {fileID: 0}
   WeaponAttackDuration: 0.1
-  currentAbility: {fileID: 11400000, guid: 25fc6c622adb99c408a58bdce5c83ff8, type: 2}
+  currentAbility: {fileID: 11400000, guid: 272a2df8990d374428b64f943bc5aa38, type: 2}
 --- !u!1 &1427107650
 GameObject:
   m_ObjectHideFlags: 0
@@ -101365,7 +101365,7 @@ GameObject:
   - component: {fileID: 1454995233}
   m_Layer: 10
   m_Name: HitBox Up
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101661,7 +101661,7 @@ GameObject:
   - component: {fileID: 1593936323}
   m_Layer: 10
   m_Name: HitBox Left
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104833,6 +104833,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1383931742737719240, guid: 04d619528369512428dd6f128ee01903,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3484986785852688984, guid: 04d619528369512428dd6f128ee01903,
         type: 3}
       propertyPath: powerUpSignal
@@ -105123,7 +105128,7 @@ PrefabInstance:
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.581114
+      value: 15.347393
       objectReference: {fileID: 0}
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}

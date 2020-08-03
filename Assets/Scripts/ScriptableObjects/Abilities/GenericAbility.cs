@@ -14,7 +14,10 @@ public class GenericAbility : ScriptableObject {
         Animator animator = null,
         Rigidbody2D rigidbody = null
     ) {
-        
+        if (playerMagic.value >= magicCost) {
+            playerMagic.value -= magicCost;
+            usePlayerMagic.Raise();
+        }
     }
     
 }

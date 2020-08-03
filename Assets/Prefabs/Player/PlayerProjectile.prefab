@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 8310840899223157224}
   - component: {fileID: 5316315085882963995}
   - component: {fileID: 6652546052650179925}
-  - component: {fileID: 3524663283028900810}
-  - component: {fileID: 2111907810347075560}
+  - component: {fileID: -3145067402923356675}
+  - component: {fileID: 562611033828688801}
+  - component: {fileID: 2742359637625288635}
+  - component: {fileID: 8978647516605003013}
   m_Layer: 11
   m_Name: Arrow
   m_TagString: Untagged
@@ -71,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -7391218054750426562, guid: aa8796546a392234c919c3a6bfb2cb86,
     type: 3}
@@ -125,15 +127,15 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!114 &3524663283028900810
+  m_Constraints: 0
+--- !u!114 &-3145067402923356675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,14 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2486475216213313215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c1d2b7880054a40aab3fd7eefc37f0, type: 3}
+  m_Script: {fileID: 11500000, guid: d2fb2a902195dcd4abc1602a117184e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  myRigidbody: {fileID: 6652546052650179925}
-  lifetime: 1
-  magicCost: 1
---- !u!114 &2111907810347075560
+  rigidbody: {fileID: 6652546052650179925}
+  speed: 9
+--- !u!114 &562611033828688801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 2486475216213313215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea070c108d74e741acebfc5c404e863, type: 3}
+  m_Script: {fileID: 11500000, guid: 08a4441d2b75f4837a8b0f4857ba2385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 2
+  otherTag: {fileID: 11400000, guid: f02355e5d6cc8c641bd146ee05f8e6db, type: 2}
   knockTime: 0.3
-  damage: 1
+  knockStrength: 1
+--- !u!114 &2742359637625288635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2486475216213313215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5979d67a029747bf96f07adfa34b8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherTag: {fileID: 11400000, guid: f02355e5d6cc8c641bd146ee05f8e6db, type: 2}
+  damageAmount: 1
+--- !u!114 &8978647516605003013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2486475216213313215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3dce3ead242e4b948dc6828a34eb4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 2

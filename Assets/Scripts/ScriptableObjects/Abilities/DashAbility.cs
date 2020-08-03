@@ -6,17 +6,9 @@ public class DashAbility : GenericAbility {
     public float dashForse;
 
     public override void Ability(
-        Vector2 position, 
-        Vector2 facingDirection, 
-        Animator animator = null,
-        Rigidbody2D rigidbody = null
+        Vector2 position, Vector2 facingDirection,
+        Animator animator = null, Rigidbody2D rigidbody = null
     ) {
-        if (playerMagic.value >= magicCost) {
-            playerMagic.value -= magicCost;
-            usePlayerMagic.Raise();
-        } else {
-            return;
-        }
         if (rigidbody) {
             Vector3 dashVector = rigidbody.transform.position + (Vector3)facingDirection.normalized * dashForse;
             rigidbody.DOMove(dashVector, duration);
