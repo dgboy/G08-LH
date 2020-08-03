@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\Rooms\Room.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\DashAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\GenericAbility.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\MultiProjectileAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\ProjectileAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\GameSignal.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />

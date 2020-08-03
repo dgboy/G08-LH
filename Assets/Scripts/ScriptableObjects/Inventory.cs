@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Inventory", fileName = "Inventory")]
+// [CreateAssetMenu(menuName = "ScriptableObjects/Inventory", fileName = "Inventory")]
 public class Inventory : ScriptableObject, ISerializationCallbackReceiver {
 
     public Item currentItem;

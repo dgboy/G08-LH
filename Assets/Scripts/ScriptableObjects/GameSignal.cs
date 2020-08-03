@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Game Signal", fileName = "Game Signal")]
+// [CreateAssetMenu(menuName = "ScriptableObjects/Game Signal", fileName = "Game Signal")]
 public class GameSignal : ScriptableObject {
     public List<SignalListener> listeners = new List<SignalListener>();
 
