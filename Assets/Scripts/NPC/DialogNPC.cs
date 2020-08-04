@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogNPC : Interactive {
+public class DialogNPC : Interactable {
     [SerializeField] private TextAsset myDialog;
     [SerializeField] private DialogAssetValue dialogValue;
-    // [SerializeField] private Notification branchingDialogNotification;
+    [SerializeField] private Notification branchingDialogNotification;
 
     void Start() {
         
@@ -15,7 +15,7 @@ public class DialogNPC : Interactive {
         if (playerInRange) {
             if(Input.GetButtonDown("Check")) {
                 dialogValue.value = myDialog;
-                // branchingDialogNotification.Raise();
+                branchingDialogNotification.Raise();
                 clue.Raise();
             }
         }

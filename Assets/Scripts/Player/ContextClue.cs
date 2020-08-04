@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ContextClue : MonoBehaviour {
-    public GameObject contextClue;
-    public bool clueActive = false;
+    [SerializeField] private SpriteRenderer mySprite;
+    [SerializeField] private bool clueActive = false;
 
     public void ChangeClue() {
-        contextClue.SetActive(clueActive = !clueActive);
+        // contextClue.SetActive(clueActive = !clueActive);
+        mySprite.enabled = clueActive = !clueActive;
     }
 }
