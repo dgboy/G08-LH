@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2dd7a8912681754682d6f9cfb82b28b, type: 3}
-  m_Name: Change Player Magic
+  m_Name: React Player Health
   m_EditorClassIdentifier: 
   listeners: []

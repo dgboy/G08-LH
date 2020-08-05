@@ -53,8 +53,8 @@ public class PlayerMovement : Movement {
             Motion(tempMovement);
         }
 
-        if(Input.GetButtonDown("Check")) {
-            if(myState.myState == GenericState.receiveItem) {
+        if(myState.myState == GenericState.receiveItem) {
+            if(Input.GetButtonDown("Check")) {
                 myState.ChangeState(GenericState.idle);
                 anim.SetAnimParameter("receiveItem", false);
                 myItem.ChangeSpriteState();
@@ -77,6 +77,21 @@ public class PlayerMovement : Movement {
             }
         }
     }
+
+    // public void RaiseItem() {
+    //     if (myState.myState != GenericState.receiveItem) {
+    //         anim.SetAnimParameter("receiveItem", true);
+    //             myState.ChangeState(GenericState.receiveItem);
+    //         // animator.SetBool("receive_item", true);
+    //         // currentState = PlayerState.interact;
+    //         reseiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
+    //     } else {
+    //         anim.SetAnimParameter("receiveItem", false);
+    //         // animator.SetBool("receive_item", false);
+    //         currentState = PlayerState.idle;
+    //         reseiveItemSprite.sprite = null;
+    //     }
+    // }
 
     public IEnumerator WeaponCo() {
         myState.ChangeState(GenericState.attack);

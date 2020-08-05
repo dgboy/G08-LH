@@ -1,31 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
-public class Chest : Interactive {
-
+public class Chest : Interactable {
     public Inventory playerInventory;
     public Item item;
-    public GameSignal itemSignal;
-    public GameObject dialogBox;
-    public Text dialogText;
+    public Notification itemSignal;
     public BoolValue storedOpen;
-
+    public GameObject dialogBox;
+    [SerializeField] private TextMeshProUGUI dialogText;
     private Animator animator;
 
     void Start() {
         animator = GetComponent<Animator>();
-        if(storedOpen.value) {
+        if (storedOpen.value) {
             animator.SetBool("open", true);
-            blocked = true;
+            isBlocked = true;
         }
     }
 
     void Update() {
-        if(Input.GetButtonDown("Check") && !blocked && playerInRange) {
+        if (Input.GetButtonDown("Check") && !isBlocked && playerInRange) {
             OpenChest();
-            StartCoroutine(WaitCo());
+            // StartCoroutine(WaitCo());
+        } else if (Input.GetButtonDown("Check") && playerInRange) {
+            dialogBox.SetActive(false);
+            playerInventory.currentItem = null;
+            itemSignal.Raise(); 
         }
     }
 
@@ -38,18 +40,23 @@ public class Chest : Interactive {
 
         playerInventory.AddItem(item);
         playerInventory.currentItem = item;
-        
+
         itemSignal.Raise();
-        clue.Raise(); 
-
-        blocked = true;
+        clue.Raise();
+        isBlocked = true;
     }
 
-    private IEnumerator WaitCo() {
-        yield return new WaitForSeconds(2f);
+    // private void CloseChest() {
+    //     dialogBox.SetActive(false);
+    //     playerInventory.currentItem = null;
+    //     itemSignal.Raise(); 
+    // }
 
-        dialogBox.SetActive(false);
-        playerInventory.currentItem = null;
-        itemSignal.Raise(); 
-    }
+    // private IEnumerator WaitCo() {
+    //     yield return new WaitForSeconds(2f);
+
+    //     dialogBox.SetActive(false);
+    //     playerInventory.currentItem = null;
+    //     itemSignal.Raise(); 
+    // }
 }

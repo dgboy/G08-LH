@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519d102f722ee0b4baa8d0e2aa3d2978, type: 3}
   m_Name: ChestB
   m_EditorClassIdentifier: 
-  runtimeValue: 0
+  value: 0
   defaultValue: 0
