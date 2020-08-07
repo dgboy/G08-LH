@@ -18,6 +18,15 @@ public class PlayerMovement : Movement {
 
     void Update() {
         if (!IsRestrictedState(myState.myState)) {
+            if(myState.myState == GenericState.receiveItem) {
+                if(Input.GetButtonDown("Check")) {
+                    myState.ChangeState(GenericState.idle);
+                    anim.SetAnimParameter("receive_item", false);
+                    myItem.ChangeSpriteState();
+                }
+                return;
+            }
+
             GetInput();
             SetAnimation();
         }
@@ -30,10 +39,7 @@ public class PlayerMovement : Movement {
 
 
     void GetInput() {
-        if (
-            Input.GetButtonDown("Attack")
-            && myState.myState != GenericState.attack
-        ) {
+        if (Input.GetButtonDown("Attack")) {
             StartCoroutine(WeaponCo());
             tempMovement = Vector2.zero;
             Motion(tempMovement);
@@ -52,15 +58,6 @@ public class PlayerMovement : Movement {
             tempMovement = Vector2.zero;
             Motion(tempMovement);
         }
-
-        if(myState.myState == GenericState.receiveItem) {
-            if(Input.GetButtonDown("Check")) {
-                myState.ChangeState(GenericState.idle);
-                anim.SetAnimParameter("receiveItem", false);
-                myItem.ChangeSpriteState();
-                return;
-            }
-        }
     }
 
     void SetAnimation() {
@@ -77,21 +74,6 @@ public class PlayerMovement : Movement {
             }
         }
     }
-
-    // public void RaiseItem() {
-    //     if (myState.myState != GenericState.receiveItem) {
-    //         anim.SetAnimParameter("receiveItem", true);
-    //             myState.ChangeState(GenericState.receiveItem);
-    //         // animator.SetBool("receive_item", true);
-    //         // currentState = PlayerState.interact;
-    //         reseiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
-    //     } else {
-    //         anim.SetAnimParameter("receiveItem", false);
-    //         // animator.SetBool("receive_item", false);
-    //         currentState = PlayerState.idle;
-    //         reseiveItemSprite.sprite = null;
-    //     }
-    // }
 
     public IEnumerator WeaponCo() {
         myState.ChangeState(GenericState.attack);

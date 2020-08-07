@@ -1,15 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class Chest : Interactable {
-    public Inventory playerInventory;
-    public Item item;
-    public Notification itemSignal;
-    public BoolValue storedOpen;
-    public GameObject dialogBox;
-    [SerializeField] private TextMeshProUGUI dialogText;
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private Notification receiveItemNotif;
+    [SerializeField] private InventoryItem item;
+    [SerializeField] private BoolValue storedOpen;
     private Animator animator;
 
     void Start() {
@@ -21,42 +18,26 @@ public class Chest : Interactable {
     }
 
     void Update() {
-        if (Input.GetButtonDown("Check") && !isBlocked && playerInRange) {
-            OpenChest();
-            // StartCoroutine(WaitCo());
-        } else if (Input.GetButtonDown("Check") && playerInRange) {
-            dialogBox.SetActive(false);
-            playerInventory.currentItem = null;
-            itemSignal.Raise(); 
+        if (Input.GetButtonDown("Check") && playerInRange && !isBlocked) {
+            if (!storedOpen.value) {
+                OpenChest();
+            }
         }
     }
 
     private void OpenChest() {
         animator.SetBool("open", true);
-        
+
         storedOpen.value = true;
-        dialogBox.SetActive(true);
-        dialogText.text = item.itemDescription;
-
         playerInventory.AddItem(item);
-        playerInventory.currentItem = item;
 
-        itemSignal.Raise();
         clue.Raise();
         isBlocked = true;
+        StartCoroutine(WaitCo());
     }
 
-    // private void CloseChest() {
-    //     dialogBox.SetActive(false);
-    //     playerInventory.currentItem = null;
-    //     itemSignal.Raise(); 
-    // }
-
-    // private IEnumerator WaitCo() {
-    //     yield return new WaitForSeconds(2f);
-
-    //     dialogBox.SetActive(false);
-    //     playerInventory.currentItem = null;
-    //     itemSignal.Raise(); 
-    // }
+    private IEnumerator WaitCo() {
+        yield return null;
+        receiveItemNotif.Raise(); 
+    }
 }

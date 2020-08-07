@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class ReceiveItem : MonoBehaviour {
     [SerializeField] private SpriteRenderer mySprite;
-    [SerializeField] private SpriteValue receivedSprite;
     [SerializeField] private AnimatorController anim;
     [SerializeField] private StateMachine myState;
     [SerializeField] private bool isActive = false;
     [SerializeField] private Notification dialogNotification;
 
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private StringValue itemDescription;
+
     void Start() {
         mySprite.enabled = false;
     }
 
-
     public void ChangeSpriteState() {
-        // Debug.Log(isActive);
+        Debug.Log(isActive);
         isActive = !isActive;
         if (isActive) {
             DisplaySprite();
@@ -25,35 +26,20 @@ public class ReceiveItem : MonoBehaviour {
         }
     }
 
-
     void DisplaySprite() {
         myState.ChangeState(GenericState.receiveItem);
+        anim.SetAnimParameter("receive_item", true);
         mySprite.enabled = true;
-        mySprite.sprite = receivedSprite.value;
-        anim.SetAnimParameter("receiveItem", true);
+
+        mySprite.sprite = playerInventory.receiveItem.itemImage;
+        itemDescription.value = playerInventory.receiveItem.itemDescription;
         dialogNotification.Raise();
     }
 
-
     void DisableSprite() {
+        playerInventory.receiveItem = null;
         myState.ChangeState(GenericState.idle);
         mySprite.enabled = false;
         dialogNotification.Raise();
-
     }
-
-    // public void RaiseItem() {
-    //     if (myState.myState != GenericState.receiveItem) {
-    //         anim.SetAnimParameter("receiveItem", true);
-    //             myState.ChangeState(GenericState.receiveItem);
-    //         // animator.SetBool("receive_item", true);
-    //         // currentState = PlayerState.interact;
-    //         reseiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
-    //     } else {
-    //         anim.SetAnimParameter("receiveItem", false);
-    //         // animator.SetBool("receive_item", false);
-    //         currentState = PlayerState.idle;
-    //         reseiveItemSprite.sprite = null;
-    //     }
-    // }
 }

@@ -157,7 +157,7 @@ RectTransform:
   m_Children:
   - {fileID: 4598175387037942656}
   m_Father: {fileID: 4598175385159594730}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -179,7 +179,7 @@ MonoBehaviour:
   dialogNotification: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11, type: 2}
   dialogBox: {fileID: 4598175387037942657}
   dialogText: {fileID: 5639844535862593271}
-  stringText: {fileID: 0}
+  stringText: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911, type: 2}
 --- !u!114 &3878512609217510943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,9 +391,9 @@ RectTransform:
   - {fileID: 4598175385715364508}
   - {fileID: 6326513283552300727}
   - {fileID: 3587761688829053124}
-  - {fileID: 1568620767328245791}
   - {fileID: 4243334462964757217}
   - {fileID: 4598175385783278039}
+  - {fileID: 1568620767328245791}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -797,7 +797,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4598175385159594730}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1054,7 +1054,7 @@ RectTransform:
   m_GameObject: {fileID: 4598175387037942657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5639844535862593264}
   m_Father: {fileID: 1568620767328245791}
@@ -1681,7 +1681,7 @@ PrefabInstance:
     - target: {fileID: 7018864771556023679, guid: ac4644c368b003543ae114ad62bc46d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7018864771556023679, guid: ac4644c368b003543ae114ad62bc46d8,
         type: 3}

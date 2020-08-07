@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Inventory/Item")]
 public class InventoryItem : ScriptableObject {
+    public Sprite itemImage;
     public string itemName;
     public string itemDescription;
-    public Sprite itemImage;
     public int numberHeld;
-    public bool usable;
     public bool unique;
+    public bool usable;
     public UnityEvent thisEvent;
 
     public void Use() {

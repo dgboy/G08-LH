@@ -109,8 +109,6 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\GenericAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\MultiProjectileAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\ProjectileAbility.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Notification.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\BoolValue.cs" />
@@ -135,6 +133,8 @@
      <Compile Include="Assets\Scripts\_old\DialogController.cs" />
      <Compile Include="Assets\Scripts\_old\GameSignal.cs" />
      <Compile Include="Assets\Scripts\_old\Interactive.cs" />
+     <Compile Include="Assets\Scripts\_old\Inventory.cs" />
+     <Compile Include="Assets\Scripts\_old\Item.cs" />
      <Compile Include="Assets\Scripts\_old\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\_old\PatrolLog.cs" />
      <Compile Include="Assets\Scripts\_old\Player.cs" />

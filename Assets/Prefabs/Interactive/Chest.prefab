@@ -172,11 +172,7 @@ MonoBehaviour:
   playerInRange: 0
   otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
   clue: {fileID: 11400000, guid: e3475f0b95d5b0b45a3ca09bc3d72be9, type: 2}
-  playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
-  item: {fileID: 11400000, guid: 194fcca5226e8b44d844b667df8b9ae0, type: 2}
-  itemSignal: {fileID: 11400000, guid: 52b4b3e9b56c72a4dadd9eca6d6f48c9, type: 2}
-  dialogBox: {fileID: 1737816683056229427, guid: 92225ca2aaec1124a96879633f9d14b3,
-    type: 3}
-  dialogText: {fileID: 1112701753745352524, guid: f32d90ee5f9afd147afc972d34372e52,
-    type: 3}
   storedOpen: {fileID: 11400000, guid: ac94dca35a8c0d7498cf352306f0eb9f, type: 2}
+  playerInventory: {fileID: 11400000, guid: 9844ff4a3f780734eb9ce62c3f3bb5a7, type: 2}
+  item: {fileID: 0}
+  receiveItemNotif: {fileID: 11400000, guid: 52b4b3e9b56c72a4dadd9eca6d6f48c9, type: 2}
