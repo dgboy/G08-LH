@@ -27,7 +27,7 @@ public class ReceiveItem : MonoBehaviour {
     }
 
     void DisplaySprite() {
-        myState.ChangeState(GenericState.receiveItem);
+        myState.ChangeState(State.receiveItem);
         anim.SetAnimParameter("receive_item", true);
         mySprite.enabled = true;
 
@@ -38,7 +38,7 @@ public class ReceiveItem : MonoBehaviour {
 
     void DisableSprite() {
         playerInventory.receiveItem = null;
-        myState.ChangeState(GenericState.idle);
+        myState.ChangeState(State.idle);
         mySprite.enabled = false;
         dialogNotification.Raise();
     }
