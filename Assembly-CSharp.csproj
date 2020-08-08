@@ -52,6 +52,8 @@
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\SixtyFPS.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\TileSpin.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\PixelArtCamera.cs" />
+     <Compile Include="Assets\Scripts\Enemies\AI\CatchUpAndAttacking.cs" />
+     <Compile Include="Assets\Scripts\Enemies\AI\WakingUpAndFollowing.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemies\Log.cs" />
@@ -67,8 +69,9 @@
      <Compile Include="Assets\Scripts\Generic Components\Interactable.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Magic.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Movement.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\PlayerStateMachine.cs" />
      <Compile Include="Assets\Scripts\Generic Components\ResetToPosition.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\States\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Inventory\HealthReaction.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />

@@ -7,7 +7,7 @@ public class PlayerHealth : Health {
 
     public override void Damage(int damage) {
         base.Damage(damage);
-        if(currentHealth > 0) {
+        if(IsAlive) {
             if (flash) {
                 flash.StartFlash();
             }

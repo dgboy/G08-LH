@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : Movement {
     [SerializeField] private AnimatorController anim;
-    [SerializeField] private StateMachine myState;
+    [SerializeField] private PlayerStateMachine myState;
     [SerializeField] private ReceiveItem myItem;
     [SerializeField] private float WeaponAttackDuration;
     private Vector2 tempMovement = Vector2.down;

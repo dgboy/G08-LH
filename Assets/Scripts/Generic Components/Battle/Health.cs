@@ -1,37 +1,27 @@
 ﻿using UnityEngine;
 
-public class Health : MonoBehaviour
-{
+public class Health : MonoBehaviour {
     [Tooltip("Max and current health \n Set this to one for pots")]
     [Header("Health values")]
     [SerializeField] private int maxHealth;
-    [SerializeField] public int currentHealth;
+    private int currentHealth;
 
-    public void SetHealth(int amount) {
-        currentHealth = amount;
+    void Start() {
+        FullHeal();
     }
+
+    public bool IsAlive => (currentHealth > 0) ? true : false;
+
+    public void IncreaseMaxHealth() => maxHealth += 2;
+
+    public void SetHealth(int amount) => currentHealth = amount;
+    public void FullHeal() => currentHealth = maxHealth;
+    public void Kill() => currentHealth = 0;
 
     public void Heal(int amount) {
-        currentHealth += amount;
-        if(currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
+        currentHealth = (currentHealth > maxHealth) ? maxHealth : currentHealth + amount;
     }
-
-    public void FullHeal() {
-        currentHealth = maxHealth;
-    }
-
-    public virtual void Damage(int damage) {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
-        {
-            currentHealth = 0;
-        }
-    }
-
-    public void Kill() {
-        currentHealth = 0;
+    public virtual void Damage(int amount) {
+        currentHealth = (currentHealth <= 0) ? 0 : currentHealth - amount;
     }
 }

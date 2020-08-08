@@ -176,7 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c261d6e51974b4197bfad1bcb0cc66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogNotification: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11, type: 2}
   dialogBox: {fileID: 4598175387037942657}
   dialogText: {fileID: 5639844535862593271}
   stringText: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911, type: 2}
@@ -672,8 +671,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4598175385715364508}
   - component: {fileID: 4598175385715364706}
-  - component: {fileID: 4598175385715364707}
-  - component: {fileID: 4598175385715364705}
   m_Layer: 5
   m_Name: Health Holder
   m_TagString: Untagged
@@ -709,63 +706,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4598175385715364509}
   m_CullTransparentMesh: 0
---- !u!114 &4598175385715364707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598175385715364509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -3855957774892257989, guid: c077c6bb1d757b245b8f38e6b67f5267,
-    type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &4598175385715364705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598175385715364509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2909cb1f3d109b4e8bb92481eeb4d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
-  signalEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4598175386712614286}
-        m_MethodName: UpdateHearts
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4598175385783278032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicSlider: {fileID: 6769806419069947266}
-  playerMP: {fileID: 0}
+  playerMP: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
 --- !u!1001 &6596469863797387166
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReceiveItem : MonoBehaviour {
     [SerializeField] private SpriteRenderer mySprite;
     [SerializeField] private AnimatorController anim;
-    [SerializeField] private StateMachine myState;
+    [SerializeField] private PlayerStateMachine myState;
     [SerializeField] private bool isActive = false;
     [SerializeField] private Notification dialogNotification;
 

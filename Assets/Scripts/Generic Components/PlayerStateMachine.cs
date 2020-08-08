@@ -12,7 +12,7 @@ public enum GenericState {
     ability
 }
 
-public class StateMachine : MonoBehaviour {
+public class PlayerStateMachine : StateMachine {
     public GenericState myState;
 
     public void ChangeState(GenericState newState) {

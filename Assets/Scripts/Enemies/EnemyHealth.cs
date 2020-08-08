@@ -8,8 +8,8 @@ public class EnemyHealth : Health {
     public override void Damage(int damage) {
         base.Damage(damage);
 
-        if(currentHealth <= 0) {
-        Debug.Log("Die!");
+        if(!IsAlive) {
+            // Debug.Log("Die!");
             Die();
         }
     }
