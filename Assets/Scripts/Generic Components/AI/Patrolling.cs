@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrolling : WakeUpAndFollowing {
+public class Patrolling : Sleeping {
     [SerializeField] private Transform[] points;
     [SerializeField] private float roundingDistance = .1f;
     private int currentPoint = 0;

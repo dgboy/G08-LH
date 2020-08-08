@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WakeUpAndFollowing : Following {
+public class Sleeping : Following {
     public bool IsAwakened => Animator.GetBool("wakeUp");
 
     public override void Idle() {
@@ -20,5 +20,9 @@ public class WakeUpAndFollowing : Following {
         } else {
             base.Walking(followTarget);
         }
+    }
+
+    protected void WakeUp() {
+        Animator.SetBool("wakeUp", true);
     }
 }

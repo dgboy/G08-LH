@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatchUpAndAttacking : Following {
+public class MeleeAttacking : Following {
     [SerializeField] private float attackRadius;
     [SerializeField] private float attackDelay = .5f;
 

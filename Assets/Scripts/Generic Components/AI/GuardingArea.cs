@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuardingArea : WakeUpAndFollowing {
+public class GuardingArea : Sleeping {
     [SerializeField] private Collider2D area;
     public bool TargetInBoundary => area.bounds.Contains(target.transform.position);
 

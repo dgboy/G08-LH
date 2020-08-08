@@ -4,19 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Sign : Interactable {
-    public GameObject dialogBox;
-    public Text dialogText;
-    public string dialog;
+    [SerializeField] private string text;
+    [SerializeField] private Notification dialogNotification;
+    [SerializeField] private StringValue dialogBoxMessege;
+    // public GameObject dialogBox;
+    // public Text dialogText;
 
     public virtual void Update() {
         if(playerInRange) {
-            if(Input.GetButtonDown("Check") && dialogBox.activeInHierarchy) {
+            if(Input.GetButtonDown("Check") && Time.timeScale == 0f) {
                 Time.timeScale = 1f;
-                dialogBox.SetActive(false);
-            } else if(Input.GetButtonDown("Check") && !dialogBox.activeInHierarchy) {
+                dialogNotification.Raise();
+            } else if(Input.GetButtonDown("Check")) {
                 Time.timeScale = 0f;
-                dialogText.text = dialog;
-                dialogBox.SetActive(true);
+                dialogBoxMessege.value = text;
+                dialogNotification.Raise();
             }
         }
     }
