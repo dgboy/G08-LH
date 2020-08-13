@@ -29,8 +29,8 @@ public class BoundedNPC : Sign {
         ChangeDirection();
     }
 
-    public override void Update() {
-        base.Update();
+    public override void StartDialog() {
+        base.StartDialog();
         
         if(isMoving) {
             moveTimeSeconds -= Time.deltaTime;

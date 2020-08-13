@@ -6,18 +6,16 @@ public class DialogNPC : Interactable {
     [SerializeField] private TextAsset myDialog;
     [SerializeField] private DialogAssetValue dialogValue;
     [SerializeField] private Notification branchingDialogNotification;
+	private bool isTalking = false;
 
-    void Start() {
-        
-    }
-
-    void Update() {
-        if (playerInRange) {
-            if(Input.GetButtonDown("Check")) {
-                dialogValue.value = myDialog;
-                branchingDialogNotification.Raise();
-                clue.Raise();
-            }
+    public void StartDialog() {
+        if (playerInRange && !isTalking) {
+            isTalking = true;
+            dialogValue.value = myDialog;
+            branchingDialogNotification.Raise();
+            clue.Raise();
         }
     }
+
+
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6474640301563710538}
   - component: {fileID: 6474640301563710537}
   - component: {fileID: 6474640301563710541}
+  - component: {fileID: 3978783330629806175}
   m_Layer: 0
   m_Name: Table Info
   m_TagString: Untagged
@@ -155,3 +156,30 @@ MonoBehaviour:
   text: "\u041C\u043E\u0439 \u0414\u043E\u043C"
   dialogNotification: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11, type: 2}
   dialogBoxMessege: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911, type: 2}
+--- !u!114 &3978783330629806175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474640301563710536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8a886659edfdc4dad39fa67f77bc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNotification: {fileID: 11400000, guid: 0bb19ed31c0ffdc4bad9a6ea2e97b761, type: 2}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6474640301563710541}
+        m_MethodName: StartDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

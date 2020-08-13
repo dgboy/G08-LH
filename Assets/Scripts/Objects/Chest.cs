@@ -17,23 +17,17 @@ public class Chest : Interactable {
         }
     }
 
-    void Update() {
-        if (Input.GetButtonDown("Check") && playerInRange && !isBlocked) {
-            if (!storedOpen.value) {
-                OpenChest();
-            }
+    public void OpenChest() {
+        if (playerInRange && !isBlocked && !storedOpen.value) {
+            clue.Raise();
+            animator.SetBool("open", true);
+
+            storedOpen.value = true;
+            playerInventory.AddItem(item);
+
+            isBlocked = true;
+            StartCoroutine(WaitCo());
         }
-    }
-
-    private void OpenChest() {
-        animator.SetBool("open", true);
-
-        storedOpen.value = true;
-        playerInventory.AddItem(item);
-
-        clue.Raise();
-        isBlocked = true;
-        StartCoroutine(WaitCo());
     }
 
     private IEnumerator WaitCo() {

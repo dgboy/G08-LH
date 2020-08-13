@@ -11,7 +11,7 @@ public class Following : Movement {
     public float DistanceToTarget => Vector3.Distance(transform.position, target.position);
     public bool InChaseRadius => DistanceToTarget < chaseRadius;
 
-    protected void Start() {
+    protected virtual void Start() {
         animator = GetComponentInParent<Animator>();
         target = GameObject.FindGameObjectWithTag(targetTag.value).GetComponent<Transform>();
     }

@@ -4,25 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
+    public string mainMenu;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
-    public string mainMenu;
 
-    private bool isPaused;
-
-    void Start() {
-        isPaused = false;
+    public void CancelPause() {
+        if(!pausePanel.activeSelf && inventoryPanel.activeSelf) {
+            ChangePanelActive(inventoryPanel);
+        } else {
+            ChangePanelActive(pausePanel);
+        }
     }
 
-    void Update() {
-        if (Input.GetButtonDown("Cancel")) {
-            if(!pausePanel.activeSelf && inventoryPanel.activeSelf) {
-                ChangePanelActive(inventoryPanel);
-            } else {
-                ChangePanelActive(pausePanel);
-            }
-        }
-        if (Input.GetButtonDown("Inventory") && !pausePanel.activeSelf) {
+    public void DisplayInventory() {
+        if (!pausePanel.activeSelf) {
             ChangePanelActive(inventoryPanel);
         }
     }
@@ -31,6 +26,7 @@ public class PauseManager : MonoBehaviour {
     public void Resume() {
         ChangePanelActive(pausePanel);
     }
+
     public void QuitToMain() {
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;

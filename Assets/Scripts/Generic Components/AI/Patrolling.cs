@@ -11,7 +11,7 @@ public class Patrolling : Sleeping {
     public float DistanceToGoal => Vector3.Distance(transform.position, currentGoal.position);
     public bool InPlace => DistanceToGoal > roundingDistance;
 
-    void Start() {
+    protected override void Start() {
         base.Start();
         currentGoal = points[currentPoint];
     }

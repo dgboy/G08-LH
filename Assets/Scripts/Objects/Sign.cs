@@ -7,15 +7,13 @@ public class Sign : Interactable {
     [SerializeField] private string text;
     [SerializeField] private Notification dialogNotification;
     [SerializeField] private StringValue dialogBoxMessege;
-    // public GameObject dialogBox;
-    // public Text dialogText;
 
-    public virtual void Update() {
+    public virtual void StartDialog() {
         if(playerInRange) {
-            if(Input.GetButtonDown("Check") && Time.timeScale == 0f) {
+            if(Time.timeScale == 0f) {
                 Time.timeScale = 1f;
                 dialogNotification.Raise();
-            } else if(Input.GetButtonDown("Check")) {
+            } else {
                 Time.timeScale = 0f;
                 dialogBoxMessege.value = text;
                 dialogNotification.Raise();

@@ -1103,6 +1103,7 @@ GameObject:
   - component: {fileID: 8747630572791009621}
   - component: {fileID: 8747630572791009620}
   - component: {fileID: 8747630572791009617}
+  - component: {fileID: 1888605822937784133}
   m_Layer: 5
   m_Name: Pause Canvas
   m_TagString: Untagged
@@ -1212,9 +1213,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3486f01c308b1984f9b85be41641b732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: MainMenu
   pausePanel: {fileID: 8747630571908205569}
   inventoryPanel: {fileID: 4998671384903358395}
-  mainMenu: MainMenu
+--- !u!114 &1888605822937784133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747630572791009626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8a886659edfdc4dad39fa67f77bc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNotification: {fileID: 11400000, guid: 0e4451dd7e533184fa39510778d22a9a, type: 2}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8747630572791009617}
+        m_MethodName: CancelPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1850218007199674203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1500,15 +1528,15 @@ PrefabInstance:
       objectReference: {fileID: 8747630572791009617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab667eabf7cfd3248844d752af6c52e5, type: 3}
---- !u!1 &8747630571908205569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6213852326178271806, guid: ab667eabf7cfd3248844d752af6c52e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3411998350847295039}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8747630571908205570 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6213852326178271805, guid: ab667eabf7cfd3248844d752af6c52e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3411998350847295039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8747630571908205569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6213852326178271806, guid: ab667eabf7cfd3248844d752af6c52e5,
     type: 3}
   m_PrefabInstance: {fileID: 3411998350847295039}
   m_PrefabAsset: {fileID: 0}

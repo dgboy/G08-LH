@@ -6,8 +6,8 @@ public class ReceiveItem : MonoBehaviour {
     [SerializeField] private SpriteRenderer mySprite;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerStateMachine myState;
-    [SerializeField] private bool isActive = false;
     [SerializeField] private Notification dialogNotification;
+    [SerializeField] private bool isActive = false;
 
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private StringValue itemDescription;
@@ -29,6 +29,8 @@ public class ReceiveItem : MonoBehaviour {
     void DisplaySprite() {
         myState.ChangeState(State.receiveItem);
         animator.SetBool("receive_item", true);
+        Debug.Log(myState.myState);
+        
         mySprite.enabled = true;
 
         mySprite.sprite = playerInventory.receiveItem.itemImage;
@@ -39,6 +41,7 @@ public class ReceiveItem : MonoBehaviour {
     void DisableSprite() {
         playerInventory.receiveItem = null;
         myState.ChangeState(State.idle);
+        animator.SetBool("receive_item", false);
         mySprite.enabled = false;
         dialogNotification.Raise();
     }

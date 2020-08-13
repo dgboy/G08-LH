@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.4" tiledversion="1.4.2" name="world" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
- <image source="../../../G11-NS/Assets/Arts/Overworld.png" width="640" height="576"/>
+ <image source="../Tilesets/Overworld.png" width="640" height="576"/>
  <terraintypes>
   <terrain name="path" tile="-1"/>
   <terrain name="lake" tile="-1"/>
