@@ -129,8 +129,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -438007231
-  m_SortingLayer: 2
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2757298984738394219, guid: ed173e1b2c631b34fa6124f1c2f6724f,
     type: 3}
@@ -248,12 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8e55d789c12514b8d5ebd4bfd4d762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 11400000, guid: 1d6f8a7611762be46ba24a0ad5310115, type: 2}
-  dialogBox: {fileID: 1737816683056229427, guid: 92225ca2aaec1124a96879633f9d14b3,
-    type: 3}
-  dialogText: {fileID: 1112701753745352524, guid: f32d90ee5f9afd147afc972d34372e52,
-    type: 3}
-  dialog: '?'
+  playerInRange: 0
+  otherTag: {fileID: 0}
+  clue: {fileID: 0}
+  text: 
+  dialogNotification: {fileID: 0}
+  dialogBoxMessege: {fileID: 0}
   bounds: {fileID: 4729247693763326145}
   speed: 5
   moveTime: 3

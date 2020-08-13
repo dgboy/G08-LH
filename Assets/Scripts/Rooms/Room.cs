@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour {
     public Enemy[] enemies;
-    public Pot[] pots;
+    public Breakable[] pots;
     public GameObject virtualCamera;
 
     void OnDisable() {

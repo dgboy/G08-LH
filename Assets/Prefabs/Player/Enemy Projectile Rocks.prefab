@@ -19,6 +19,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c,
         type: 2}
+    - target: {fileID: 3074182153099472344, guid: 33a32464455c1e74a8b49f300076426b,
+        type: 3}
+      propertyPath: knockStrength
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3853740960722847899, guid: 33a32464455c1e74a8b49f300076426b,
         type: 3}
       propertyPath: m_Name

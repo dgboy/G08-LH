@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1664281198986533546}
   - component: {fileID: 4646603668846635926}
   m_Layer: 11
-  m_Name: Projectile Rocks
+  m_Name: Player Projectile Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1151158985
-  m_SortingLayer: 3
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 5849325189442884660, guid: c077c6bb1d757b245b8f38e6b67f5267,
     type: 3}

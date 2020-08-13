@@ -59,12 +59,12 @@
      <Compile Include="Assets\Scripts\Generic Components\AI\Patrolling.cs" />
      <Compile Include="Assets\Scripts\Generic Components\AI\Shooting.cs" />
      <Compile Include="Assets\Scripts\Generic Components\AI\Sleeping.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\AnimatorController.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Damage.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Health.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Knockback.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\Breakable.cs" />
      <Compile Include="Assets\Scripts\Generic Components\DestroyOverTime.cs" />
      <Compile Include="Assets\Scripts\Generic Components\GenericProjectile.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Interactable.cs" />
@@ -89,7 +89,6 @@
      <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
      <Compile Include="Assets\Scripts\Objects\LocationTransfer.cs" />
      <Compile Include="Assets\Scripts\Objects\LockedDoor.cs" />
-     <Compile Include="Assets\Scripts\Objects\Pot.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Coin.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Heart.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\MagicPowerUp.cs" />
@@ -131,6 +130,7 @@
      <Compile Include="Assets\Scripts\System\SignalListener.cs" />
      <Compile Include="Assets\Scripts\System\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\System\TimelineManager.cs" />
+     <Compile Include="Assets\Scripts\_old\AnimatorController.cs" />
      <Compile Include="Assets\Scripts\_old\Arrow.cs" />
      <Compile Include="Assets\Scripts\_old\Enemy.cs" />
      <Compile Include="Assets\Scripts\_old\GameSignal.cs" />

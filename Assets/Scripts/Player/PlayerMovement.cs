@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : Movement {
-    [SerializeField] private AnimatorController anim;
+    // [SerializeField] private AnimatorController anim;
+    [SerializeField] private Animator animator;
     [SerializeField] private PlayerStateMachine myState;
     [SerializeField] private ReceiveItem myItem;
     [SerializeField] private float WeaponAttackDuration;
@@ -21,7 +22,7 @@ public class PlayerMovement : Movement {
             if(myState.myState == State.receiveItem) {
                 if(Input.GetButtonDown("Check")) {
                     myState.ChangeState(State.idle);
-                    anim.SetAnimParameter("receive_item", false);
+                    animator.SetBool("receive_item", false);
                     myItem.ChangeSpriteState();
                 }
                 return;
@@ -62,13 +63,13 @@ public class PlayerMovement : Movement {
 
     void SetAnimation() {
         if (tempMovement.magnitude > 0) {
-            anim.SetAnimParameter("moveX", Mathf.Round(tempMovement.x));
-            anim.SetAnimParameter("moveY", Mathf.Round(tempMovement.y));
-            anim.SetAnimParameter("moving", true);
+            animator.SetFloat("moveX", Mathf.Round(tempMovement.x));
+            animator.SetFloat("moveY", Mathf.Round(tempMovement.y));
+            animator.SetBool("moving", true);
             SetState(State.walk);
             facingDirection = tempMovement;
         } else {
-            anim.SetAnimParameter("moving", false);
+            animator.SetBool("moving", false);
             if(myState.myState != State.attack) {
                 SetState(State.idle);
             }
@@ -77,15 +78,15 @@ public class PlayerMovement : Movement {
 
     public IEnumerator WeaponCo() {
         myState.ChangeState(State.attack);
-        anim.SetAnimParameter("attacking", true);
+        animator.SetBool("attacking", true);
         yield return new WaitForSeconds(WeaponAttackDuration);
         myState.ChangeState(State.idle);
-        anim.SetAnimParameter("attacking", false);
+        animator.SetBool("attacking", false);
     }
 
     private IEnumerator AbilityCo(float duration) {
         myState.ChangeState(State.ability);
-        currentAbility.Ability(transform.position, facingDirection, anim.anim, myRigidbody);
+        currentAbility.Ability(transform.position, facingDirection, animator, myRigidbody);
         yield return new WaitForSeconds(duration);
         myState.ChangeState(State.idle);
     }

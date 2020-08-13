@@ -7,6 +7,7 @@ TagManager:
   - breakable
   - enemy
   - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -46,13 +47,4 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 439362667
-    locked: 0
-  - name: Creatures
-    uniqueID: 3856960065
-    locked: 0
-  - name: Player
-    uniqueID: 1151158985
-    locked: 0
-  - name: GUI
-    uniqueID: 1990899687
     locked: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ReceiveItem : MonoBehaviour {
     [SerializeField] private SpriteRenderer mySprite;
-    [SerializeField] private AnimatorController anim;
+    [SerializeField] private Animator animator;
     [SerializeField] private PlayerStateMachine myState;
     [SerializeField] private bool isActive = false;
     [SerializeField] private Notification dialogNotification;
@@ -28,7 +28,7 @@ public class ReceiveItem : MonoBehaviour {
 
     void DisplaySprite() {
         myState.ChangeState(State.receiveItem);
-        anim.SetAnimParameter("receive_item", true);
+        animator.SetBool("receive_item", true);
         mySprite.enabled = true;
 
         mySprite.sprite = playerInventory.receiveItem.itemImage;
