@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Generic Components\AI\Shooting.cs" />
      <Compile Include="Assets\Scripts\Generic Components\AI\Sleeping.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Damage.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\Battle\DamageAndDestroy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Health.cs" />

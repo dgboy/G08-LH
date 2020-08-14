@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : Health {
-    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private GameObject deathEffect = null;
 
     public override void Damage(int damage) {
         base.Damage(damage);

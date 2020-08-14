@@ -2,10 +2,10 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class GenericProjectile : MonoBehaviour {
-    [SerializeField] private float speed; 
-    private Rigidbody2D rigidbody; 
+    [SerializeField] [Range(10f, 20f)] private float speed; 
+    private new Rigidbody2D rigidbody;
 
-    void Start() {
+    void OnEnable() {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 

@@ -29,9 +29,7 @@ public class BoundedNPC : Sign {
         ChangeDirection();
     }
 
-    public override void StartDialog() {
-        base.StartDialog();
-        
+    void Update() {
         if(isMoving) {
             moveTimeSeconds -= Time.deltaTime;
             if(moveTimeSeconds <= 0) {
@@ -64,7 +62,9 @@ public class BoundedNPC : Sign {
     private void Move() {
         Vector3 temp = myTransform.position + directionVector * speed * Time.deltaTime;
         if (bounds.bounds.Contains(temp)) {
-            myRigidbody.MovePosition(temp);
+            myRigidbody.velocity = (Vector2)directionVector.normalized * speed;
+            // Debug.Log(temp);
+            // myRigidbody.MovePosition(temp);
         } else {
             ChangeDirection();
         }

@@ -17,7 +17,7 @@ public class ReceiveItem : MonoBehaviour {
     }
 
     public void ChangeSpriteState() {
-        Debug.Log(isActive);
+        // Debug.Log(isActive);
         isActive = !isActive;
         if (isActive) {
             DisplaySprite();
@@ -29,7 +29,7 @@ public class ReceiveItem : MonoBehaviour {
     void DisplaySprite() {
         myState.ChangeState(State.receiveItem);
         animator.SetBool("receive_item", true);
-        Debug.Log(myState.myState);
+        // Debug.Log(myState.myState);
         
         mySprite.enabled = true;
 

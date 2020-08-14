@@ -89,7 +89,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 640682055342252250}
   m_Father: {fileID: 4729247695116245096}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,7 +252,8 @@ MonoBehaviour:
   playerInRange: 0
   otherTag: {fileID: 0}
   clue: {fileID: 0}
-  text: 
+  text: "\u041F\u0440\u0438\u0432\u0435\u0442. \u0430 \u044F \u0442\u0443\u0442 \u043F\u0440\u043E\u0441\u0442\u043E
+    \u0445\u043E\u0436\u0443-\u0431\u0440\u043E\u0436\u0443."
   dialogNotification: {fileID: 0}
   dialogBoxMessege: {fileID: 0}
   bounds: {fileID: 4729247693763326145}
@@ -294,3 +296,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8091290690680616710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640682055342252250}
+  - component: {fileID: 8223118408856433309}
+  - component: {fileID: 5824876261327308393}
+  - component: {fileID: 2309944515048817866}
+  m_Layer: 0
+  m_Name: Dialog Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &640682055342252250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091290690680616710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4729247694575189163}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8223118408856433309
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091290690680616710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &5824876261327308393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091290690680616710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca370e07c65ba724c91b5435f599760b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
+  clue: {fileID: 11400000, guid: e3475f0b95d5b0b45a3ca09bc3d72be9, type: 2}
+  myDialog: {fileID: 4900000, guid: 4c9f72f32fd9f694d98e3dfd7f7259f9, type: 3}
+  dialogValue: {fileID: 11400000, guid: da257509dde07ba4c8cc3e00ab8817e1, type: 2}
+  branchingDialogNotification: {fileID: 11400000, guid: e55ea5f6df45dfd4182336b707aa6f34,
+    type: 2}
+--- !u!114 &2309944515048817866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091290690680616710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8a886659edfdc4dad39fa67f77bc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNotification: {fileID: 11400000, guid: 0bb19ed31c0ffdc4bad9a6ea2e97b761, type: 2}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: StartDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

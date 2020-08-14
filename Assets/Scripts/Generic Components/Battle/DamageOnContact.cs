@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class DamageOnContact : Damage {
     [SerializeField] StringValue otherTag;
-    [SerializeField] private int damageAmount;
+    [SerializeField] private int damageAmount = 1;
 
-    public void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag(otherTag.value)) {
-            Health health = other.gameObject.GetComponent<Health>();
-            if (health) {
-                ApplyDamage(health, damageAmount);
-            }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (IsTarget(other)) {
+            MakeDamage(other);
         }
+    }
+
+    public void MakeDamage(Collider2D other) {
+        Health health = other.gameObject.GetComponent<Health>();
+        if (health) {
+            ApplyDamage(health, damageAmount);
+        }
+    }
+
+    public bool IsTarget(Collider2D other) {
+        return other.gameObject.CompareTag(otherTag.value);
     }
 }

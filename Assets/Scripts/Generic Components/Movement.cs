@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour {
 
     public void Motion(Vector2 direction) {
         direction = direction.normalized;
+        // myRigidbody.AddForce(direction * speed);
         myRigidbody.velocity = direction * speed;
     }
 }

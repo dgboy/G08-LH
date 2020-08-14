@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4794348001486866923}
   - component: {fileID: 429127288919927409}
   - component: {fileID: 3074182153099472344}
-  - component: {fileID: 1664281198986533546}
+  - component: {fileID: 8571928774117617830}
   - component: {fileID: 4646603668846635926}
   m_Layer: 11
   m_Name: Player Projectile Rocks
@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fb2a902195dcd4abc1602a117184e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 4794348001486866923}
   speed: 10
 --- !u!114 &3074182153099472344
 MonoBehaviour:
@@ -154,7 +153,7 @@ MonoBehaviour:
   otherTag: {fileID: 11400000, guid: f02355e5d6cc8c641bd146ee05f8e6db, type: 2}
   knockTime: 0.2
   knockStrength: 3
---- !u!114 &1664281198986533546
+--- !u!114 &8571928774117617830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3853740960722847899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5979d67a029747bf96f07adfa34b8c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 343d9c8c7925db7418a0024809f0c0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   otherTag: {fileID: 11400000, guid: f02355e5d6cc8c641bd146ee05f8e6db, type: 2}

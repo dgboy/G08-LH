@@ -224,9 +224,9 @@ GameObject:
   - component: {fileID: 54807675}
   - component: {fileID: 54807680}
   - component: {fileID: 54807679}
-  - component: {fileID: 54807678}
-  - component: {fileID: 54807677}
   - component: {fileID: 54807676}
+  - component: {fileID: 54807677}
+  - component: {fileID: 54807678}
   m_Layer: 0
   m_Name: Fances
   m_TagString: Untagged
@@ -1961,7 +1961,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3663,9 +3663,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e3475f0b95d5b0b45a3ca09bc3d72be9,
         type: 2}
+    - target: {fileID: 4729247694575189159, guid: 791f9d6462979254881ef1cb76eba4ac,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729247694575189159, guid: 791f9d6462979254881ef1cb76eba4ac,
+        type: 3}
+      propertyPath: dialogBoxMessege
+      value: 
+      objectReference: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911,
+        type: 2}
+    - target: {fileID: 4729247694575189159, guid: 791f9d6462979254881ef1cb76eba4ac,
+        type: 3}
+      propertyPath: dialogNotification
+      value: 
+      objectReference: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11,
+        type: 2}
     - target: {fileID: 4729247694575189161, guid: 791f9d6462979254881ef1cb76eba4ac,
         type: 3}
-      propertyPath: m_BodyType
+      propertyPath: m_LinearDrag
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4729247694575189162, guid: 791f9d6462979254881ef1cb76eba4ac,
@@ -3681,7 +3698,7 @@ PrefabInstance:
     - target: {fileID: 4729247695116245096, guid: 791f9d6462979254881ef1cb76eba4ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 29.34
       objectReference: {fileID: 0}
     - target: {fileID: 4729247695116245096, guid: 791f9d6462979254881ef1cb76eba4ac,
         type: 3}
@@ -3691,7 +3708,7 @@ PrefabInstance:
     - target: {fileID: 4729247695116245096, guid: 791f9d6462979254881ef1cb76eba4ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4729247695116245096, guid: 791f9d6462979254881ef1cb76eba4ac,
         type: 3}
@@ -3728,7 +3745,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Holder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4729247694575189157, guid: 791f9d6462979254881ef1cb76eba4ac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 791f9d6462979254881ef1cb76eba4ac, type: 3}
 --- !u!1 &209215336
 GameObject:
@@ -4066,7 +4084,7 @@ Transform:
   m_Children:
   - {fileID: 1958213597}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &369727211
 Rigidbody2D:
@@ -5333,7 +5351,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: 0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6304,7 +6322,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -6381,7 +6399,7 @@ Transform:
   - {fileID: 2119294274}
   - {fileID: 607250282}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &807640417
 BoxCollider2D:
@@ -101282,7 +101300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126882203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000030517578, y: -0.000015258789, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 757837265}
@@ -101759,51 +101777,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1324780035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8645182717166879710, guid: 8e2761b042b845647b566ae40a21db1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1988952324}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1324780037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324780035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8a886659edfdc4dad39fa67f77bc29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myNotification: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
-  myEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1324780039}
-        m_MethodName: UpdateMagic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1324780039 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4898085869885495451, guid: 8e2761b042b845647b566ae40a21db1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1988952324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324780035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5cdee5f2200ae74ab0dd807d1f4adbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1340544955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1401050440257945720, guid: bf20c0f5c70119e42be673f9ef75c7d6,
@@ -101865,7 +101838,7 @@ MonoBehaviour:
   myState: {fileID: 344300470}
   myItem: {fileID: 4592938956132437798}
   weaponAttackDuration: 0.1
-  currentAbility: {fileID: 11400000, guid: 25fc6c622adb99c408a58bdce5c83ff8, type: 2}
+  currentAbility: {fileID: 11400000, guid: 272a2df8990d374428b64f943bc5aa38, type: 2}
   inputCheck: {fileID: 11400000, guid: 0bb19ed31c0ffdc4bad9a6ea2e97b761, type: 2}
   inputInventory: {fileID: 11400000, guid: a429e5db5b8584c45ae9532a69c86541, type: 2}
   inputCancel: {fileID: 11400000, guid: 0e4451dd7e533184fa39510778d22a9a, type: 2}
@@ -101958,21 +101931,6 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1376861471}
-        m_MethodName: OnInventory
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9336162a-f3be-445a-a495-c369f40a7ad3
-    m_ActionName: Player/Inventory[/Keyboard/i]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1376861471}
         m_MethodName: OnPause
         m_Mode: 0
         m_Arguments:
@@ -101985,6 +101943,48 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cf7d3faf-f927-4643-8ff8-0a5b9c28d39e
     m_ActionName: Player/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e30af9de-a6b0-4f87-8a38-15e30ace6446
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a18cb3dc-5ec5-4089-a61b-61e048d3d91f
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1376861471}
+        m_MethodName: OnInventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d6c36446-11f9-4e19-a6b1-035d0ed8c03f
+    m_ActionName: UI/Inventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc7f3603-fc56-4fc3-a792-3cb8dff105bd
+    m_ActionName: UI/Navigate[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1376861471}
+        m_MethodName: OnInventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fd8e2dcc-82fe-4fe0-9054-8539d636bc3f
+    m_ActionName: Player/Inventory[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -105936,7 +105936,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 439362667
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106331,7 +106331,7 @@ PrefabInstance:
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.769068
+      value: 15.955711
       objectReference: {fileID: 0}
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
@@ -106887,9 +106887,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -438007231
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -5034061168752090764, guid: 16cc2a8d1078ba34e956355949e624de,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107298,9 +107298,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1151158985
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8387997009269029421, guid: c077c6bb1d757b245b8f38e6b67f5267,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

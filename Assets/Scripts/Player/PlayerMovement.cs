@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+#pragma warning restore 0649
+// [Range(.1f, 10f)]
+
 public class PlayerMovement : Movement {
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerStateMachine myState;
@@ -26,15 +29,19 @@ public class PlayerMovement : Movement {
         Motion(tempMovement);
     }
     public void OnAbility(InputAction.CallbackContext context) {
-        if (currentAbility) {
+        if(!context.started) {
+            return;
+        }
+        
+        if (currentAbility && !IsRestrictedState(myState.myState)) {
             StartCoroutine(AbilityCo(currentAbility.duration));
         }
     }
     public void OnCheck(InputAction.CallbackContext context) {
-        // Debug.Log(myState.myState);
         if(!context.started) {
             return;
         }
+        Debug.Log(myState.myState);
 
         if (myState.myState == State.receiveItem) {
             myItem.ChangeSpriteState();
@@ -56,9 +63,8 @@ public class PlayerMovement : Movement {
         tempMovement = Vector2.zero;
     }
 
-    void Update() {
+    void FixedUpdate() {
         if (!IsRestrictedState(myState.myState)) {
-            // GetInput();
             Motion(tempMovement);
             SetAnimation();
         }

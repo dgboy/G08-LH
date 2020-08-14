@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FlashColor : MonoBehaviour {
 
-    [SerializeField] private SpriteRenderer mySprite;
+    [SerializeField] private SpriteRenderer mySprite = null;
     [SerializeField] private Color flashColor;
     [SerializeField] private int numberOfFlashes;
     [SerializeField] private float flashDelay;

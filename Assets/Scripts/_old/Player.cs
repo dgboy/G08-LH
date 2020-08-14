@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] private GenericAbility currentAbility;
     private Vector3 facingDirection = Vector2.down;
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     private Animator animator;
     private Vector3 movement;
 
