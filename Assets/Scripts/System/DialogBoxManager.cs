@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using TMPro;
 
 public class DialogBoxManager : MonoBehaviour {
-    [SerializeField] private GameObject dialogBox;
-    [SerializeField] private TextMeshProUGUI dialogText;
-    [SerializeField] private StringValue stringText;
+    [SerializeField] private GameObject dialogBox = null;
+    [SerializeField] private TextMeshProUGUI dialogText = null;
+    [SerializeField] private StringValue stringText = null;
 
     public void ChangeDialogBox() {
         // Debug.Log("dialog: " + dialogBox.activeSelf);

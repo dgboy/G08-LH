@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine;
 
 public class InventorySaver : MonoBehaviour {
-    [SerializeField] private PlayerInventory myInventory;
+    [SerializeField] private PlayerInventory myInventory = null;
 
     private void OnEnable() {
         myInventory.myInventory.Clear();

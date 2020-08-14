@@ -5,8 +5,8 @@ public class FlashColor : MonoBehaviour {
 
     [SerializeField] private SpriteRenderer mySprite = null;
     [SerializeField] private Color flashColor;
-    [SerializeField] private int numberOfFlashes;
-    [SerializeField] private float flashDelay;
+    [SerializeField] private int numberOfFlashes = 3;
+    [SerializeField] private float flashDelay = .1f;
     private bool isFlashing = false;
 
     public void StartFlash() {

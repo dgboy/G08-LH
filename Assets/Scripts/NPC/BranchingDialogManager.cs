@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using Ink.Runtime;
 
 public class BranchingDialogManager : MonoBehaviour {
-    [SerializeField] private GameObject branchingCanvas;
-    [SerializeField] private GameObject dialogPrefab;
-    [SerializeField] private GameObject choicePrefab;
-    [SerializeField] private GameObject dialogHolder;
-    [SerializeField] private GameObject choiceHolder;
-    [SerializeField] private DialogAssetValue dialogValue;
-    [SerializeField] private Story myStory;
-    [SerializeField] private ScrollRect dialogScroll;
+    [SerializeField] private GameObject branchingCanvas = null;
+    [SerializeField] private GameObject dialogPrefab = null;
+    [SerializeField] private GameObject choicePrefab = null;
+    [SerializeField] private GameObject dialogHolder = null;
+    [SerializeField] private GameObject choiceHolder = null;
+    [SerializeField] private DialogAssetValue dialogValue = null;
+    [SerializeField] private Story myStory = null;
+    [SerializeField] private ScrollRect dialogScroll = null;
 
     public void EnableCanvas() {
         Time.timeScale = 0f;

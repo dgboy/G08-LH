@@ -3,7 +3,7 @@ using DG.Tweening;
 
 [CreateAssetMenu(fileName = "Projectile", menuName = "Scriptable Objects/Abilities/Projectile")]
 public class ProjectileAbility : GenericAbility {
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject projectile = null;
 
     public override void Ability(
         Vector2 position, Vector2 facingDirection,

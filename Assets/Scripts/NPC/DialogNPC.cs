@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogNPC : Interactable {
-    [SerializeField] private TextAsset myDialog;
-    [SerializeField] private DialogAssetValue dialogValue;
-    [SerializeField] private Notification branchingDialogNotification;
+    [SerializeField] private TextAsset myDialog = null;
+    [SerializeField] private DialogAssetValue dialogValue = null;
+    [SerializeField] private Notification branchingDialogNotification = null;
 	private bool isTalking = false;
 
     public void StartDialog() {

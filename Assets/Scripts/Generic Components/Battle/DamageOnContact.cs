@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageOnContact : Damage {
-    [SerializeField] StringValue otherTag;
+    [SerializeField] StringValue otherTag = null;
     [SerializeField] private int damageAmount = 1;
 
     private void OnTriggerEnter2D(Collider2D other) {

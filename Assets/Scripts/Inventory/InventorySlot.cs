@@ -10,8 +10,8 @@ public class InventorySlot : MonoBehaviour {
     public InventoryManager thisManager;
 
     [Header("UI Stuff to change")]
-    [SerializeField] private TextMeshProUGUI itemNumberText;
-    [SerializeField] private Image itemImage;
+    [SerializeField] private TextMeshProUGUI itemNumberText = null;
+    [SerializeField] private Image itemImage = null;
 
     public void Setup(InventoryItem newItem, InventoryManager newManager) {
         thisItem = newItem;

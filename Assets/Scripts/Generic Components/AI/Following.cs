@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class Following : Movement {
-    [SerializeField] private StringValue targetTag;
+    [SerializeField] private StringValue targetTag = null;
     [SerializeField] protected float chaseRadius;
     protected Transform target;
     private Animator animator;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 1f;
     protected Rigidbody2D myRigidbody;
 
     void OnEnable() {

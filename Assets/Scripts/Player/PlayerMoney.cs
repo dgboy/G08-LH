@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMoney : MonoBehaviour
 {
-    [SerializeField] private int currentMoney;
-    [SerializeField] private int maxMoney;
+    [SerializeField] private int currentMoney = 0;
+    [SerializeField] private int maxMoney = 100000;
 
     public void AddMoney(int amountToAdd)
     {

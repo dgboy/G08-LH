@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResetPlayerPosition : MonoBehaviour
 {
-    [SerializeField] private VectorValue playerPosition;
+    [SerializeField] private VectorValue playerPosition = null;
 
     // Start is called before the first frame update
     void Start()

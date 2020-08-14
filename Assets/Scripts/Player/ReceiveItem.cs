@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ReceiveItem : MonoBehaviour {
-    [SerializeField] private SpriteRenderer mySprite;
-    [SerializeField] private Animator animator;
-    [SerializeField] private PlayerStateMachine myState;
-    [SerializeField] private Notification dialogNotification;
+    [SerializeField] private SpriteRenderer mySprite = null;
+    [SerializeField] private Animator animator = null;
+    [SerializeField] private PlayerStateMachine myState = null;
+    [SerializeField] private Notification dialogNotification = null;
     [SerializeField] private bool isActive = false;
 
-    [SerializeField] private PlayerInventory playerInventory;
-    [SerializeField] private StringValue itemDescription;
+    [SerializeField] private PlayerInventory playerInventory = null;
+    [SerializeField] private StringValue itemDescription = null;
 
     void Start() {
         mySprite.enabled = false;

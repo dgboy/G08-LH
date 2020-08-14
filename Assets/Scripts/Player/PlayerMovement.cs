@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-#pragma warning restore 0649
-// [Range(.1f, 10f)]
-
 public class PlayerMovement : Movement {
-    [SerializeField] private Animator animator;
-    [SerializeField] private PlayerStateMachine myState;
-    [SerializeField] private ReceiveItem myItem;
+    [SerializeField] private Animator animator = null;
+    [SerializeField] private PlayerStateMachine myState = null;
+    [SerializeField] private ReceiveItem myItem = null;
     [SerializeField] private float weaponAttackDuration = .1f;
-    [SerializeField] private GenericAbility currentAbility;
-    [SerializeField] private Notification inputCheck;
-    [SerializeField] private Notification inputInventory;
-    [SerializeField] private Notification inputCancel;
+    [SerializeField] private GenericAbility currentAbility = null;
+    [SerializeField] private Notification inputCheck = null;
+    [SerializeField] private Notification inputInventory = null;
+    [SerializeField] private Notification inputCancel = null;
 
     private Vector2 tempMovement = Vector2.down;
     private Vector3 facingDirection = Vector2.down;
@@ -32,7 +29,6 @@ public class PlayerMovement : Movement {
         if(!context.started) {
             return;
         }
-        
         if (currentAbility && !IsRestrictedState(myState.myState)) {
             StartCoroutine(AbilityCo(currentAbility.duration));
         }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Multi Projectile", menuName = "Scriptable Objects/Abilities/Multi Projectile")]
 public class MultiProjectileAbility : GenericAbility {
-    [SerializeField] private GameObject projectile;
-    [SerializeField] private int count;
-    [SerializeField] private float spread;
+    [SerializeField] private GameObject projectile = null;
+    [SerializeField] private int count = 3;
+    [SerializeField] private float spread = 80;
 
     public override void Ability(
         Vector2 position, Vector2 facingDirection,

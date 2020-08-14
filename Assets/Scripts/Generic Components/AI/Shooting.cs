@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : Sleeping {
-    [SerializeField] private GenericAbility ability;
+    [SerializeField] private GenericAbility ability = null;
     // public GameObject projectile;
     // public float fireDelay = .8f;
     // private float fireDelaySeconds;

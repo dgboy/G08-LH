@@ -2,9 +2,9 @@
 using DG.Tweening;
 
 public class Knockback : MonoBehaviour {
-    [SerializeField] private StringValue otherTag;
-    [SerializeField] private float knockTime;
-    [SerializeField] private float knockStrength;
+    [SerializeField] private StringValue otherTag = null;
+    [SerializeField] private float knockTime = 0.1f;
+    [SerializeField] private float knockStrength = 1f;
 
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag(otherTag.value) && other.isTrigger) {

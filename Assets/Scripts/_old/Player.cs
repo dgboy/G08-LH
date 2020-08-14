@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
     public Collider2D trigger;
     public SpriteRenderer mySprite;
 
-    [SerializeField] private GenericAbility currentAbility;
+    [SerializeField] private GenericAbility currentAbility = null;
     private Vector3 facingDirection = Vector2.down;
     private new Rigidbody2D rigidbody;
     private Animator animator;

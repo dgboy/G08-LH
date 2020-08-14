@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class PhysicalInventoryItem : MonoBehaviour {
-    [SerializeField] private InventoryItem thisItem;
-    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private InventoryItem thisItem = null;
+    [SerializeField] private PlayerInventory playerInventory = null;
 
     void AddItemToInventory() {
         if(playerInventory && thisItem) {

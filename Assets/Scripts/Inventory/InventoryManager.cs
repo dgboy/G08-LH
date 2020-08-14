@@ -8,11 +8,11 @@ public class InventoryManager : MonoBehaviour {
     public InventoryItem currentItem;
 
     [Header("Inventory Information")]
-    [SerializeField] private GameObject blankInventorySlot;
-    [SerializeField] private GameObject inventoryPanel;
-    [SerializeField] private TextMeshProUGUI itemNameText;
-    [SerializeField] private TextMeshProUGUI descriptionText;
-    [SerializeField] private GameObject useButton;
+    [SerializeField] private GameObject blankInventorySlot = null;
+    [SerializeField] private GameObject inventoryPanel = null;
+    [SerializeField] private TextMeshProUGUI itemNameText = null;
+    [SerializeField] private TextMeshProUGUI descriptionText = null;
+    [SerializeField] private GameObject useButton = null;
 
     void OnEnable() {
         ClearInventorySlots();

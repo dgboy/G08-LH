@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Chest : Interactable {
-    [SerializeField] private PlayerInventory playerInventory;
-    [SerializeField] private Notification receiveItemNotif;
-    [SerializeField] private InventoryItem item;
-    [SerializeField] private BoolValue storedOpen;
+    [SerializeField] private PlayerInventory playerInventory = null;
+    [SerializeField] private Notification receiveItemNotif = null;
+    [SerializeField] private InventoryItem item = null;
+    [SerializeField] private BoolValue storedOpen = null;
     private Animator animator;
 
     void Start() {

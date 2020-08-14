@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class Magic : MonoBehaviour {
-    [SerializeField] private int maxMagic;
-    [SerializeField] private int currentMagic;
+    [SerializeField] private int maxMagic = 10;
+    private int currentMagic;
 
 
     public bool CanUseMagic(int amountToUse) {

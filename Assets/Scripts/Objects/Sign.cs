@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Sign : Interactable {
     [SerializeField] private string text;
-    [SerializeField] private Notification dialogNotification;
-    [SerializeField] private StringValue dialogBoxMessege;
+    [SerializeField] private Notification dialogNotification = null;
+    [SerializeField] private StringValue dialogBoxMessege = null;
 
     public virtual void StartDialog() {
         if(playerInRange) {
