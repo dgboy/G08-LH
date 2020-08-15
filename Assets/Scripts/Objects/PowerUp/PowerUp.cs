@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
-    
-    public Notification powerUpSignal;
-    
+    [SerializeField] protected StringValue otherTag;
+    public Notification powerUpNotif;
 }

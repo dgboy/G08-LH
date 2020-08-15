@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Breakable : MonoBehaviour {
     [SerializeField] private StringValue otherTag;
+    private float breakDelay = .3f;
     private Animator animator;
 
     void Start() {
@@ -16,7 +17,7 @@ public class Breakable : MonoBehaviour {
     }
 
     IEnumerator BreakCo() {
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(breakDelay);
         this.gameObject.SetActive(false);
     }
 

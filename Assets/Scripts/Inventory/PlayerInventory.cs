@@ -10,16 +10,6 @@ public class PlayerInventory : ScriptableObject {
 
     public int coins = 0;
     // public int keys = 0;
-    // public FloatValue maxMagic;
-    // public float currentMagic;
-
-    // public void OnEnable() {
-    //     currentMagic = maxMagic.value;
-    // }
-
-    // public void DecreaseMagic(float magicCost) {
-    //     currentMagic -= magicCost;
-    // }
 
     public bool CheckForItem(InventoryItem item) {
         if(myInventory.Contains(item)) {

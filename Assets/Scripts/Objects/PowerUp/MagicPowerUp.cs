@@ -7,9 +7,9 @@ public class MagicPowerUp : PowerUp {
     public float magicValue;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag(otherTag.value) && !other.isTrigger) {
             playerMP.value += magicValue;
-            powerUpSignal.Raise();
+            powerUpNotif.Raise();
             Destroy(this.gameObject);
         }
     }

@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetPlayerPosition : MonoBehaviour
-{
+public class ResetPlayerPosition : MonoBehaviour {
     [SerializeField] private VectorValue playerPosition = null;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        if (playerPosition)
-        {
+    void Start() {
+        if (playerPosition) {
             transform.position = playerPosition.value;
         }
     }

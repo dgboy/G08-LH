@@ -2,26 +2,27 @@
 
 public class Health : MonoBehaviour {
     [Tooltip("Max and current health \n Set this to one for pots")]
-    [Header("Health values")]
-    [SerializeField] private int maxHealth;
+    [SerializeField] private FloatValue maxHealth;
     private int currentHealth;
 
-    void Start() {
-        FullHeal();
-    }
+    public int Max { get => (int)maxHealth.value; set => maxHealth.value = (int)value; }
+    public int Current { get => currentHealth; }
+    public bool IsAlive => (currentHealth > 0);
 
-    public bool IsAlive => (currentHealth > 0) ? true : false;
 
-    public void IncreaseMaxHealth() => maxHealth += 2;
-
+    public void IncreaseMaxHealth() => currentHealth = Max += 2;
+    public void FullHeal() => currentHealth = Max;
     public void SetHealth(int amount) => currentHealth = amount;
-    public void FullHeal() => currentHealth = maxHealth;
     public void Kill() => currentHealth = 0;
 
     public void Heal(int amount) {
-        currentHealth = (currentHealth > maxHealth) ? maxHealth : currentHealth + amount;
+        currentHealth = (currentHealth > Max) ? Max : currentHealth + amount;
     }
     public virtual void Damage(int amount) {
         currentHealth = (currentHealth <= 0) ? 0 : currentHealth - amount;
+    }
+
+    void Start() {
+        FullHeal();
     }
 }

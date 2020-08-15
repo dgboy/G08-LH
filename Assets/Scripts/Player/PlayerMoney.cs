@@ -2,29 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoney : MonoBehaviour
-{
-    [SerializeField] private int currentMoney = 0;
+public class PlayerMoney : MonoBehaviour {
     [SerializeField] private int maxMoney = 100000;
+    [SerializeField] private int currentMoney = 0;
 
-    public void AddMoney(int amountToAdd)
-    {
-        currentMoney += amountToAdd;
-        if(currentMoney >= maxMoney)
-        {
-            currentMoney = maxMoney;
-        }
+    public void AddMoney(int amount) {
+        currentMoney = (currentMoney >= maxMoney) ? currentMoney + amount : maxMoney;
     }
 
+    public void SubtractMoney(int amount) => currentMoney -= amount;
 
-    public bool CanAfford(int price)
-    {
-        return (currentMoney >= price);
-    }
-
-
-    public void SubtractMoney(int amountToTake)
-    {
-        currentMoney -= amountToTake;
-    }
+    public bool CanAfford(int price) => (currentMoney >= price);
 }

@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
+
 public class ReceiveItem : MonoBehaviour {
-    [SerializeField] private SpriteRenderer mySprite = null;
-    [SerializeField] private Animator animator = null;
     [SerializeField] private PlayerStateMachine myState = null;
     [SerializeField] private Notification dialogNotification = null;
     [SerializeField] private bool isActive = false;
 
     [SerializeField] private PlayerInventory playerInventory = null;
     [SerializeField] private StringValue itemDescription = null;
+    private SpriteRenderer mySprite;
+    private Animator myAnimator;
 
     void Start() {
+        mySprite = GetComponent<SpriteRenderer>();
+        myAnimator = GetComponentInParent<Animator>();
         mySprite.enabled = false;
     }
 
@@ -28,7 +33,7 @@ public class ReceiveItem : MonoBehaviour {
 
     void DisplaySprite() {
         myState.ChangeState(State.receiveItem);
-        animator.SetBool("receive_item", true);
+        myAnimator.SetBool("receive_item", true);
         // Debug.Log(myState.myState);
         
         mySprite.enabled = true;
@@ -41,7 +46,7 @@ public class ReceiveItem : MonoBehaviour {
     void DisableSprite() {
         playerInventory.receiveItem = null;
         myState.ChangeState(State.idle);
-        animator.SetBool("receive_item", false);
+        myAnimator.SetBool("receive_item", false);
         mySprite.enabled = false;
         dialogNotification.Raise();
     }

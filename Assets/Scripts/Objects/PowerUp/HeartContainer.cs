@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heart : PowerUp {
-    public int healPower;
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag(otherTag.value) && !other.isTrigger) {
+public class HeartContainer : PowerUp {
+    public void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag(otherTag.value) && !other.isTrigger) {
             Health health = other.gameObject.GetComponentInChildren<Health>();
-            health.Heal(healPower);
+            health.IncreaseMaxHealth();
 
             powerUpNotif.Raise();
             Destroy(this.gameObject);

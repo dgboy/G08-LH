@@ -87,11 +87,11 @@
      <Compile Include="Assets\Scripts\NPC\DialogObject.cs" />
      <Compile Include="Assets\Scripts\NPC\ResponseObject.cs" />
      <Compile Include="Assets\Scripts\Objects\Chest.cs" />
-     <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
      <Compile Include="Assets\Scripts\Objects\LocationTransfer.cs" />
      <Compile Include="Assets\Scripts\Objects\LockedDoor.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Coin.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Heart.cs" />
+     <Compile Include="Assets\Scripts\Objects\PowerUp\HeartContainer.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\MagicPowerUp.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\PowerUp.cs" />
      <Compile Include="Assets\Scripts\Objects\SceneTransition.cs" />

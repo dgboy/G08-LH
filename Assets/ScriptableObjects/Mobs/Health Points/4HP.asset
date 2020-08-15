@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c1e5cfced8294499a93d2ff8543dab, type: 3}
   m_Name: 4HP
   m_EditorClassIdentifier: 
-  initialValue: 4
-  runtimeValue: 4
+  value: 4
+  defaultValue: 4

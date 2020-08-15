@@ -4,38 +4,43 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour {
-    public Image[] hearts;
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
-    public FloatValue heartContainers;
-    public FloatValue playerCurrentHealth;
+    [SerializeField] private PlayerHealth playerHealth = null;
+    [SerializeField] private GameObject heart;
+    private List<GameObject> hearts = new List<GameObject>();
+
+    public void CreateHeart() {
+        GameObject temp = Instantiate(heart, this.transform.position, Quaternion.identity);
+        temp.transform.SetParent(this.transform);
+        hearts.Add(temp);
+    }
+
+    public void UpdateHearts() {
+        int max = playerHealth.Max / 2;
+        float current = (float)playerHealth.Current / 2;
+
+        for (int i = 0; i < max; i++) {
+            Image image = hearts[i].GetComponent<Image>();
+
+            if (i + 1 <= current) {
+                image.sprite = fullHeart;
+            } else if (i >= current) {
+                image.sprite = emptyHeart;
+            } else {
+                image.sprite = halfHeart;
+            }
+        }
+    }
 
     void Start() {
         InitHearts();
     }
 
-    public void InitHearts() {
-        for(int i = 0; i < heartContainers.value; i++) {
-            if (i < hearts.Length) {
-                hearts[i].gameObject.SetActive(true);
-                hearts[i].sprite = fullHeart;
-            }
-        }
-    }
-
-    public void UpdateHearts() {
-        InitHearts();
-        float tempHealth = playerCurrentHealth.value / 2;
-
-        for(int i = 0; i < heartContainers.value; i++) {
-            if(i <= tempHealth - 1) {
-                hearts[i].sprite = fullHeart;
-            } else if (i >= tempHealth) {
-                hearts[i].sprite = emptyHeart;
-            } else {
-                hearts[i].sprite = halfHeart;
-            }
+    private void InitHearts() {
+        for (int i = 0; i < playerHealth.Max / 2; i++) {
+            CreateHeart();
         }
     }
 }

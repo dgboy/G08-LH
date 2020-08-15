@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3e4fe8708d5f941ada1153bc1a0414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpSignal: {fileID: 0}
+  otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
+  powerUpNotif: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
   playerMP: {fileID: 0}
   magicValue: 3

@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 439362667
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -3555468057966329373, guid: c077c6bb1d757b245b8f38e6b67f5267,
     type: 3}
@@ -142,6 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9772f50e2b5a8894181d11d4e3ee6fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpSignal: {fileID: 11400000, guid: 3be52784b977d654188319a00c1192d3, type: 2}
-  heartContainers: {fileID: 11400000, guid: 574739076d1d94247ab2f00421db4070, type: 2}
-  playerHealth: {fileID: 11400000, guid: 03ddba860889b104587098272dbda747, type: 2}
+  otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
+  powerUpNotif: {fileID: 11400000, guid: fbc9924ba1ee51b4a9cc3f0f0a346967, type: 2}

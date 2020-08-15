@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : Movement {
-    [SerializeField] private Animator animator = null;
     [SerializeField] private PlayerStateMachine myState = null;
     [SerializeField] private ReceiveItem myItem = null;
-    [SerializeField] private float weaponAttackDuration = .1f;
     [SerializeField] private GenericAbility currentAbility = null;
     [SerializeField] private Notification inputCheck = null;
     [SerializeField] private Notification inputInventory = null;
     [SerializeField] private Notification inputCancel = null;
+    [SerializeField] private float weaponAttackDuration = .1f;
 
+    private Animator myAnimator;
     private Vector2 tempMovement = Vector2.down;
     private Vector3 facingDirection = Vector2.down;
 
@@ -26,7 +26,7 @@ public class PlayerMovement : Movement {
         Motion(tempMovement);
     }
     public void OnAbility(InputAction.CallbackContext context) {
-        if(!context.started) {
+        if (!context.started) {
             return;
         }
         if (currentAbility && !IsRestrictedState(myState.myState)) {
@@ -34,7 +34,7 @@ public class PlayerMovement : Movement {
         }
     }
     public void OnCheck(InputAction.CallbackContext context) {
-        if(!context.started) {
+        if (!context.started) {
             return;
         }
         Debug.Log(myState.myState);
@@ -55,6 +55,7 @@ public class PlayerMovement : Movement {
 
 
     void Start() {
+        myAnimator = GetComponentInParent<Animator>();
         myState.ChangeState(State.idle);
         tempMovement = Vector2.zero;
     }
@@ -73,14 +74,14 @@ public class PlayerMovement : Movement {
 
     void SetAnimation() {
         if (tempMovement.magnitude > 0) {
-            animator.SetFloat("moveX", Mathf.Round(tempMovement.x));
-            animator.SetFloat("moveY", Mathf.Round(tempMovement.y));
-            animator.SetBool("moving", true);
+            myAnimator.SetFloat("moveX", Mathf.Round(tempMovement.x));
+            myAnimator.SetFloat("moveY", Mathf.Round(tempMovement.y));
+            myAnimator.SetBool("moving", true);
             SetState(State.walk);
             facingDirection = tempMovement;
         } else {
-            animator.SetBool("moving", false);
-            if(myState.myState != State.attack) {
+            myAnimator.SetBool("moving", false);
+            if (myState.myState != State.attack) {
                 SetState(State.idle);
             }
         }
@@ -88,21 +89,21 @@ public class PlayerMovement : Movement {
 
     public IEnumerator WeaponCo() {
         myState.ChangeState(State.attack);
-        animator.SetBool("attacking", true);
+        myAnimator.SetBool("attacking", true);
         yield return new WaitForSeconds(weaponAttackDuration);
         myState.ChangeState(State.idle);
-        animator.SetBool("attacking", false);
+        myAnimator.SetBool("attacking", false);
     }
 
     private IEnumerator AbilityCo(float duration) {
         myState.ChangeState(State.ability);
-        currentAbility.Ability(transform.position, facingDirection, animator, myRigidbody);
+        currentAbility.Ability(transform.position, facingDirection, myAnimator, myRigidbody);
         yield return new WaitForSeconds(duration);
         myState.ChangeState(State.idle);
     }
 
     bool IsRestrictedState(State curState) {
-        if(curState == State.attack || curState == State.ability || curState == State.receiveItem) {
+        if (curState == State.attack || curState == State.ability || curState == State.receiveItem) {
             return true;
         }
         return false;

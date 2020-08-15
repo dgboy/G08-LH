@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class FlashColor : MonoBehaviour {
-
-    [SerializeField] private SpriteRenderer mySprite = null;
     [SerializeField] private Color flashColor;
     [SerializeField] private int numberOfFlashes = 3;
-    [SerializeField] private float flashDelay = .1f;
+    [SerializeField] private float flashDelay = 0.1f;
+    private SpriteRenderer mySprite;
     private bool isFlashing = false;
+
+    private void Start() {
+        mySprite = GetComponentInParent<SpriteRenderer>();
+    }
 
     public void StartFlash() {
         if (!isFlashing) {
