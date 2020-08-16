@@ -6,12 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 
 public class ReceiveItem : MonoBehaviour {
-    [SerializeField] private PlayerStateMachine myState = null;
+    [SerializeField] private PlayerStates myState = null;
     [SerializeField] private Notification dialogNotification = null;
-    [SerializeField] private bool isActive = false;
 
     [SerializeField] private PlayerInventory playerInventory = null;
     [SerializeField] private StringValue itemDescription = null;
+    private bool isActive = false;
     private SpriteRenderer mySprite;
     private Animator myAnimator;
 
@@ -34,8 +34,6 @@ public class ReceiveItem : MonoBehaviour {
     void DisplaySprite() {
         myState.ChangeState(State.receiveItem);
         myAnimator.SetBool("receive_item", true);
-        // Debug.Log(myState.myState);
-        
         mySprite.enabled = true;
 
         mySprite.sprite = playerInventory.receiveItem.itemImage;

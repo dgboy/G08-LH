@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoney : MonoBehaviour {
-    [SerializeField] private int maxMoney = 100000;
+    [SerializeField] private int maxMoney = 10000;
     [SerializeField] private int currentMoney = 0;
 
     public void AddMoney(int amount) {
@@ -11,6 +11,5 @@ public class PlayerMoney : MonoBehaviour {
     }
 
     public void SubtractMoney(int amount) => currentMoney -= amount;
-
     public bool CanAfford(int price) => (currentMoney >= price);
 }

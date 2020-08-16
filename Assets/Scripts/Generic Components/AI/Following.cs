@@ -21,7 +21,7 @@ public class Following : Movement {
     }
 
     public virtual void FollowingTarget() {
-        if (InChaseRadius) {
+        if (target && InChaseRadius) {
             Walking(target.position);
         } else {
             Idle();
