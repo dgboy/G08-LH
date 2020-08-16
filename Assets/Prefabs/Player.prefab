@@ -524,6 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myState: 0
+  playerMagic: {fileID: 6166927633649406303}
 --- !u!1 &6166927632835887983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2ae862c0e69d143a22a33e06bd39f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMagic: 10
+  maxMagic: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
+  magicNotif: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
 --- !u!1 &6166927633690786769
 GameObject:
   m_ObjectHideFlags: 0

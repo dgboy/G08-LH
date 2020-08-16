@@ -14,7 +14,8 @@ public enum State {
 
 public class PlayerStates : MonoBehaviour {
     public State myState;
-    private Vector3 facingDirection = Vector2.down;
+    [SerializeField] private PlayerMagic playerMagic = null;
+    private Vector3 facingDir = Vector2.down;
     private float weaponAttackDuration = .2f;
     private Animator myAnimator;
 
@@ -47,7 +48,7 @@ public class PlayerStates : MonoBehaviour {
     public void Walking(Vector2 movement) {
         if (myState != State.stun) {
             ChangeState(State.walk);
-            facingDirection = movement;
+            facingDir = movement;
 
             myAnimator.SetBool("moving", true);
             myAnimator.SetFloat("moveX", Mathf.Round(movement.x));
@@ -85,7 +86,7 @@ public class PlayerStates : MonoBehaviour {
 
     private IEnumerator AbilityCo(GenericAbility ability, Rigidbody2D myRigidbody) {
         ChangeState(State.ability);
-        ability.Ability(transform.position, facingDirection, myAnimator, myRigidbody);
+        ability.Use(playerMagic, transform.position, facingDir, myAnimator, myRigidbody);
         yield return new WaitForSeconds(ability.duration);
         ChangeState(State.idle);
     }

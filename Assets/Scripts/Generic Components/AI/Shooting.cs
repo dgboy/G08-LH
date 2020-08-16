@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class Shooting : Sleeping {
     [SerializeField] private GenericAbility ability = null;
-    // public GameObject projectile;
-    // public float fireDelay = .8f;
-    // private float fireDelaySeconds;
+    [SerializeField] private Magic magic = null;
     private bool canFire = true;
-
-    // private void Update() {
-    //     if (!canFire) {
-    //         fireDelaySeconds -= Time.deltaTime;
-    //         if (fireDelaySeconds <= 0) {
-    //             canFire = true;
-    //             fireDelaySeconds = fireDelay;
-    //         }    
-    //     }    
-    // }
 
     // protected override void CheckDistance() {
     //     if(
@@ -59,7 +47,7 @@ public class Shooting : Sleeping {
     private IEnumerator AbilityCo(float duration) {
         // myState.ChangeState(State.ability);
         canFire = false;
-        ability.Ability(transform.position, target.position - transform.position, null, null);
+        ability.Use(magic, transform.position, target.position - transform.position, null, null);
         yield return new WaitForSeconds(duration);
         canFire = true;
         // myState.ChangeState(State.idle);

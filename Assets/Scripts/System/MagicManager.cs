@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI; 
 
 public class MagicManager : MonoBehaviour {
-    public Slider magicSlider; 
-    public FloatValue playerMP; 
+    public Slider magicSlider;
+    [SerializeField] private PlayerMagic playerMagic = null;
 
     void Start() {
-        magicSlider.value = magicSlider.maxValue = playerMP.value; 
+        magicSlider.value = magicSlider.maxValue = playerMagic.Max; 
     }
 
     public void UpdateMagic() {
-        magicSlider.value = playerMP.value; 
+        magicSlider.value = playerMagic.Current;
     }
 }

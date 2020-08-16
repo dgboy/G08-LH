@@ -8,17 +8,12 @@ public class MultiProjectileAbility : GenericAbility {
     [SerializeField] private int count = 3;
     [SerializeField] private float spread = 80;
 
-    public override void Ability(
-        Vector2 position, Vector2 facingDirection,
+    protected override void Ability(
+        Vector2 position, Vector2 facingDir,
         Animator animator = null, Rigidbody2D rigidbody = null
     ) {
-        base.Ability(position, facingDirection, animator, rigidbody);
-        if (playerMagic.value <= magicCost) {
-            return;
-        }
-
-        Debug.Log(facingDirection);
-        float facingRotation = Mathf.Atan2(facingDirection.y, facingDirection.x) * Mathf.Rad2Deg;
+        Debug.Log(facingDir);
+        float facingRotation = Mathf.Atan2(facingDir.y, facingDir.x) * Mathf.Rad2Deg;
         Debug.Log(facingRotation);
         float startRotation = facingRotation + spread / 2f;
         float angleIncrease = spread / ((float)count - 1f);

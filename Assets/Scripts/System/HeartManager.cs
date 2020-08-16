@@ -21,8 +21,8 @@ public class HeartManager : MonoBehaviour {
         int max = playerHealth.Max / 2;
         float current = (float)playerHealth.Current / 2;
 
-        Debug.Log(max);
-        Debug.Log(hearts.Count);
+        // Debug.Log(max);
+        // Debug.Log(hearts.Count);
         if (max > hearts.Count) {
             CreateHeart();
         }

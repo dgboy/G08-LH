@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7401dc2cfe102ac49956db765e3d18c2, type: 3}
   m_Name: Enemy Projectile
   m_EditorClassIdentifier: 
-  magicCost: 0
+  magicCost: 1
   duration: 0.8
-  playerMagic: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
+  playerMagic: {fileID: 11400000, guid: 8697f06400311e449a8ef71e0960e9c1, type: 2}
   usePlayerMagic: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
   projectile: {fileID: 3748130419550953216, guid: 8f0f108ab37a45647a77f9fbb2d64eee,
     type: 3}

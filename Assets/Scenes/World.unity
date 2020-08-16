@@ -3071,6 +3071,18 @@ MonoBehaviour:
   - {fileID: 1136085778}
   - {fileID: 862747926}
   roundingDistance: 0.1
+--- !u!114 &87355862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6166927633649406303, guid: 86682db935e12654581918b032b23dc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6166927632383133388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2ae862c0e69d143a22a33e06bd39f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &89247002
 GameObject:
   m_ObjectHideFlags: 3
@@ -3489,6 +3501,7 @@ MonoBehaviour:
   maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
+  thisLoot: {fileID: 11400000, guid: 1805d0b6b4a1cc9489f25fe62cc95e0f, type: 2}
 --- !u!61 &178910314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5115,6 +5128,7 @@ MonoBehaviour:
   maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
+  thisLoot: {fileID: 11400000, guid: 1805d0b6b4a1cc9489f25fe62cc95e0f, type: 2}
 --- !u!61 &603579490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56981,7 +56995,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5852065725538711771}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1074014101
 MonoBehaviour:
@@ -56999,6 +57013,7 @@ MonoBehaviour:
   targetTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
   chaseRadius: 5
   ability: {fileID: 11400000, guid: 2ed98c111cda94a46902b1bbb8664531, type: 2}
+  magic: {fileID: 1195226776}
 --- !u!1 &1098792930
 GameObject:
   m_ObjectHideFlags: 0
@@ -100801,6 +100816,50 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1195226775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195226777}
+  - component: {fileID: 1195226776}
+  m_Layer: 8
+  m_Name: Enemy Magic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1195226776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195226775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5104df3d5ddc740a0b0921a70317a90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMagic: {fileID: 11400000, guid: 8697f06400311e449a8ef71e0960e9c1, type: 2}
+--- !u!4 &1195226777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195226775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5852065725538711771}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1206593369 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4598175385159594730, guid: 8e2761b042b845647b566ae40a21db1e,
@@ -101524,6 +101583,7 @@ MonoBehaviour:
   maxHealth: {fileID: 11400000, guid: 6fed615c17f9cf74ba9f97e1fa336f3c, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
+  thisLoot: {fileID: 11400000, guid: 1805d0b6b4a1cc9489f25fe62cc95e0f, type: 2}
 --- !u!61 &1528749330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102270,6 +102330,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757837265}
     m_Modifications:
+    - target: {fileID: 484922049269734538, guid: 8e2761b042b845647b566ae40a21db1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Money Bar
+      objectReference: {fileID: 0}
     - target: {fileID: 720395401464061954, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
       propertyPath: m_IsActive
@@ -102545,6 +102610,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4598175385715364509, guid: 8e2761b042b845647b566ae40a21db1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     - target: {fileID: 4598175385841833424, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -102641,6 +102711,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4898085869885495451, guid: 8e2761b042b845647b566ae40a21db1e,
+        type: 3}
+      propertyPath: playerMagic
+      value: 
+      objectReference: {fileID: 87355862}
     - target: {fileID: 5421070278959331748, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
       propertyPath: m_sharedMaterial
@@ -102736,7 +102811,7 @@ PrefabInstance:
     - target: {fileID: 8645182717166879710, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
       propertyPath: m_Name
-      value: Magic Slider
+      value: Magic Bar
       objectReference: {fileID: 0}
     - target: {fileID: 8645182717166879710, guid: 8e2761b042b845647b566ae40a21db1e,
         type: 3}
@@ -104407,6 +104482,7 @@ MonoBehaviour:
   maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
+  thisLoot: {fileID: 11400000, guid: 069960cd03572c446bc02eec02e65d57, type: 2}
 --- !u!61 &2139594405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -104762,12 +104838,6 @@ PrefabInstance:
       propertyPath: powerUpSignal
       value: 
       objectReference: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c,
-        type: 2}
-    - target: {fileID: 3484986785852688984, guid: 04d619528369512428dd6f128ee01903,
-        type: 3}
-      propertyPath: playerMP
-      value: 
-      objectReference: {fileID: 11400000, guid: 486478c753590114990f898c21887a62,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d619528369512428dd6f128ee01903, type: 3}
@@ -105434,6 +105504,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2139594401}
+  - {fileID: 1195226777}
   - {fileID: 1074014100}
   m_Father: {fileID: 1006721866}
   m_RootOrder: 4
@@ -105818,6 +105889,7 @@ MonoBehaviour:
   maxHealth: {fileID: 11400000, guid: 8079905805d51f7488847af2a108ca56, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
+  thisLoot: {fileID: 11400000, guid: 1805d0b6b4a1cc9489f25fe62cc95e0f, type: 2}
 --- !u!114 &7225675549895120632
 MonoBehaviour:
   m_ObjectHideFlags: 0

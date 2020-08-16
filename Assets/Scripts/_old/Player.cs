@@ -65,9 +65,9 @@ public class Player : MonoBehaviour {
             && currentState != PlayerState.attack 
             && currentState != PlayerState.stagger
         ) {
-            if(currentAbility) {
-                StartCoroutine(AbilityCo(currentAbility.duration));
-            }
+            // if(currentAbility) {
+            //     StartCoroutine(AbilityCo(currentAbility.duration));
+            // }
         } else if(
             currentState == PlayerState.walk 
             || currentState != PlayerState.stagger 
@@ -171,17 +171,17 @@ public class Player : MonoBehaviour {
 
         trigger.enabled = true;
     }
-    private IEnumerator AbilityCo(float duration) {
-        facingDirection = movement;
-        currentAbility.Ability(transform.position, facingDirection, animator, rigidbody);
-        // if (currentAbility) {
-        // } else {
-        //     yield return null;
-        // }
-        currentState = PlayerState.ability;
-        yield return new WaitForSeconds(duration);
-        currentState = PlayerState.idle;
-    }
+    // private IEnumerator AbilityCo(float duration) {
+    //     facingDirection = movement;
+    //     currentAbility.Use(transform.position, facingDirection, animator, rigidbody);
+    //     // if (currentAbility) {
+    //     // } else {
+    //     //     yield return null;
+    //     // }
+    //     currentState = PlayerState.ability;
+    //     yield return new WaitForSeconds(duration);
+    //     currentState = PlayerState.idle;
+    // }
 
     bool IsRestrictedState(PlayerState curState) {
         if(curState == PlayerState.attack || curState == PlayerState.ability) {

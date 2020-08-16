@@ -66,9 +66,9 @@
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageAndDestroy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
-     <Compile Include="Assets\Scripts\Generic Components\Battle\Health.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Knockback.cs" />
      <Compile Include="Assets\Scripts\Generic Components\GenericProjectile.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\Health.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Magic.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Movement.cs" />
      <Compile Include="Assets\Scripts\Generic Components\ResetToPosition.cs" />
@@ -130,7 +130,6 @@
      <Compile Include="Assets\Scripts\System\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\System\SaveManager.cs" />
      <Compile Include="Assets\Scripts\System\TimelineManager.cs" />
-     <Compile Include="Assets\Scripts\_old\AnimatorController.cs" />
      <Compile Include="Assets\Scripts\_old\Arrow.cs" />
      <Compile Include="Assets\Scripts\_old\Enemy.cs" />
      <Compile Include="Assets\Scripts\_old\GameSignal.cs" />

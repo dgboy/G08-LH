@@ -124,5 +124,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
   powerUpNotif: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
-  playerMP: {fileID: 0}
+  playerMP: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
   magicValue: 3

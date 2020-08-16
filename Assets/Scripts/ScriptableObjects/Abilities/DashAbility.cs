@@ -5,17 +5,13 @@ using DG.Tweening;
 public class DashAbility : GenericAbility {
     public float dashForse;
 
-    public override void Ability(
-        Vector2 position, Vector2 facingDirection,
+    protected override void Ability(
+        Vector2 position, Vector2 facingDir,
         Animator animator = null, Rigidbody2D rigidbody = null
     ) {
-        base.Ability(position, facingDirection, animator, rigidbody);
-        if (playerMagic.value <= magicCost) {
-            return;
-        }
-        
         if (rigidbody) {
-            Vector3 dashVector = rigidbody.transform.position + (Vector3)facingDirection.normalized * dashForse;
+            Vector3 temp = (Vector3)facingDir.normalized * dashForse;
+            Vector3 dashVector = rigidbody.transform.position + temp;
             rigidbody.DOMove(dashVector, duration);
         }
     }

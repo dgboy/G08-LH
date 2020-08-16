@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : Health {
     [SerializeField] private GameObject deathEffect = null;
+    [SerializeField] private LootTable thisLoot = null;
 
     public override void Damage(int damage) {
         base.Damage(damage);
@@ -19,5 +20,15 @@ public class EnemyHealth : Health {
         this.transform.parent.gameObject.SetActive(false);
         Destroy(effect, 1f);
         // Destroy(this.transform.parent.gameObject);
+        MakeLoot();
+    }
+
+    private void MakeLoot() {
+        if(thisLoot) {
+            PowerUp current = thisLoot.LootPowerUp();
+            if (current) {
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
+        }
     }
 }
