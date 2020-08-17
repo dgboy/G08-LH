@@ -4,16 +4,22 @@ using UnityEngine;
 using UnityEngine.Playables;
 
 public class TimelineManager : MonoBehaviour {
-    public Animator playerAnimator;
-    public RuntimeAnimatorController playerAnim;
-    public PlayableDirector director;
+    [SerializeField] private Animator playerAnimator = null;
+    [SerializeField] private PlayableDirector director = null;
+    [SerializeField] private BoolValue done = null;
 
+    private RuntimeAnimatorController playerAnim;
     private bool fix = false;
 
 
     void Start() {
-        playerAnim = playerAnimator.runtimeAnimatorController;
-        playerAnimator.runtimeAnimatorController = null;
+        Debug.Log(done.value);
+        if (!done.value) {
+            playerAnim = playerAnimator.runtimeAnimatorController;
+            playerAnimator.runtimeAnimatorController = null;
+        } else {
+            this.gameObject.SetActive(false);
+        }
     }
 
     void Update() {
@@ -21,5 +27,9 @@ public class TimelineManager : MonoBehaviour {
             fix = true;
             playerAnimator.runtimeAnimatorController = playerAnim;
         }
+    }
+
+    public void SwitchOffTimeline() {
+        done.value = true;
     }
 }

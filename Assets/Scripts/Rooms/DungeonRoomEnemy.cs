@@ -32,9 +32,9 @@ public class DungeonRoomEnemy : DungeonRoom {
             for (int i = 0; i < enemies.Length; i++) {
                 ChangeActivation(enemies[i], true);
             }
-            for (int i = 0; i < pots.Length; i++) {
-                ChangeActivation(pots[i], true);
-            }
+            // for (int i = 0; i < pots.Length; i++) {
+            //     ChangeActivation(pots[i], true);
+            // }
             CloseDoors();
             virtualCamera.SetActive(true);
         }
@@ -44,9 +44,9 @@ public class DungeonRoomEnemy : DungeonRoom {
             for (int i = 0; i < enemies.Length; i++) {
                 ChangeActivation(enemies[i], false);
             }
-            for (int i = 0; i < pots.Length; i++) {
-                ChangeActivation(pots[i], false);
-            }
+            // for (int i = 0; i < pots.Length; i++) {
+            //     ChangeActivation(pots[i], false);
+            // }
             virtualCamera.SetActive(false);
         }
     }

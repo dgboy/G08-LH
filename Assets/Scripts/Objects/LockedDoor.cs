@@ -8,7 +8,7 @@ public enum DoorType {
     button
 }
 
-public class LockedDoor : Interactive {
+public class LockedDoor : Interactable {
     
     [Header("Door variables")]
     public DoorType thisDoorType;

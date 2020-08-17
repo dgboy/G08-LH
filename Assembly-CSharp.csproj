@@ -142,7 +142,6 @@
      <Compile Include="Assets\Scripts\_old\RockProjectile.cs" />
      <Compile Include="Assets\Scripts\_old\SignalListener.cs" />
      <Compile Include="Assets\Scripts\_old\SmoothCamera.cs" />
-     <Compile Include="Assets\TimelineCtrl.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

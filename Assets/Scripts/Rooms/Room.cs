@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour {
-    public Enemy[] enemies;
-    public Breakable[] pots;
+    public GameObject[] enemies;
+    // public Breakable[] pots;
     public GameObject virtualCamera;
 
     void OnDisable() {
@@ -16,9 +16,9 @@ public class Room : MonoBehaviour {
             for (int i = 0; i < enemies.Length; i++) {
                 ChangeActivation(enemies[i], true);
             }
-            for (int i = 0; i < pots.Length; i++) {
-                ChangeActivation(pots[i], true);
-            }
+            // for (int i = 0; i < pots.Length; i++) {
+            //     ChangeActivation(pots[i], true);
+            // }
             virtualCamera.SetActive(true);
         }
     }
@@ -27,14 +27,14 @@ public class Room : MonoBehaviour {
             for (int i = 0; i < enemies.Length; i++) {
                 ChangeActivation(enemies[i], false);
             }
-            for (int i = 0; i < pots.Length; i++) {
-                ChangeActivation(pots[i], false);
-            }
+            // for (int i = 0; i < pots.Length; i++) {
+            //     ChangeActivation(pots[i], false);
+            // }
             virtualCamera.SetActive(false);
         }
     }
 
-    public void ChangeActivation(Component component, bool activation) {
-        component.gameObject.SetActive(activation);
+    public void ChangeActivation(GameObject obj, bool activation) {
+        obj.SetActive(activation);
     }
 }
