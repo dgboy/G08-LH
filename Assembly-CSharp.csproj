@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\Objects\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\Objects\Sign.cs" />
      <Compile Include="Assets\Scripts\Objects\Switch.cs" />
+     <Compile Include="Assets\Scripts\Objects\Zone.cs" />
      <Compile Include="Assets\Scripts\Player\ContextClue.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMagic.cs" />
@@ -141,6 +142,7 @@
      <Compile Include="Assets\Scripts\_old\RockProjectile.cs" />
      <Compile Include="Assets\Scripts\_old\SignalListener.cs" />
      <Compile Include="Assets\Scripts\_old\SmoothCamera.cs" />
+     <Compile Include="Assets\TimelineCtrl.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

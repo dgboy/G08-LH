@@ -33,6 +33,7 @@ public class InventoryManager : MonoBehaviour {
     void MakeInventorySlots() {
         if(playerInventory) {
             for (int i = 0; i < playerInventory.myInventory.Count; i++) {
+                Debug.Log(playerInventory.myInventory[i]);
                 if (playerInventory.myInventory[i].numberHeld > 0) {
                     GameObject temp = Instantiate(
                         blankInventorySlot, 
