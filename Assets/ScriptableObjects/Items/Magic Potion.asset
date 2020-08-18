@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a03f130c9ea77746b3293a066ea2aeb, type: 3}
   m_Name: Magic Potion
   m_EditorClassIdentifier: 
-  itemName: "\u041A\u0440\u0438\u0441\u0442\u0430\u043B"
+  itemImage: {fileID: 4282217882897941369, guid: aa8796546a392234c919c3a6bfb2cb86,
+    type: 3}
+  itemName: "\u0417\u0435\u043B\u044C\u0435"
   itemDescription: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442
     \u043C\u0430\u0433\u0438\u044E."
-  itemImage: {fileID: 21300000, guid: 7fc045d5b1c7a49b89d11b409406336b, type: 3}
-  numberHeld: 2
-  usable: 1
+  numberHeld: 1
   unique: 0
+  usable: 1
   thisEvent:
     m_PersistentCalls:
       m_Calls:
@@ -30,6 +31,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000}
+        m_MethodName: DecreaseAmount
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

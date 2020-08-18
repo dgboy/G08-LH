@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : PowerUp {
-    public Inventory playerInventory;
+    public PlayerInventory playerInventory;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag(otherTag.value) && !other.isTrigger) {
             
-            playerInventory.coins++;
+            playerInventory.Coins++;
 
             powerUpNotif.Raise();
             Destroy(this.gameObject);

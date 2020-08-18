@@ -144,4 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherTag: {fileID: 11400000, guid: 638b8f83d93eaf644bfc89701c1c208c, type: 2}
   powerUpNotif: {fileID: 11400000, guid: e0f97ac320fb5194196c1e58cbff3d76, type: 2}
-  playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
+  playerInventory: {fileID: 11400000, guid: 9844ff4a3f780734eb9ce62c3f3bb5a7, type: 2}

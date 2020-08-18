@@ -7,9 +7,11 @@ using UnityEngine;
 public class PlayerInventory : ScriptableObject {
     public List<InventoryItem> myInventory = new List<InventoryItem>();
     public InventoryItem receiveItem;
-
-    public int coins = 0;
+    [SerializeField] private int coins = 0;
     // public int keys = 0;
+
+    public int Coins { get => coins; set => coins = value; }
+
 
     public bool CheckForItem(InventoryItem item) {
         if(myInventory.Contains(item)) {

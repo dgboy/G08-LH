@@ -10,15 +10,11 @@ public partial class PlayerMovement : Movement {
     [SerializeField] private Notification inputCheck = null;
     [SerializeField] private Notification inputInventory = null;
     [SerializeField] private Notification inputCancel = null;
-    
-    // [SerializeField] private State myState = null;
     private State myState;
-    private float weaponAttackDuration = .2f;
     private Animator myAnimator;
+    private float weaponAttackDuration = .2f;
     private Vector3 facingDir = Vector2.down;
     private Vector2 tempMovement = Vector2.down;
-
-    public Animator MyAnimator { get => myAnimator; set => myAnimator = value; }
 
     void Start() {
         tempMovement = Vector2.zero;
@@ -47,6 +43,7 @@ public partial class PlayerMovement : Movement {
             myState == State.ability ||
             myState == State.receiveItem;
     }
+    public bool IsReceiveItem => myState == State.receiveItem;
 
     public void Idling() {
         if (!IsRestrictedState()) {
@@ -71,11 +68,14 @@ public partial class PlayerMovement : Movement {
     }
 
     public void ReceivingItem() {
+        // myItem.ChangeSpriteState();
         if (!IsRestrictedState()) {
             ChangeState(State.receiveItem);
+            myItem.DisplaySprite();
             myAnimator.SetBool("receive_item", true);
         } else {
             ChangeState(State.idle);
+            myItem.DisableSprite();
             myAnimator.SetBool("receive_item", false);
         }
     }
@@ -125,10 +125,10 @@ public partial class PlayerMovement : Movement {
         if (!context.started) {
             return;
         }
-        if (!IsRestrictedState()) {
+        if (!IsReceiveItem) {
             inputCheck.Raise();
         } else {
-            myItem.ChangeSpriteState();
+            ReceivingItem();
         }
     }
     public void OnInventory(InputAction.CallbackContext context) {

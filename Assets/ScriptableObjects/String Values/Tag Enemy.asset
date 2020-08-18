@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ce1ae4c32006045a8d0a111732b2df, type: 3}
-  m_Name: TagPlayer
+  m_Name: Tag Enemy
   m_EditorClassIdentifier: 
-  value: Player
+  value: Enemy

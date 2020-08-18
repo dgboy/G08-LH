@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+    public StringValue startSceneName;
 
     public void NewGame() {
-        SceneManager.LoadScene("World");
+        SceneManager.LoadScene(startSceneName.value);
     }
     
     public void Exit() {

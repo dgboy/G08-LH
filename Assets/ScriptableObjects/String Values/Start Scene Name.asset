@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a6c625527279f4696f92be096cbc34, type: 3}
-  m_Name: Inventory
+  m_Script: {fileID: 11500000, guid: 80ce1ae4c32006045a8d0a111732b2df, type: 3}
+  m_Name: Start Scene Name
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 0}
-  items:
-  - {fileID: 11400000, guid: b79428e98d30ed948b2761ca168b71fa, type: 2}
-  numberOfKeys: 0
-  coins: 0
-  maxMagic: 10
-  currentMagic: 10
+  value: HeroHome

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a03f130c9ea77746b3293a066ea2aeb, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
+  itemImage: {fileID: 5508725064705088119, guid: c3cf0c7e639c40a42bb139735b1f395b,
+    type: 3}
   itemName: "\u042F\u0431\u043B\u043E\u043A\u043E"
   itemDescription: "\u0421\u0432\u0435\u0436\u0435\u0435 \u0438 \u0441\u043E\u0447\u043D\u043E\u0435.
     \u0422\u043E\u043B\u044C\u043A\u043E \u043D\u0435\u0434\u0430\u0432\u043D\u043E
     \u0441\u043E\u0440\u0432\u0430\u043B."
-  itemImage: {fileID: 5508725064705088119, guid: c3cf0c7e639c40a42bb139735b1f395b,
-    type: 3}
-  numberHeld: 0
-  usable: 1
+  numberHeld: 1
   unique: 0
+  usable: 1
   thisEvent:
     m_PersistentCalls:
       m_Calls:

@@ -272,7 +272,6 @@ MonoBehaviour:
   healthNotif: {fileID: 11400000, guid: fbc9924ba1ee51b4a9cc3f0f0a346967, type: 2}
   deathEffect: {fileID: 8142501195545639763, guid: 776ff2d59d4e944428a731ffa813fc7e,
     type: 3}
-  inputCancel: {fileID: 11400000, guid: 0e4451dd7e533184fa39510778d22a9a, type: 2}
 --- !u!1 &4658640507902018871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4257175aae32d648b700c8a626adb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myState: {fileID: 0}
+  playerState: {fileID: 6166927633690786771}
   dialogNotification: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11, type: 2}
   playerInventory: {fileID: 11400000, guid: 9844ff4a3f780734eb9ce62c3f3bb5a7, type: 2}
   itemDescription: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911, type: 2}
