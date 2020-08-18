@@ -8,7 +8,7 @@ public abstract class GenericAbility : ScriptableObject {
         Magic magic, Vector2 position, Vector2 facingDir,
         Animator animator = null, Rigidbody2D rigidbody = null
     ) {
-        Debug.Log(magic.IsExhausted);
+        // Debug.Log(magic.IsExhausted);
         if (!magic.IsExhausted) {
             magic.UseMagic(magicCost);
             Ability(position, facingDir, animator, rigidbody);

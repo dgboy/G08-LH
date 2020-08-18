@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Arrow
   m_EditorClassIdentifier: 
   magicCost: 1
-  duration: 0.4
-  playerMagic: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
-  usePlayerMagic: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
+  duration: 0.5
   projectile: {fileID: 2486475216213313215, guid: 963267f3ce4ea1b40aee8230d7bd2492,
     type: 3}

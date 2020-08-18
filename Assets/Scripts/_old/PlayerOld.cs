@@ -12,7 +12,7 @@ public enum PlayerState {
     ability
 }
 
-public class Player : MonoBehaviour {
+public class PlayerOld : MonoBehaviour {
     public PlayerState currentState;
     public float speed = 15.0f;
     

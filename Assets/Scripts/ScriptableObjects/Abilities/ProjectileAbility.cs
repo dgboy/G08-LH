@@ -9,7 +9,7 @@ public class ProjectileAbility : GenericAbility {
         Vector2 position, Vector2 facingDir,
         Animator animator = null, Rigidbody2D rigidbody = null
     ) {
-        Debug.Log("HERE");
+        // Debug.Log("HERE");
         float facingRot = Mathf.Atan2(facingDir.y, facingDir.x) * Mathf.Rad2Deg;
         GameObject projectileClone = Instantiate(
             projectile, position, Quaternion.Euler(0f, 0f, facingRot)

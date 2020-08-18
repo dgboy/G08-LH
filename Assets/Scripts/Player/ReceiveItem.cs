@@ -6,18 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 
 public class ReceiveItem : MonoBehaviour {
-    [SerializeField] private PlayerStates myState = null;
+    [SerializeField] private PlayerMovement player = null;
     [SerializeField] private Notification dialogNotification = null;
 
     [SerializeField] private PlayerInventory playerInventory = null;
     [SerializeField] private StringValue itemDescription = null;
     private bool isActive = false;
     private SpriteRenderer mySprite;
-    private Animator myAnimator;
 
     void Start() {
         mySprite = GetComponent<SpriteRenderer>();
-        myAnimator = GetComponentInParent<Animator>();
         mySprite.enabled = false;
     }
 
@@ -32,19 +30,16 @@ public class ReceiveItem : MonoBehaviour {
     }
 
     void DisplaySprite() {
-        myState.ChangeState(State.receiveItem);
-        myAnimator.SetBool("receive_item", true);
+        player.ReceivingItem();
         mySprite.enabled = true;
-
         mySprite.sprite = playerInventory.receiveItem.itemImage;
         itemDescription.value = playerInventory.receiveItem.itemDescription;
         dialogNotification.Raise();
     }
 
     void DisableSprite() {
+        player.ReceivingItem();
         playerInventory.receiveItem = null;
-        myState.ChangeState(State.idle);
-        myAnimator.SetBool("receive_item", false);
         mySprite.enabled = false;
         dialogNotification.Raise();
     }
