@@ -3,10 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Sends user input to the correct control systems.
+/// </summary>
 public class InputController : MonoBehaviour {
     [SerializeField] private Notification inputCheck = null;
     [SerializeField] private Notification inputInventory = null;
     [SerializeField] private Notification inputCancel = null;
+
+    public enum State {
+        Player,
+        ListMenu,
+        Inventory
+    }
+    private State state;
+
+    public void ChangeState(State state) => this.state = state;
+
+    void Update() {
+        switch (state) {
+            case State.Player:
+                PlayerControl();
+                break;
+            case State.ListMenu:
+                ListMenuControl();
+                break;
+            case State.Inventory:
+                InventoryControl();
+                break;
+        }
+    }
+
+    void PlayerControl() {
+        
+    }
+
+    void ListMenuControl() {
+        
+    }
+
+    void InventoryControl() {
+        
+    }
 
 
     public void OnMove(InputAction.CallbackContext context) {
