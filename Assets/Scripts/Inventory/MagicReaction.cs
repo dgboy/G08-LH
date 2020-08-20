@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MagicReaction : MonoBehaviour {
     public FloatValue playerMagic;
-    public GameSignal magicSignal;
+    public Notification magicSignal;
 
     public void Use(int amountToIncrease) {
         playerMagic.value += amountToIncrease;

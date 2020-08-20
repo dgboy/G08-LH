@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthReaction : MonoBehaviour {
     public FloatValue playerHealth;
-    public GameSignal healhSignal;
+    public Notification healhSignal;
 
     public void Use(int amountToIncrease) {
         playerHealth.value += amountToIncrease;

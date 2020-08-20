@@ -172,6 +172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LockedDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 3301832094799266877, guid: 9801464d01a4b1e438b16c68c542334e,
+        type: 3}
+      propertyPath: doorType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3301832094799266878, guid: 9801464d01a4b1e438b16c68c542334e,
         type: 3}
       propertyPath: m_LocalPosition.x

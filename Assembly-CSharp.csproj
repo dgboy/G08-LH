@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Generic Components\Ables\Breakable.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Ables\DestroyOverTime.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Ables\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\Ables\NotifierOnDisable.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\Damage.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageAndDestroy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
@@ -86,6 +87,7 @@
      <Compile Include="Assets\Scripts\NPC\DialogObject.cs" />
      <Compile Include="Assets\Scripts\NPC\ResponseObject.cs" />
      <Compile Include="Assets\Scripts\Objects\Chest.cs" />
+     <Compile Include="Assets\Scripts\Objects\KeyLockedDoor.cs" />
      <Compile Include="Assets\Scripts\Objects\LocationTransfer.cs" />
      <Compile Include="Assets\Scripts\Objects\LockedDoor.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Coin.cs" />
@@ -135,7 +137,6 @@
      <Compile Include="Assets\Scripts\_old\Arrow.cs" />
      <Compile Include="Assets\Scripts\_old\Enemy.cs" />
      <Compile Include="Assets\Scripts\_old\GameSignal.cs" />
-     <Compile Include="Assets\Scripts\_old\Interactive.cs" />
      <Compile Include="Assets\Scripts\_old\Inventory.cs" />
      <Compile Include="Assets\Scripts\_old\Item.cs" />
      <Compile Include="Assets\Scripts\_old\PlayerOld.cs" />

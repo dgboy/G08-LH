@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour {
     public int attackDamage = 1;
     public float moveSpeed = 1.5f;
     public Vector2 homePosition;
-    public GameSignal roomSignal;
+    public Notification roomSignal;
     public LootTable thisLoot;
     
     [Header("Death Effects")]

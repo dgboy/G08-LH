@@ -933,7 +933,7 @@ MonoBehaviour:
   currentState: 0
   speed: 15
   startPosition: {fileID: 11400000, guid: 382a918c15c765c4b8188a44b399f043, type: 2}
-  playerInventory: {fileID: 11400000, guid: 3f8b4d96b7cd9f447b70df575decb70e, type: 2}
+  playerInventory: {fileID: 0}
   reseiveItemSprite: {fileID: 0}
   projectile: {fileID: 0}
   decreaseMagic: {fileID: 0}
@@ -1750,7 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4257175aae32d648b700c8a626adb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerState: {fileID: 6166927633690786771}
   dialogNotification: {fileID: 11400000, guid: 37676d6fc3f2f1a4990a991007c4ef11, type: 2}
   playerInventory: {fileID: 11400000, guid: 9844ff4a3f780734eb9ce62c3f3bb5a7, type: 2}
   itemDescription: {fileID: 11400000, guid: 152a474c1f6395445b3a288d33ff2911, type: 2}
@@ -1770,8 +1769,8 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7649418562178583018}
-        m_MethodName: ChangeSpriteState
+      - m_Target: {fileID: 6166927633690786771}
+        m_MethodName: ReceivingItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

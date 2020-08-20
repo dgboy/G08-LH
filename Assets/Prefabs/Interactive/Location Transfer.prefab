@@ -75,4 +75,4 @@ MonoBehaviour:
   text: {fileID: 0}
   roomText: {fileID: 0}
   roomName: 
-  textActive: 0
+  textActive: 1

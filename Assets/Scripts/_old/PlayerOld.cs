@@ -22,11 +22,11 @@ public class PlayerOld : MonoBehaviour {
     
     [Header("Projectile Stuff")]
     public GameObject projectile;
-    public GameSignal decreaseMagic;
+    public Notification decreaseMagic;
     public Item Bow;
 
     [Header("Invulnerable Frames")]
-    public GameSignal painSignal;
+    public Notification painSignal;
     public Color flash;
     public Color regular;
     public float flashDuration;
