@@ -14,19 +14,19 @@ public class PlayerInventory : ScriptableObject {
 
 
     public bool CheckForItem(InventoryItem item) {
-        if(myInventory.Contains(item)) {
-            return true;
-        }
-        return false;
+        return myInventory.Contains(item);
     }
 
-    public void AddItem(InventoryItem itemToAdd) {
-        receiveItem = itemToAdd;
+    public void AddItem(InventoryItem item) {
+        receiveItem = item;
 
-        if(!myInventory.Contains(itemToAdd)) {
-            myInventory.Add(itemToAdd);
+        if (CheckForItem(item)) {
+            item.numberHeld += 1;
+        } else {
+            myInventory.Add(item);
+            item.numberHeld += 1;
         }
-        // if(itemToAdd.isKey) {
+        // if(item.isKey) {
         //     keys++;
         // } else {
         // }

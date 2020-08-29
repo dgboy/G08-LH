@@ -37,12 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Generic Components\AI\GuardingArea.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\InventoryItem.cs" />
      <Compile Include="Assets\Materials\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Generic Components\GenericProjectile.cs" />
      <Compile Include="Assets\Scripts\Generic Components\ResetToPosition.cs" />
      <Compile Include="Assets\Scripts\Generic Components\AI\Shooting.cs" />
-     <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
+     <Compile Include="Assets\Scripts\Generic Components\Ables\PickedUp.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.0\Simple Demo\SimpleController_UsingPlayerInput.cs" />
@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\NPC\DialogNPC.cs" />
      <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\Objects\Zone.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Values\Points.cs" />
      <Compile Include="Assets\Lib\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.0\Simple Demo\SimpleController_UsingActions.cs" />
@@ -141,7 +142,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\DashAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMoney.cs" />
-     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\Coin.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\BoolValue.cs" />
      <Compile Include="Assets\Scripts\NPC\ResponseObject.cs" />
@@ -150,6 +151,7 @@
      <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\FloatValue.cs" />
+     <Compile Include="Assets\Scripts\Player\Stats.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -366,9 +368,6 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Users/I3aN/AppData/Local/Programs/Microsoft VS Code/2020.1.2f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-        <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
         <HintPath>C:/Users/I3aN/Documents/gamedev/G08-LH/Assets/Lib/Demigiant/DOTween/DOTween.dll</HintPath>
@@ -780,14 +779,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InputSystem.InGameHints.csproj">
-      <Project>{88e7d2b3-5f05-5c77-77b0-4e6738c3dd44}</Project>
-      <Name>Unity.InputSystem.InGameHints</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.Recorder.csproj">
       <Project>{0d049b11-3a76-d8a2-fbce-04aa1c7491a7}</Project>
       <Name>Unity.InputSystem.Recorder</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.InGameHints.csproj">
+      <Project>{88e7d2b3-5f05-5c77-77b0-4e6738c3dd44}</Project>
+      <Name>Unity.InputSystem.InGameHints</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">

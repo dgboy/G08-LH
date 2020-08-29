@@ -6,7 +6,6 @@ public class PlayerHealth : Health {
     [SerializeField] private FlashColor flash = null;
     [SerializeField] private Notification healthNotif = null;
     [SerializeField] private GameObject deathEffect = null;
-    // [SerializeField] private Notification inputCancel = null;
 
     public override void Damage(int damage) {
         base.Damage(damage);
@@ -26,11 +25,5 @@ public class PlayerHealth : Health {
         this.transform.parent.gameObject.SetActive(false);
         Destroy(effect, 1f);
         // Destroy(this.transform.parent.gameObject);
-        // inputCancel.Raise();
-        // StartCoroutine();
     }
-
-    // void OpenMenu() {
-    //     inputCancel.Raise();
-    // }
 }

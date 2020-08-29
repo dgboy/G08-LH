@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine; 
 
 public class Interactable : MonoBehaviour {
-
     [SerializeField] public StringValue otherTag;
 	[SerializeField] public Notification clue;
 	protected bool isBlocked = false;

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Animator))]
-
 public class ReceiveItem : MonoBehaviour {
     [SerializeField] private Notification dialogNotification = null;
 
@@ -17,16 +15,6 @@ public class ReceiveItem : MonoBehaviour {
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.enabled = false;
     }
-
-    // public void ChangeSpriteState() {
-    //     // Debug.Log(isActive);
-    //     isActive = !isActive;
-    //     if (isActive) {
-    //         DisplaySprite();
-    //     } else {
-    //         DisableSprite();
-    //     }
-    // }
 
     public void DisplaySprite() {
         mySprite.enabled = true;

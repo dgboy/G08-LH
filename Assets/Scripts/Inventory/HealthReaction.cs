@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthReaction : MonoBehaviour {
-    public FloatValue playerHealth;
+    public FloatValue PlayerHealth { get; set; }
     public Notification healhSignal;
 
     public void Use(int amountToIncrease) {
-        playerHealth.value += amountToIncrease;
+        PlayerHealth.value += amountToIncrease;
         healhSignal.Raise();
     }
 }

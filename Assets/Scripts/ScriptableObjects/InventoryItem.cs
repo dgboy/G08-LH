@@ -19,6 +19,6 @@ public class InventoryItem : ScriptableObject {
     }
 
     public void DecreaseAmount(int amount = 1) {
-        numberHeld -= (numberHeld > 0) ? amount : 0;
+        numberHeld = (numberHeld > 0) ? numberHeld - amount : 0;
     }
 }

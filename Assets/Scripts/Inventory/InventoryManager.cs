@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class InventoryManager : MonoBehaviour {
@@ -46,6 +47,14 @@ public class InventoryManager : MonoBehaviour {
 
                     if (newSlot) {
                         newSlot.Setup(playerInventory.myInventory[i], this);
+                    }
+                    
+
+                    if(i == 0) {
+                        Button button = temp.GetComponent<Button>();
+                        button.Select();
+                        // var eventSystem = EventSystemManager.currentSystem;
+                        // eventSystem.SetSelectedGameObject(temp, new BaseEventData(eventSystem));
                     }
                 }
             }

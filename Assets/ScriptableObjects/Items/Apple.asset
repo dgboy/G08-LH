@@ -24,9 +24,9 @@ MonoBehaviour:
   thisEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705823131560594140, guid: 98cff31f495ce7f408c36ffdb80d9b73,
-          type: 3}
-        m_MethodName: Use
+      - m_Target: {fileID: 11400000, guid: afa3bc414a4abba4ab2ca334a425ef83, type: 2}
+        m_TargetAssemblyTypeName: Points, Assembly-CSharp
+        m_MethodName: Heal
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37,6 +37,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000}
+        m_TargetAssemblyTypeName: 
         m_MethodName: DecreaseAmount
         m_Mode: 3
         m_Arguments:
