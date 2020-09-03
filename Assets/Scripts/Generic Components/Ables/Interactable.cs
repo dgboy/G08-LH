@@ -6,7 +6,7 @@ public class Interactable : MonoBehaviour {
     [SerializeField] public StringValue otherTag;
 	[SerializeField] public Notification clue;
 	protected bool isBlocked = false;
-    protected bool playerInRange; 
+    protected bool playerInRange;
 
     protected virtual void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag(otherTag.value) && !other.isTrigger) {
@@ -24,5 +24,10 @@ public class Interactable : MonoBehaviour {
                 clue.Raise(); 
             }
         }
+    }
+
+    protected void BlockClue() {
+        isBlocked = true;
+        clue.Raise();
     }
 }

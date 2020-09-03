@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : MonoBehaviour {
+    public string name;
     public Points health;
     public Points magic;
-    public PlayerInventory inventory;
+    public SpriteValue face;
     // public Skills skills;
 }

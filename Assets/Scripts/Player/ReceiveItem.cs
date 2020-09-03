@@ -19,7 +19,8 @@ public class ReceiveItem : MonoBehaviour {
     public void DisplaySprite() {
         mySprite.enabled = true;
         mySprite.sprite = playerInventory.receiveItem.itemImage;
-        itemDescription.value = playerInventory.receiveItem.itemDescription;
+        itemDescription.value = "Я нашёл " + playerInventory.receiveItem.itemName + ". ";
+        itemDescription.value += playerInventory.receiveItem.itemDescription;
         dialogNotification.Raise();
     }
 

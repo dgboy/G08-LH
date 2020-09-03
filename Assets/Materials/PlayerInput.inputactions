@@ -338,6 +338,55 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Dialog",
+            "id": "ab2c59ff-f414-4bda-b6ca-03f0c9348f9b",
+            "actions": [
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "039944f8-ad85-4c62-97f1-4198bd0d5020",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bf0c5696-047e-4e3f-9597-081bfb85a09c",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "109d78f0-d765-42e4-b9fd-aa82ddd1fe4c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b40d90eb-1a57-47af-a554-478cd527df2c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

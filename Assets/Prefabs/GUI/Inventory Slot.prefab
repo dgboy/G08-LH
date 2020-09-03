@@ -286,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
       propertyPath: m_textAlignment
-      value: 516
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}
@@ -317,6 +317,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.b
       value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221396659970974970, guid: 2df92672639b5a64ab710781f87eb390,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8221396659970974972, guid: 2df92672639b5a64ab710781f87eb390,
         type: 3}

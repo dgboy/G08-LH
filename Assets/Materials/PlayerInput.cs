@@ -351,6 +351,55 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Dialog"",
+            ""id"": ""ab2c59ff-f414-4bda-b6ca-03f0c9348f9b"",
+            ""actions"": [
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""039944f8-ad85-4c62-97f1-4198bd0d5020"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""bf0c5696-047e-4e3f-9597-081bfb85a09c"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""109d78f0-d765-42e4-b9fd-aa82ddd1fe4c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b40d90eb-1a57-47af-a554-478cd527df2c"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -392,6 +441,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
         m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
         m_UI_Inventory = m_UI.FindAction("Inventory", throwIfNotFound: true);
+        // Dialog
+        m_Dialog = asset.FindActionMap("Dialog", throwIfNotFound: true);
+        m_Dialog_Continue = m_Dialog.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -567,6 +619,39 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Dialog
+    private readonly InputActionMap m_Dialog;
+    private IDialogActions m_DialogActionsCallbackInterface;
+    private readonly InputAction m_Dialog_Continue;
+    public struct DialogActions
+    {
+        private @PlayerInput m_Wrapper;
+        public DialogActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Continue => m_Wrapper.m_Dialog_Continue;
+        public InputActionMap Get() { return m_Wrapper.m_Dialog; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DialogActions set) { return set.Get(); }
+        public void SetCallbacks(IDialogActions instance)
+        {
+            if (m_Wrapper.m_DialogActionsCallbackInterface != null)
+            {
+                @Continue.started -= m_Wrapper.m_DialogActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_DialogActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_DialogActionsCallbackInterface.OnContinue;
+            }
+            m_Wrapper.m_DialogActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
+            }
+        }
+    }
+    public DialogActions @Dialog => new DialogActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -600,5 +685,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+    }
+    public interface IDialogActions
+    {
+        void OnContinue(InputAction.CallbackContext context);
     }
 }

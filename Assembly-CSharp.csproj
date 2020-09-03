@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\Generic Components\Ables\NotifierOnDisable.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\DialogAssetValue.cs" />
      <Compile Include="Assets\Scripts\Rooms\Room.cs" />
+     <Compile Include="Assets\Scripts\Player\Stats.cs" />
      <Compile Include="Assets\Lib\Ink\Example\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\Scripts\Generic Components\AI\MeleeAttacking.cs" />
      <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -89,6 +90,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\Points.cs" />
      <Compile Include="Assets\Lib\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\DamageOnContact.cs" />
+     <Compile Include="Assets\Scripts\NPC\DialogManager.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.0\Simple Demo\SimpleController_UsingActions.cs" />
      <Compile Include="Assets\Scripts\_old\Arrow.cs" />
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
@@ -151,7 +153,8 @@
      <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\FloatValue.cs" />
-     <Compile Include="Assets\Scripts\Player\Stats.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Values\SpeakerValue.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

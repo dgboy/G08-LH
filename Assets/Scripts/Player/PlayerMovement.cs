@@ -10,6 +10,7 @@ public partial class PlayerMovement : Movement {
     [SerializeField] private Notification inputCheck = null;
     [SerializeField] private Notification inputInventory = null;
     [SerializeField] private Notification inputCancel = null;
+    
     private State myState;
     private Animator myAnimator;
     private float weaponAttackDuration = .2f;
@@ -22,7 +23,7 @@ public partial class PlayerMovement : Movement {
         myAnimator = GetComponentInParent<Animator>();
     }
 
-    void FixedUpdate() {
+    void Update() {
         Motion(tempMovement);
         if (tempMovement.magnitude > 0) {
             Walking(tempMovement);
@@ -37,13 +38,16 @@ public partial class PlayerMovement : Movement {
         }
     }
 
+    public bool IsReceiveItem => myState == State.receiveItem;
+
+    public Vector2 TempMovement { get => tempMovement; set => tempMovement = value; }
+
     public bool IsRestrictedState() {
         return 
             myState == State.attack ||
             myState == State.ability ||
             myState == State.receiveItem;
     }
-    public bool IsReceiveItem => myState == State.receiveItem;
 
     public void Idling() {
         if (!IsRestrictedState()) {
@@ -87,9 +91,9 @@ public partial class PlayerMovement : Movement {
         }
     }
 
-    public void AbilityUse(GenericAbility ability, Rigidbody2D myRigidbody) {
-        if (ability && !IsRestrictedState()) {
-            StartCoroutine(AbilityCo(ability, myRigidbody));
+    public void UseAbility() {
+        if (currentAbility && !IsRestrictedState()) {
+            StartCoroutine(AbilityCo(currentAbility, myRigidbody));
         }
     }
 
@@ -99,8 +103,8 @@ public partial class PlayerMovement : Movement {
         ChangeState(State.attack);
         myAnimator.SetBool("attacking", true);
         yield return new WaitForSeconds(weaponAttackDuration);
-        ChangeState(State.idle);
         myAnimator.SetBool("attacking", false);
+        ChangeState(State.idle);
     }
 
     private IEnumerator AbilityCo(GenericAbility ability, Rigidbody2D myRigidbody) {
@@ -108,33 +112,5 @@ public partial class PlayerMovement : Movement {
         ability.Use(playerMagic, transform.position, facingDir, myAnimator, myRigidbody);
         yield return new WaitForSeconds(ability.duration);
         ChangeState(State.idle);
-    }
-
-
-
-    public void OnMove(InputAction.CallbackContext context) {
-        tempMovement = context.ReadValue<Vector2>();
-    }
-    public void OnAttack(InputAction.CallbackContext context) {
-        Attacking();
-    }
-    public void OnAbility(InputAction.CallbackContext context) {
-        AbilityUse(currentAbility, myRigidbody);
-    }
-    public void OnCheck(InputAction.CallbackContext context) {
-        if (!context.started) {
-            return;
-        }
-        if (!IsReceiveItem) {
-            inputCheck.Raise();
-        } else {
-            ReceivingItem();
-        }
-    }
-    public void OnInventory(InputAction.CallbackContext context) {
-        inputInventory.Raise();
-    }
-    public void OnPause(InputAction.CallbackContext context) {
-        inputCancel.Raise();
     }
 }
