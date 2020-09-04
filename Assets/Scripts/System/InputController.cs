@@ -27,7 +27,7 @@ public class InputController : MonoBehaviour {
         if (!context.started) {
             return;
         }
-        Debug.Log("Check!");
+        // Debug.Log("Check!");
         if (!player.IsReceiveItem) {
             inputCheck.Raise();
             // ChangeActiveMap("Dialog");

@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogNPC : Interactable {
-    [SerializeField] private TextAsset myDialog = null;
-    [SerializeField] private DialogAssetValue dialogBuffer = null;
-    [SerializeField] private Notification dialogNotif = null;
-    [SerializeField] private StringValue storyStateBuffer = null;
-    [SerializeField] private SpriteValue faceSprite = null;
+    [Header("Dialog Stats")]
     [SerializeField] private SpeakerValue speakerStats = null;
     [SerializeField] private SpeakerValue speakerBuffer = null;
+    [SerializeField] private Notification dialogNotif = null;
+    [Header("Diary")]
+    [SerializeField] private StringValue storyStateBuffer = null;
+    // [SerializeField] private Quest questBuffer = null;
+    // [SerializeField] private Notification diaryNotif = null;
     private string myStoryState = null;
-	private bool isTalking = false;
 
     public void InitDialog() {
-        if (playerInRange) { /*&& !isTalking*/
-            dialogBuffer.value = myDialog;
+        if (playerInRange) {
             storyStateBuffer.value = myStoryState;
             speakerBuffer.CopyStats(speakerStats);
             dialogNotif.Raise();
-            // BlockClue();
-            // isTalking = true;
         }
     }
-    
+
     public void SaveStoryState() {
         myStoryState = storyStateBuffer.value;
     }
 
-    protected void Start() {
+    protected void OnEnable() {
         isBlocked = true;
+        if (speakerStats) {
+            speakerStats.quest.InitProgress();
+        }
     }
 }

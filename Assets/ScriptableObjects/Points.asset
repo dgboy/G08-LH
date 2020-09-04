@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf759fb5afd5ae345a7d7829d7a1fba4, type: 3}
-  m_Name: Dialog Buffer
+  m_Script: {fileID: 11500000, guid: f9cfcb372f9e5804b995eaa198eb1fab, type: 3}
+  m_Name: Points
   m_EditorClassIdentifier: 
-  value: {fileID: 0}
+  defaultValue: 0

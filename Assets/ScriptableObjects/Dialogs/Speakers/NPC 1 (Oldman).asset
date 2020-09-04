@@ -15,3 +15,4 @@ MonoBehaviour:
   name: "\u0421\u0442\u0430\u0440\u0438\u043A"
   face: {fileID: 1192797924117851111, guid: a0f262e76f514824f99113f0b5c74d8b, type: 3}
   story: {fileID: 4900000, guid: 8cd431f683347304c872ac56a838dc83, type: 3}
+  quest: {fileID: 11400000, guid: edf03205bbc768e46874554111c4fa7f, type: 2}
