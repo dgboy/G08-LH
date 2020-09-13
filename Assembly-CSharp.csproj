@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\_old\Projectile.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\StringValue.cs" />
      <Compile Include="Assets\Lib\GGEZ\PerfectPixelCamera\Scripts\PerfectPixelCamera.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\ActionMapManager.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\_old\Inventory.cs" />
      <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -99,6 +100,7 @@
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
      <Compile Include="Assets\Scripts\System\CoinTextManager.cs" />
      <Compile Include="Assets\Scripts\Rooms\OverworldRoom.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\TakenQuest.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Lib\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Lib\Ocias\PixelArtCamera\Example\CameraPan.cs" />
@@ -147,6 +149,7 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp\HeartContainer.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
+     <Compile Include="Assets\Scripts\NPC\StorySaveManager.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\DashAbility.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMoney.cs" />
@@ -159,9 +162,6 @@
      <Compile Include="Assets\Scripts\Rooms\DungeonRoomEnemy.cs" />
      <Compile Include="Assets\Scripts\Generic Components\Battle\FlashColor.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Values\FloatValue.cs" />
-     <Compile Include="Assets\Scripts\System\ActionMapManager.cs" />
-     <Compile Include="Assets\Scripts\NPC\StorySaveManager.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\TakenQuest.cs" />
      <None Include="Assets\Lib\Ocias\PixelArtCamera\README.txt" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Lib\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

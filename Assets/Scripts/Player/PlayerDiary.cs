@@ -15,10 +15,6 @@ public class PlayerDiary : MonoBehaviour {
         }
     }
 
-    public void UpdateQuestBuffer() {
-        questBuffer.Progress = Quest.Status.executed;
-    }
-
     // WIP
     public void UpdateQuest() {
         Debug.Log(questBuffer.Progress);

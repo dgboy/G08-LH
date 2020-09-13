@@ -49,10 +49,6 @@ public class DialogManager : MonoBehaviour {
         actionMapManager.Change(ActionMap.Dialog);
 
         questBuffer.CopyStats(speakerBuffer.quest);
-        // if (questBuffer.IsExecuted) {
-        //     Debug.Log("here");
-        //     SaveStoryState("state", 2);
-        // }
         if (speakerBuffer.story) {
             myStory = new Story(speakerBuffer.story.text);
             myStory.ObserveVariable("state", SaveStoryState);
@@ -112,7 +108,6 @@ public class DialogManager : MonoBehaviour {
         storyStateBuffer.value = save.state.ToJson();
         storyStateNotif.Raise();
         diaryNotif.Raise();
-        // questBuffer.ChangeState((int)newValue);
         speakerBuffer.quest.CopyStats(questBuffer);
     }
 

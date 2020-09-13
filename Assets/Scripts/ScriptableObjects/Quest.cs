@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class Quest : ScriptableObject {
     public string name;
     [TextArea] public string description;
+    [TextArea] public string afterword;
     public InventoryItem[] reward;
     public Task task;
     public Notification diaryNotif = null;

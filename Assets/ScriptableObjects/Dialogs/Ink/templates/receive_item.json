@@ -1,0 +1,1 @@
+﻿{"inkVersion":19,"root":[["^Я нашёл ","ev",{"VAR?":"item_name"},"out","/ev","^!","\n","ev",{"VAR?":"item_description"},"out","/ev","^.","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev","str","^null","/str",{"VAR=":"item_name"},"str","^null","/str",{"VAR=":"item_description"},"/ev","end",null],"#f":1}],"listDefs":{}}
