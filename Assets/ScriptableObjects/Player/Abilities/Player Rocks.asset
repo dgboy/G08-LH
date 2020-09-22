@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fb3af434ae0b9043897c2e7f2093d1e, type: 3}
-  m_Name: Rocks
+  m_Name: Player Rocks
   m_EditorClassIdentifier: 
   magicCost: 3
   duration: 0.3
-  playerMagic: {fileID: 11400000, guid: 486478c753590114990f898c21887a62, type: 2}
-  usePlayerMagic: {fileID: 11400000, guid: 8a8f0546d775f294db16402fd4b2a14c, type: 2}
   projectile: {fileID: 3853740960722847899, guid: 33a32464455c1e74a8b49f300076426b,
     type: 3}
   count: 3

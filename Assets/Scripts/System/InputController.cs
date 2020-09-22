@@ -9,6 +9,16 @@ public class InputController : MonoBehaviour {
     [SerializeField] private Notification inputCancel = null;
 
     [SerializeField] private PlayerMovement player = null;
+    public GenericAbility[] abilities;
+    private int current = 0;
+
+    public void SwitchSkill(InputAction.CallbackContext context) {
+        if (!context.started) {
+            return;
+        }
+        current = (current + 1 < abilities.Length) ? current + 1 : 0;
+        player.Ability = abilities[current];
+    }
     // private PlayerInput _input;
     // private bool dialogMap = false;
 

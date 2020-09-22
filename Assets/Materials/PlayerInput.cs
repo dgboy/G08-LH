@@ -65,6 +65,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Switch Skill"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c1da1b0-0d41-441b-a0fa-1cd51b1784b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -175,6 +183,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97c31fe1-55a6-4585-9ca3-0363240f5df2"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Switch Skill"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -435,6 +454,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
         m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+        m_Player_SwitchSkill = m_Player.FindAction("Switch Skill", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -499,6 +519,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Ability;
     private readonly InputAction m_Player_Cancel;
     private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_SwitchSkill;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -509,6 +530,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Ability => m_Wrapper.m_Player_Ability;
         public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
         public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @SwitchSkill => m_Wrapper.m_Player_SwitchSkill;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -536,6 +558,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Inventory.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventory;
                 @Inventory.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventory;
                 @Inventory.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventory;
+                @SwitchSkill.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchSkill;
+                @SwitchSkill.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchSkill;
+                @SwitchSkill.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchSkill;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -558,6 +583,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Inventory.started += instance.OnInventory;
                 @Inventory.performed += instance.OnInventory;
                 @Inventory.canceled += instance.OnInventory;
+                @SwitchSkill.started += instance.OnSwitchSkill;
+                @SwitchSkill.performed += instance.OnSwitchSkill;
+                @SwitchSkill.canceled += instance.OnSwitchSkill;
             }
         }
     }
@@ -678,6 +706,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnAbility(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+        void OnSwitchSkill(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

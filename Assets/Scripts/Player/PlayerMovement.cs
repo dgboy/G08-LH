@@ -17,6 +17,8 @@ public partial class PlayerMovement : Movement {
     private Vector3 facingDir = Vector2.down;
     private Vector2 tempMovement = Vector2.down;
 
+    public GenericAbility Ability { get => currentAbility; set => currentAbility = value; }
+
     void Start() {
         tempMovement = Vector2.zero;
         ChangeState(State.idle);
