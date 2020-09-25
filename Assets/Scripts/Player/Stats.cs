@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : MonoBehaviour {
-    public string name;
+    public new string name;
     public Points health;
     public Points magic;
     public SpriteValue face;

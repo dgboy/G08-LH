@@ -5,7 +5,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Values/Speaker", fileName = "Speaker")]
 public class SpeakerValue : ScriptableObject {
-    public string name;
+    public new string name;
     public Sprite face;
     public TextAsset story;
     public Quest quest;

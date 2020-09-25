@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b30a1fa2bf57e40ad727efc98edb38, type: 3}
   m_Name: General Inventory
   m_EditorClassIdentifier: 
-  myInventory:
-  - {fileID: 11400000, guid: 1a3b372b0dbcc284b872d242ac8a267e, type: 2}
-  - {fileID: 11400000, guid: d669545c2bd3a7943b0a62287407842b, type: 2}
-  - {fileID: 11400000, guid: 1d09cad6416baf44385b45b8244702a1, type: 2}
+  myInventory: []
   receiveItem: {fileID: 0}
   coins: 0
