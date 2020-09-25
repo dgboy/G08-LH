@@ -105986,7 +105986,7 @@ PrefabInstance:
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.0274315
+      value: 15.156599
       objectReference: {fileID: 0}
     - target: {fileID: 3393368749656083712, guid: 1413c41caa749fe4298e354c71639802,
         type: 3}
@@ -106551,16 +106551,16 @@ PrefabInstance:
       propertyPath: playerMagic
       value: 
       objectReference: {fileID: 87355862}
-    - target: {fileID: 6759052063045730007, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6784655966400971482, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
         type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 4471097449357566824}
+    - target: {fileID: 6784655966995633599, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7059375378049338240, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
         type: 3}
       propertyPath: m_Name
@@ -106626,16 +106626,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1209353506}
-    - target: {fileID: 7059375378351695213, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059375378374951187, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7059375378964778914, guid: a5b4f1cca9bcb344c95fdcb2f4e9ccda,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
