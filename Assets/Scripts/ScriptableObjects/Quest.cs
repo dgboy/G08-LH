@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Quest", fileName = "Quest")]
 public class Quest : ScriptableObject {
-    public string name;
+    public string title;
     [TextArea] public string description;
     [TextArea] public string afterword;
     public InventoryItem[] reward;
@@ -39,7 +39,7 @@ public class Quest : ScriptableObject {
     }
 
     public Quest(Quest quest) {
-        this.name = quest.name;
+        this.title = quest.title;
         this.description = quest.description;
         this.reward = quest.reward;
         this.progress = Status.received;
@@ -49,7 +49,7 @@ public class Quest : ScriptableObject {
     }
 
     public void CopyStats(Quest quest) {
-        this.name = quest.name;
+        this.title = quest.title;
         this.description = quest.description;
         this.reward = quest.reward;
         this.progress = quest.progress;
@@ -60,7 +60,7 @@ public class Quest : ScriptableObject {
     }
 
     public override bool Equals(object obj) {
-        return obj is Quest quest && name == quest.name;
+        return obj is Quest quest && title == quest.title;
     }
 
     public void ChangeState(Status progress) {

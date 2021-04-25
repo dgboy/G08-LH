@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: aa72da9078ad11f429d9f4121120e2d9
   - enabled: 1
-    path: Assets/Scenes/World.unity
+    path: Assets/Scenes/Maps/World.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/NeighborHouse.unity
+    path: Assets/Scenes/Maps/NeighborHouse.unity
     guid: 70242485b9458a640ac328f170ce2016
   - enabled: 1
-    path: Assets/Scenes/HeroHome.unity
+    path: Assets/Scenes/Maps/HeroHome.unity
     guid: 2811b41d2f1e1cd4d9765cc3a286a071
   - enabled: 1
-    path: Assets/Scenes/NeighborCellar.unity
+    path: Assets/Scenes/Maps/NeighborCellar.unity
     guid: 694d309f4767e3041812b90e9c2e32fb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 589eceb91f2416748a484ea73c292ed9,
