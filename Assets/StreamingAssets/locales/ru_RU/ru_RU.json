@@ -1,0 +1,23 @@
+{
+    "items": [{
+            "key": "game_title",
+            "value": "Юный герой"
+        },
+        {
+            "key": "new_game",
+            "value": "Новая игра"
+        },
+        {
+            "key": "continue",
+            "value": "Продолжить игру"
+        },
+        {
+            "key": "settings",
+            "value": "Настройки"
+        },
+        {
+            "key": "exit_game",
+            "value": "Выйти из игры"
+        }
+    ]
+}
